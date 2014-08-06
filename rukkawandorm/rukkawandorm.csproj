@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DF05AAF2-0864-424A-AC94-3DA44248A267}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>rukkawandorm</RootNamespace>
+    <AssemblyName>rukkawandorm</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Design">
+      <HintPath>.\DevComponents.DotNetBar.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>.\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation">
+      <HintPath>.\DevComponents.Instrumentation.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation.Design">
+      <HintPath>.\DevComponents.Instrumentation.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>.\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
+      <HintPath>.\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\customer.cs" />
+    <Compile Include="Class\customerType.cs" />
+    <Compile Include="Class\employee.cs" />
+    <Compile Include="Class\employeeType.cs" />
+    <Compile Include="Class\module.cs" />
+    <Compile Include="Class\reservation.cs" />
+    <Compile Include="Class\room.cs" />
+    <Compile Include="Class\roomType.cs" />
+    <Compile Include="customerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerForm.Designer.cs">
+      <DependentUpon>customerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reservationForm.Designer.cs">
+      <DependentUpon>reservationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomForm.Designer.cs">
+      <DependentUpon>roomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomTypeForm.Designer.cs">
+      <DependentUpon>roomTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customerTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerTypeForm.Designer.cs">
+      <DependentUpon>customerTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeForm.Designer.cs">
+      <DependentUpon>employeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeTypeForm.Designer.cs">
+      <DependentUpon>employeeTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform.Designer.cs">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchCustomerForm.Designer.cs">
+      <DependentUpon>searchCustomerForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="customerForm.resx">
+      <DependentUpon>customerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reservationForm.resx">
+      <DependentUpon>reservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomForm.resx">
+      <DependentUpon>roomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomTypeForm.resx">
+      <DependentUpon>roomTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customerTypeForm.resx">
+      <DependentUpon>customerTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeForm.resx">
+      <DependentUpon>employeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeTypeForm.resx">
+      <DependentUpon>employeeTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="searchCustomerForm.resx">
+      <DependentUpon>searchCustomerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="photo\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_data\rukkawandorm.accdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="mono-icons\cancel.png" />
+    <None Include="mono-icons\save.png" />
+    <None Include="mono-icons\paperminus32.png" />
+    <None Include="mono-icons\paperpencil32.png" />
+    <None Include="mono-icons\paperplus32.png" />
+    <None Include="mono-icons\info.png" />
+    <None Include="mono-icons\lightbulb32.png" />
+    <None Include="mono-icons\on-off.png" />
+    <None Include="mono-icons\145.png" />
+    <None Include="mono-icons\149.png" />
+    <None Include="mono-icons\key.png" />
+    <None Include="mono-icons\notecheck32.png" />
+    <None Include="mono-icons\users32.png" />
+    <None Include="mono-icons\user32.png" />
+    <None Include="mono-icons\home.png" />
+    <None Include="mono-icons\users.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

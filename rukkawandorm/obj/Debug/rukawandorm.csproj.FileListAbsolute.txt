@@ -1,0 +1,17 @@
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\rukawandorm.exe.config
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.csprojResolveAssemblyReference.cache
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.mainform.resources
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.Properties.Resources.resources
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.csproj.GenerateResource.Cache
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\rukawandorm.exe
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\rukawandorm.pdb
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\DevComponents.DotNetBar.Design.dll
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\DevComponents.DotNetBar2.dll
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\DevComponents.Instrumentation.Design.dll
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\DevComponents.Instrumentation.dll
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.exe
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.pdb
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\obj\Debug\rukawandorm.login.resources
+D:\Visual Studio 2012\Projects\rukawandorm\rukawandorm\bin\Debug\App_data\rukawandorm.accdb
