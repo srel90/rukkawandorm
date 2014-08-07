@@ -57,3 +57,5 @@ D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.roomForm.resources
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.reservationForm.resources
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.searchCustomerForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.checkinForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.checkoutForm.resources

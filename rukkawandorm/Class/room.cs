@@ -72,7 +72,7 @@ namespace rukkawandorm.Class
 
             try
             {
-                str = "SELECT room.*,roomType.roomType  FROM room room LEFT OUTER JOIN roomType roomType on room.roomTypeID=roomType.roomTypeID WHERE room.roomID=@roomID;";
+                str = "SELECT room.*,roomType.roomType,roomType.price  FROM room room LEFT OUTER JOIN roomType roomType on room.roomTypeID=roomType.roomTypeID WHERE room.roomID=@roomID;";
                 Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@roomID", DbType.Int32, roomID);
                 ds = db.ExecuteDataSet(Dbcmd);

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
-using System.IO;
+
 
 namespace rukkawandorm
 {
@@ -185,7 +185,7 @@ namespace rukkawandorm
             clsreservation.checkoutDateTime = Convert.ToDateTime(dateto.Text);
             clsreservation.reservationDateTime = DateTime.Now;
             clsreservation.reservationNight = Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays);
-            clsreservation.checkinoutStatus = false;   
+            clsreservation.checkinoutStatus = 0;   
             if (rdoreservationStatus1.Checked == true)
             {
                 clsreservation.reservationStatus = true;

@@ -19,6 +19,8 @@ namespace rukkawandorm
         customerForm customerForm;
         roomForm roomForm;
         reservationForm reservationForm;
+        checkinForm checkinoutForm;
+        checkoutForm checkoutForm;
 
         public mainform()
         {
@@ -106,6 +108,16 @@ namespace rukkawandorm
         private void btnMenuReservation_Click(object sender, EventArgs e)
         {
             DisplayForm<reservationForm>(ref reservationForm);
+        }
+
+        private void btnMenuCheckIn_Click(object sender, EventArgs e)
+        {
+            DisplayForm<checkinForm>(ref checkinoutForm);
+        }
+
+        private void btnMenuCheckOut_Click(object sender, EventArgs e)
+        {
+            DisplayForm<checkoutForm>(ref checkoutForm);
         }
     }
 }

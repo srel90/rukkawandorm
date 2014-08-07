@@ -62,12 +62,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="checkinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkinForm.Designer.cs">
+      <DependentUpon>checkinForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="checkoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="checkoutForm.Designer.cs">
+      <DependentUpon>checkoutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\customer.cs" />
     <Compile Include="Class\customerType.cs" />
     <Compile Include="Class\employee.cs" />
     <Compile Include="Class\employeeType.cs" />
     <Compile Include="Class\module.cs" />
     <Compile Include="Class\reservation.cs" />
+    <Compile Include="Class\revenue.cs" />
     <Compile Include="Class\room.cs" />
     <Compile Include="Class\roomType.cs" />
     <Compile Include="customerForm.cs">
@@ -132,6 +145,12 @@
     <Compile Include="searchCustomerForm.Designer.cs">
       <DependentUpon>searchCustomerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="checkinForm.resx">
+      <DependentUpon>checkinForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="checkoutForm.resx">
+      <DependentUpon>checkoutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
     </EmbeddedResource>

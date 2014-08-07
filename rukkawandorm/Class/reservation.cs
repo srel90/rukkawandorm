@@ -19,7 +19,7 @@ namespace rukkawandorm.Class
         public DateTime checkoutDateTime { get; set; }
         public DateTime reservationDateTime { get; set; }
         public int reservationNight { get; set; }
-        public bool checkinoutStatus { get; set; }
+        public int checkinoutStatus { get; set; }
         public bool reservationStatus { get; set; }
         public bool status { get; set; }
 
@@ -59,7 +59,7 @@ namespace rukkawandorm.Class
 
             try
             {
-                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName";
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
                 str += " FROM ((((reservation reservation";
                 str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
                 str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
@@ -76,6 +76,73 @@ namespace rukkawandorm.Class
                 throw new Exception(ex.Message);
             }
         }
+        public DataSet selectCheckoutToday(DateTime today)
+        {
+
+            try
+            {
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
+                str += " FROM ((((reservation reservation";
+                str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
+                str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
+                str += " LEFT OUTER JOIN room room ON room.roomID=reservation.roomID)";
+                str += " LEFT OUTER JOIN roomType roomType ON room.roomTypeID=roomType.roomTypeID)";
+                str += " WHERE  DateDiff('d',reservation.checkoutDateTime, @today)=0 order by reservation.checkoutDateTime";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@today", DbType.String, today.ToString());
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public DataSet selectReservationToday(DateTime today)
+        {
+
+            try
+            {
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
+                str += " FROM ((((reservation reservation";
+                str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
+                str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
+                str += " LEFT OUTER JOIN room room ON room.roomID=reservation.roomID)";
+                str += " LEFT OUTER JOIN roomType roomType ON room.roomTypeID=roomType.roomTypeID)";
+                str += " WHERE  DateDiff('d',reservation.checkinDateTime, @today)=0 order by reservation.checkinDateTime";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@today", DbType.String, today.ToString());
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public DataSet selectReservationByDate(DateTime today,int customerID)
+        {
+
+            try
+            {
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
+                str += " FROM ((((reservation reservation";
+                str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
+                str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
+                str += " LEFT OUTER JOIN room room ON room.roomID=reservation.roomID)";
+                str += " LEFT OUTER JOIN roomType roomType ON room.roomTypeID=roomType.roomTypeID)";
+                str += " WHERE customer.customerID=@customerID and  DateDiff('d',reservation.reservationDateTime, @today)=0 order by reservation.checkinDateTime";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@customerID", DbType.Int32, customerID);
+                db.AddInParameter(Dbcmd, "@today", DbType.String, today.ToString());
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public DataSet searchReservationAvariable(DateTime from, DateTime to, int roomTypeID)
         {
 
@@ -83,7 +150,7 @@ namespace rukkawandorm.Class
             {
                 str = "SELECT room.*,roomType.roomType from (room room";
                 str += " left outer join roomType roomType on room.roomTypeID=roomType.roomTypeID)";
-                str += " WHERE room.roomTypeID=@roomTypeID  and room.roomID NOT IN (SELECT reservation.roomID FROM reservation reservation WHERE  reservation.reservationStatus<>false and ((reservation.checkinDateTime BETWEEN @from AND @to) OR (reservation.checkoutDateTime BETWEEN @from AND @to))) ";
+                str += " WHERE room.roomTypeID=@roomTypeID  and room.roomID NOT IN (SELECT reservation.roomID FROM reservation reservation WHERE  (reservation.reservationStatus=true and reservation.checkinoutStatus in(0,1)) and ((reservation.checkinDateTime BETWEEN @from AND @to) OR (reservation.checkoutDateTime BETWEEN @from AND @to))) ";
                 Dbcmd = db.GetSqlStringCommand(str);
                 
                 db.AddInParameter(Dbcmd, "@from", DbType.String, from.ToString());
@@ -98,12 +165,35 @@ namespace rukkawandorm.Class
                 throw new Exception(ex.Message);
             }
         }
+        public DataSet searchReservationCheckout(string roomCode, int customerID)
+        {
+
+            try
+            {
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
+                str += " FROM ((((reservation reservation";
+                str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
+                str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
+                str += " LEFT OUTER JOIN room room ON room.roomID=reservation.roomID)";
+                str += " LEFT OUTER JOIN roomType roomType ON room.roomTypeID=roomType.roomTypeID)";
+                str += " WHERE customer.customerID=@customerID and room.roomCode=@roomCode order by reservation.checkoutDateTime";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@customerID", DbType.Int32, customerID);
+                db.AddInParameter(Dbcmd, "@roomCode", DbType.String, roomCode);
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public DataSet searchReservation(DateTime from, DateTime to, int roomTypeID)
         {
 
             try
             {
-                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName";
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
                 str += " FROM ((((reservation reservation";
                 str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
                 str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
@@ -115,6 +205,33 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@from", DbType.String, from.ToString());
                 db.AddInParameter(Dbcmd, "@to", DbType.String, to.ToString());
                 
+
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public DataSet searchReservation(DateTime from, DateTime to, int roomTypeID,int customerID)
+        {
+
+            try
+            {
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
+                str += " FROM ((((reservation reservation";
+                str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
+                str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";
+                str += " LEFT OUTER JOIN room room ON room.roomID=reservation.roomID)";
+                str += " LEFT OUTER JOIN roomType roomType ON room.roomTypeID=roomType.roomTypeID)";
+                str += " WHERE customer.customerID=@customerID and room.roomTypeID=@roomTypeID and ((reservation.checkinDateTime BETWEEN @from AND @to) OR (reservation.checkoutDateTime BETWEEN @from AND @to))";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@customerID", DbType.Int32, customerID);
+                db.AddInParameter(Dbcmd, "@roomTypeID", DbType.Int32, roomTypeID);
+                db.AddInParameter(Dbcmd, "@from", DbType.String, from.ToString());
+                db.AddInParameter(Dbcmd, "@to", DbType.String, to.ToString());
+
 
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;
@@ -159,7 +276,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@checkoutDateTime", DbType.String, checkoutDateTime);
                 db.AddInParameter(Dbcmd, "@reservationDateTime", DbType.String, reservationDateTime);
                 db.AddInParameter(Dbcmd, "@reservationNight", DbType.Int32, reservationNight);
-                db.AddInParameter(Dbcmd, "@checkinoutStatus", DbType.Boolean, checkinoutStatus);
+                db.AddInParameter(Dbcmd, "@checkinoutStatus", DbType.Int32, checkinoutStatus);
                 db.AddInParameter(Dbcmd, "@reservationStatus", DbType.Boolean, reservationStatus);
                 db.AddInParameter(Dbcmd, "@status", DbType.Boolean, status);
                 db.ExecuteNonQuery(Dbcmd);
@@ -183,9 +300,39 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@checkoutDateTime", DbType.String, checkoutDateTime);
                 db.AddInParameter(Dbcmd, "@reservationDateTime", DbType.String, reservationDateTime);
                 db.AddInParameter(Dbcmd, "@reservationNight", DbType.Int32, reservationNight);
-                db.AddInParameter(Dbcmd, "@checkinoutStatus", DbType.Boolean, checkinoutStatus);
+                db.AddInParameter(Dbcmd, "@checkinoutStatus", DbType.Int32, checkinoutStatus);
                 db.AddInParameter(Dbcmd, "@reservationStatus", DbType.Boolean, reservationStatus);
                 db.AddInParameter(Dbcmd, "@status", DbType.Boolean, status);
+                db.AddInParameter(Dbcmd, "@reservationID", DbType.Int32, reservationID);
+                db.ExecuteNonQuery(Dbcmd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public Boolean updateReservationCheckin(int reservationID)
+        {
+            try
+            {
+                str = "UPDATE reservation SET checkinoutStatus=1 WHERE reservationID=@reservationID;";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@reservationID", DbType.Int32, reservationID);
+                db.ExecuteNonQuery(Dbcmd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+        public Boolean updateReservationCheckout(int reservationID)
+        {
+            try
+            {
+                str = "UPDATE reservation SET checkinoutStatus=2 WHERE reservationID=@reservationID;";
+                Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@reservationID", DbType.Int32, reservationID);
                 db.ExecuteNonQuery(Dbcmd);
                 return true;
