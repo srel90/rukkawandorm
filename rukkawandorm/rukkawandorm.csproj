@@ -50,8 +50,11 @@
     <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data">
       <HintPath>.\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -62,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="aboutForm.Designer.cs">
+      <DependentUpon>aboutForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="checkinForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +97,24 @@
     </Compile>
     <Compile Include="customerForm.Designer.cs">
       <DependentUpon>customerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employeeReportForm.Designer.cs">
+      <DependentUpon>employeeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="receiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="receiptForm.Designer.cs">
+      <DependentUpon>receiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportViewer.Designer.cs">
+      <DependentUpon>reportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="reservationForm.cs">
       <SubType>Form</SubType>
@@ -139,12 +166,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rukkawandormDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rukkawandormDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="searchCustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="searchCustomerForm.Designer.cs">
       <DependentUpon>searchCustomerForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="aboutForm.resx">
+      <DependentUpon>aboutForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="checkinForm.resx">
       <DependentUpon>checkinForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +188,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employeeReportForm.resx">
+      <DependentUpon>employeeReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="receiptForm.resx">
+      <DependentUpon>receiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\employeeReport.rdlc" />
+    <EmbeddedResource Include="Reports\receipt.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportViewer.resx">
+      <DependentUpon>reportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reservationForm.resx">
       <DependentUpon>reservationForm.cs</DependentUpon>
@@ -191,6 +239,11 @@
     <EmbeddedResource Include="searchCustomerForm.resx">
       <DependentUpon>searchCustomerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="help.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\DataSources\employeeReportForm.datasource" />
+    <None Include="Properties\DataSources\rukkawandorm.Class.employee.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -200,6 +253,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="rukkawandormDataSet.xsc">
+      <DependentUpon>rukkawandormDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rukkawandormDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rukkawandormDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="rukkawandormDataSet.xss">
+      <DependentUpon>rukkawandormDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

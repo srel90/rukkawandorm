@@ -21,6 +21,8 @@ namespace rukkawandorm
         reservationForm reservationForm;
         checkinForm checkinoutForm;
         checkoutForm checkoutForm;
+        aboutForm aboutForm;
+        employeeReportForm employeeReportForm;
 
         public mainform()
         {
@@ -118,6 +120,26 @@ namespace rukkawandorm
         private void btnMenuCheckOut_Click(object sender, EventArgs e)
         {
             DisplayForm<checkoutForm>(ref checkoutForm);
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            aboutForm = new aboutForm();
+            aboutForm.ShowDialog();
+        }
+
+        private void btnMenuHelp_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"help.pdf");
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            switch (reportItems.SelectedIndex)
+            {
+                case 0: DisplayForm<employeeReportForm>(ref employeeReportForm);
+                    break;
+            }
         }
     }
 }

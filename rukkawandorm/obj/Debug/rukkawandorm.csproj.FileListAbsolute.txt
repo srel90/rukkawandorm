@@ -59,3 +59,11 @@ D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.searchCustomerForm.resources
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.checkinForm.resources
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.checkoutForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.receiptForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\RdlCompile.cache
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\RdlCompile.compiled
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\receipt.rdlc
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\help.pdf
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.aboutForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.employeeReportForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.reportViewer.resources

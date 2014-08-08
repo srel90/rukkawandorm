@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="rukkawandormDataSet" targetNamespace="http://tempuri.org/rukkawandormDataSet.xsd" xmlns:mstns="http://tempuri.org/rukkawandormDataSet.xsd" xmlns="http://tempuri.org/rukkawandormDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="rukkawandormDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="rukkawandormDataSet" msprop:Generator_UserDSName="rukkawandormDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="receipt" msprop:Generator_TableClassName="receiptDataTable" msprop:Generator_TableVarName="tablereceipt" msprop:Generator_TablePropName="receipt" msprop:Generator_RowDeletingName="receiptRowDeleting" msprop:Generator_RowChangingName="receiptRowChanging" msprop:Generator_RowEvHandlerName="receiptRowChangeEventHandler" msprop:Generator_RowDeletedName="receiptRowDeleted" msprop:Generator_UserTableName="receipt" msprop:Generator_RowChangedName="receiptRowChanged" msprop:Generator_RowEvArgName="receiptRowChangeEvent" msprop:Generator_RowClassName="receiptRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no" msprop:Generator_ColumnVarNameInTable="columnno" msprop:Generator_ColumnPropNameInRow="no" msprop:Generator_ColumnPropNameInTable="noColumn" msprop:Generator_UserColumnName="no" type="xs:string" minOccurs="0" />
+              <xs:element name="roomCode" msprop:Generator_ColumnVarNameInTable="columnroomCode" msprop:Generator_ColumnPropNameInRow="roomCode" msprop:Generator_ColumnPropNameInTable="roomCodeColumn" msprop:Generator_UserColumnName="roomCode" type="xs:string" minOccurs="0" />
+              <xs:element name="checkin" msprop:Generator_ColumnVarNameInTable="columncheckin" msprop:Generator_ColumnPropNameInRow="checkin" msprop:Generator_ColumnPropNameInTable="checkinColumn" msprop:Generator_UserColumnName="checkin" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="checkout" msprop:Generator_ColumnVarNameInTable="columncheckout" msprop:Generator_ColumnPropNameInRow="checkout" msprop:Generator_ColumnPropNameInTable="checkoutColumn" msprop:Generator_UserColumnName="checkout" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="title" msprop:Generator_ColumnVarNameInTable="columntitle" msprop:Generator_ColumnPropNameInRow="title" msprop:Generator_ColumnPropNameInTable="titleColumn" msprop:Generator_UserColumnName="title" type="xs:string" minOccurs="0" />
+              <xs:element name="name" msprop:Generator_ColumnVarNameInTable="columnname" msprop:Generator_ColumnPropNameInRow="name" msprop:Generator_ColumnPropNameInTable="nameColumn" msprop:Generator_UserColumnName="name" type="xs:string" minOccurs="0" />
+              <xs:element name="lastname" msprop:Generator_ColumnVarNameInTable="columnlastname" msprop:Generator_ColumnPropNameInRow="lastname" msprop:Generator_ColumnPropNameInTable="lastnameColumn" msprop:Generator_UserColumnName="lastname" type="xs:string" minOccurs="0" />
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" type="xs:string" minOccurs="0" />
+              <xs:element name="items1" msprop:Generator_ColumnVarNameInTable="columnitems1" msprop:Generator_ColumnPropNameInRow="items1" msprop:Generator_ColumnPropNameInTable="items1Column" msprop:Generator_UserColumnName="items1" type="xs:string" minOccurs="0" />
+              <xs:element name="amount1" msprop:Generator_ColumnVarNameInTable="columnamount1" msprop:Generator_ColumnPropNameInRow="amount1" msprop:Generator_ColumnPropNameInTable="amount1Column" msprop:Generator_UserColumnName="amount1" type="xs:double" minOccurs="0" />
+              <xs:element name="price1" msprop:Generator_ColumnVarNameInTable="columnprice1" msprop:Generator_ColumnPropNameInRow="price1" msprop:Generator_ColumnPropNameInTable="price1Column" msprop:Generator_UserColumnName="price1" type="xs:double" minOccurs="0" />
+              <xs:element name="items2" msprop:Generator_ColumnVarNameInTable="columnitems2" msprop:Generator_ColumnPropNameInRow="items2" msprop:Generator_ColumnPropNameInTable="items2Column" msprop:Generator_UserColumnName="items2" type="xs:string" minOccurs="0" />
+              <xs:element name="price2" msprop:Generator_ColumnVarNameInTable="columnprice2" msprop:Generator_ColumnPropNameInRow="price2" msprop:Generator_ColumnPropNameInTable="price2Column" msprop:Generator_UserColumnName="price2" type="xs:double" minOccurs="0" />
+              <xs:element name="items3" msprop:Generator_ColumnVarNameInTable="columnitems3" msprop:Generator_ColumnPropNameInRow="items3" msprop:Generator_ColumnPropNameInTable="items3Column" msprop:Generator_UserColumnName="items3" type="xs:string" minOccurs="0" />
+              <xs:element name="price3" msprop:Generator_ColumnVarNameInTable="columnprice3" msprop:Generator_ColumnPropNameInRow="price3" msprop:Generator_ColumnPropNameInTable="price3Column" msprop:Generator_UserColumnName="price3" type="xs:double" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -42,7 +42,6 @@ namespace rukkawandorm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtKeyword.Text.Equals(string.Empty)) return;
             DataSet ds = clsemployee.searchEmployee(txtKeyword.Text);
             dgv1.DataSource = ds.Tables[0];
         }

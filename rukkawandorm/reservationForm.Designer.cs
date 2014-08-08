@@ -37,6 +37,16 @@
             this.txtbuilding = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.dgvroomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvdetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvroomTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvroomCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvroomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvroomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvfloor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvbuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvremark = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,24 +95,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv2 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtdatefromreservation = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtroomTypeIDreservation = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btnsearchreservationtoday = new DevComponents.DotNetBar.ButtonX();
-            this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
-            this.txtdatetoreservation = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.rdostatus2 = new System.Windows.Forms.RadioButton();
-            this.rdostatus1 = new System.Windows.Forms.RadioButton();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtreservationID = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label21 = new System.Windows.Forms.Label();
-            this.rdoreservationStatus1 = new System.Windows.Forms.RadioButton();
-            this.rdoreservationStatus2 = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.dgv2reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2employeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,16 +118,24 @@
             this.dgv2employeelastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2statusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvroomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvdetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvroomTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvroomCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvroomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvroomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvfloor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvbuilding = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvremark = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtdatefromreservation = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtroomTypeIDreservation = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.btnsearchreservationtoday = new DevComponents.DotNetBar.ButtonX();
+            this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
+            this.txtdatetoreservation = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
+            this.rdostatus2 = new System.Windows.Forms.RadioButton();
+            this.rdostatus1 = new System.Windows.Forms.RadioButton();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtreservationID = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label21 = new System.Windows.Forms.Label();
+            this.rdoreservationStatus1 = new System.Windows.Forms.RadioButton();
+            this.rdoreservationStatus2 = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -280,6 +280,79 @@
             this.dgv1.TabIndex = 0;
             this.dgv1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv1_CellMouseClick);
             this.dgv1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv1_DataBindingComplete);
+            // 
+            // dgvroomID
+            // 
+            this.dgvroomID.DataPropertyName = "roomID";
+            this.dgvroomID.HeaderText = "roomID";
+            this.dgvroomID.Name = "dgvroomID";
+            this.dgvroomID.ReadOnly = true;
+            this.dgvroomID.Visible = false;
+            // 
+            // dgvdetail
+            // 
+            this.dgvdetail.DataPropertyName = "detail";
+            this.dgvdetail.HeaderText = "detail";
+            this.dgvdetail.Name = "dgvdetail";
+            this.dgvdetail.ReadOnly = true;
+            this.dgvdetail.Visible = false;
+            // 
+            // dgvroomTypeID
+            // 
+            this.dgvroomTypeID.DataPropertyName = "roomTypeID";
+            this.dgvroomTypeID.HeaderText = "roomTypeID";
+            this.dgvroomTypeID.Name = "dgvroomTypeID";
+            this.dgvroomTypeID.ReadOnly = true;
+            this.dgvroomTypeID.Visible = false;
+            // 
+            // dgvroomCode
+            // 
+            this.dgvroomCode.DataPropertyName = "roomCode";
+            this.dgvroomCode.HeaderText = "รหัสห้องพัก";
+            this.dgvroomCode.Name = "dgvroomCode";
+            this.dgvroomCode.ReadOnly = true;
+            // 
+            // dgvroomType
+            // 
+            this.dgvroomType.DataPropertyName = "roomType";
+            this.dgvroomType.HeaderText = "ประเภทห้องพัก";
+            this.dgvroomType.Name = "dgvroomType";
+            this.dgvroomType.ReadOnly = true;
+            // 
+            // dgvroomName
+            // 
+            this.dgvroomName.DataPropertyName = "roomName";
+            this.dgvroomName.HeaderText = "ชื่อห้องพัก";
+            this.dgvroomName.Name = "dgvroomName";
+            this.dgvroomName.ReadOnly = true;
+            // 
+            // dgvfloor
+            // 
+            this.dgvfloor.DataPropertyName = "floor";
+            this.dgvfloor.HeaderText = "ชั้น";
+            this.dgvfloor.Name = "dgvfloor";
+            this.dgvfloor.ReadOnly = true;
+            // 
+            // dgvbuilding
+            // 
+            this.dgvbuilding.DataPropertyName = "building";
+            this.dgvbuilding.HeaderText = "อาคาร";
+            this.dgvbuilding.Name = "dgvbuilding";
+            this.dgvbuilding.ReadOnly = true;
+            // 
+            // dgvremark
+            // 
+            this.dgvremark.DataPropertyName = "remark";
+            this.dgvremark.HeaderText = "หมายเหตุ";
+            this.dgvremark.Name = "dgvremark";
+            this.dgvremark.ReadOnly = true;
+            // 
+            // dgvstatus
+            // 
+            this.dgvstatus.DataPropertyName = "status";
+            this.dgvstatus.HeaderText = "สถานะห้องพัก";
+            this.dgvstatus.Name = "dgvstatus";
+            this.dgvstatus.ReadOnly = true;
             // 
             // label5
             // 
@@ -573,6 +646,7 @@
             this.dateto.Name = "dateto";
             this.dateto.Size = new System.Drawing.Size(72, 22);
             this.dateto.TabIndex = 51;
+            this.dateto.Visible = false;
             // 
             // datefrom
             // 
@@ -587,6 +661,7 @@
             this.datefrom.Name = "datefrom";
             this.datefrom.Size = new System.Drawing.Size(72, 22);
             this.datefrom.TabIndex = 51;
+            this.datefrom.Visible = false;
             // 
             // txtstatus
             // 
@@ -981,6 +1056,177 @@
             this.dgv2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv2_CellMouseClick);
             this.dgv2.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv2_DataBindingComplete);
             // 
+            // dgv2reservationID
+            // 
+            this.dgv2reservationID.DataPropertyName = "reservationID";
+            this.dgv2reservationID.HeaderText = "รหัสรายการ";
+            this.dgv2reservationID.Name = "dgv2reservationID";
+            this.dgv2reservationID.ReadOnly = true;
+            this.dgv2reservationID.Visible = false;
+            // 
+            // dgv2customerID
+            // 
+            this.dgv2customerID.DataPropertyName = "customerID";
+            this.dgv2customerID.HeaderText = "รหัสลูกค้า";
+            this.dgv2customerID.Name = "dgv2customerID";
+            this.dgv2customerID.ReadOnly = true;
+            this.dgv2customerID.Visible = false;
+            // 
+            // dgv2employeeID
+            // 
+            this.dgv2employeeID.DataPropertyName = "employeeID";
+            this.dgv2employeeID.HeaderText = "รหัสพนักงานที่ทำรายการ";
+            this.dgv2employeeID.Name = "dgv2employeeID";
+            this.dgv2employeeID.ReadOnly = true;
+            this.dgv2employeeID.Visible = false;
+            // 
+            // dgv2roomID
+            // 
+            this.dgv2roomID.DataPropertyName = "roomID";
+            this.dgv2roomID.HeaderText = "รหัสห้องพัก";
+            this.dgv2roomID.Name = "dgv2roomID";
+            this.dgv2roomID.ReadOnly = true;
+            this.dgv2roomID.Visible = false;
+            // 
+            // dgv2roomCode
+            // 
+            this.dgv2roomCode.DataPropertyName = "roomCode";
+            this.dgv2roomCode.HeaderText = "หมายเลขห้องพัก";
+            this.dgv2roomCode.Name = "dgv2roomCode";
+            this.dgv2roomCode.ReadOnly = true;
+            // 
+            // dgv2roomType
+            // 
+            this.dgv2roomType.DataPropertyName = "roomType";
+            this.dgv2roomType.HeaderText = "ประเภทห้องพัก";
+            this.dgv2roomType.Name = "dgv2roomType";
+            this.dgv2roomType.ReadOnly = true;
+            // 
+            // dgv2floor
+            // 
+            this.dgv2floor.DataPropertyName = "floor";
+            this.dgv2floor.HeaderText = "ห้องพักอยู่ชั้นที่";
+            this.dgv2floor.Name = "dgv2floor";
+            this.dgv2floor.ReadOnly = true;
+            // 
+            // dgv2building
+            // 
+            this.dgv2building.DataPropertyName = "building";
+            this.dgv2building.HeaderText = "อาคาร";
+            this.dgv2building.Name = "dgv2building";
+            this.dgv2building.ReadOnly = true;
+            // 
+            // dgv2checkinDateTime
+            // 
+            this.dgv2checkinDateTime.DataPropertyName = "checkinDateTime";
+            this.dgv2checkinDateTime.HeaderText = "วันที่เข้าพัก";
+            this.dgv2checkinDateTime.Name = "dgv2checkinDateTime";
+            this.dgv2checkinDateTime.ReadOnly = true;
+            // 
+            // dgv2checkoutDateTime
+            // 
+            this.dgv2checkoutDateTime.DataPropertyName = "checkoutDateTime";
+            this.dgv2checkoutDateTime.HeaderText = "วันที่คืนห้อง";
+            this.dgv2checkoutDateTime.Name = "dgv2checkoutDateTime";
+            this.dgv2checkoutDateTime.ReadOnly = true;
+            // 
+            // dgv2reservationDateTime
+            // 
+            this.dgv2reservationDateTime.DataPropertyName = "reservationDateTime";
+            this.dgv2reservationDateTime.HeaderText = "วันที่ทำการจอง";
+            this.dgv2reservationDateTime.Name = "dgv2reservationDateTime";
+            this.dgv2reservationDateTime.ReadOnly = true;
+            // 
+            // dgv2reservationNight
+            // 
+            this.dgv2reservationNight.DataPropertyName = "reservationNight";
+            this.dgv2reservationNight.HeaderText = "จำนวนคืนที่จอง";
+            this.dgv2reservationNight.Name = "dgv2reservationNight";
+            this.dgv2reservationNight.ReadOnly = true;
+            // 
+            // dgv2checkinoutStatus
+            // 
+            this.dgv2checkinoutStatus.DataPropertyName = "checkinoutStatus";
+            this.dgv2checkinoutStatus.HeaderText = "สถานะการเข้าพัก";
+            this.dgv2checkinoutStatus.Name = "dgv2checkinoutStatus";
+            this.dgv2checkinoutStatus.ReadOnly = true;
+            this.dgv2checkinoutStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2checkinoutStatus.Visible = false;
+            // 
+            // dgv2checkinoutStatusName
+            // 
+            this.dgv2checkinoutStatusName.DataPropertyName = "checkinoutStatusName";
+            this.dgv2checkinoutStatusName.HeaderText = "สถานะการเข้าพัก";
+            this.dgv2checkinoutStatusName.Name = "dgv2checkinoutStatusName";
+            this.dgv2checkinoutStatusName.ReadOnly = true;
+            // 
+            // dgv2reservationStatus
+            // 
+            this.dgv2reservationStatus.DataPropertyName = "reservationStatus";
+            this.dgv2reservationStatus.HeaderText = "สถานะการจองห้องพัก";
+            this.dgv2reservationStatus.Name = "dgv2reservationStatus";
+            this.dgv2reservationStatus.ReadOnly = true;
+            this.dgv2reservationStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv2reservationStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dgv2customertitle
+            // 
+            this.dgv2customertitle.DataPropertyName = "customertitle";
+            this.dgv2customertitle.HeaderText = "คำนำหน้าลูกค้า";
+            this.dgv2customertitle.Name = "dgv2customertitle";
+            this.dgv2customertitle.ReadOnly = true;
+            // 
+            // dgv2customerfirstName
+            // 
+            this.dgv2customerfirstName.DataPropertyName = "customerfirstName";
+            this.dgv2customerfirstName.HeaderText = "ชื่อลูกค้า";
+            this.dgv2customerfirstName.Name = "dgv2customerfirstName";
+            this.dgv2customerfirstName.ReadOnly = true;
+            // 
+            // dgv2customerlastName
+            // 
+            this.dgv2customerlastName.DataPropertyName = "customerlastName";
+            this.dgv2customerlastName.HeaderText = "นามสกุลลูกค้า";
+            this.dgv2customerlastName.Name = "dgv2customerlastName";
+            this.dgv2customerlastName.ReadOnly = true;
+            // 
+            // dgv2roomTypeID
+            // 
+            this.dgv2roomTypeID.DataPropertyName = "roomTypeID";
+            this.dgv2roomTypeID.HeaderText = "รหัสประเภทห้องพัก";
+            this.dgv2roomTypeID.Name = "dgv2roomTypeID";
+            this.dgv2roomTypeID.ReadOnly = true;
+            this.dgv2roomTypeID.Visible = false;
+            // 
+            // dgv2employeefirstName
+            // 
+            this.dgv2employeefirstName.DataPropertyName = "employeefirstName";
+            this.dgv2employeefirstName.HeaderText = "ชื่อพนักงานทำรายการ";
+            this.dgv2employeefirstName.Name = "dgv2employeefirstName";
+            this.dgv2employeefirstName.ReadOnly = true;
+            // 
+            // dgv2employeelastName
+            // 
+            this.dgv2employeelastName.DataPropertyName = "employeelastName";
+            this.dgv2employeelastName.HeaderText = "นามสกุลพนักงานทำรายการ";
+            this.dgv2employeelastName.Name = "dgv2employeelastName";
+            this.dgv2employeelastName.ReadOnly = true;
+            // 
+            // dgv2status
+            // 
+            this.dgv2status.DataPropertyName = "status";
+            this.dgv2status.HeaderText = "สถานะของรายการ";
+            this.dgv2status.Name = "dgv2status";
+            this.dgv2status.ReadOnly = true;
+            this.dgv2status.Visible = false;
+            // 
+            // dgv2statusName
+            // 
+            this.dgv2statusName.DataPropertyName = "statusName";
+            this.dgv2statusName.HeaderText = "สถานะของรายการ";
+            this.dgv2statusName.Name = "dgv2statusName";
+            this.dgv2statusName.ReadOnly = true;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtdatefromreservation);
@@ -1260,250 +1506,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(263, 34);
             this.panel4.TabIndex = 52;
-            // 
-            // dgv2reservationID
-            // 
-            this.dgv2reservationID.DataPropertyName = "reservationID";
-            this.dgv2reservationID.HeaderText = "รหัสรายการ";
-            this.dgv2reservationID.Name = "dgv2reservationID";
-            this.dgv2reservationID.ReadOnly = true;
-            this.dgv2reservationID.Visible = false;
-            // 
-            // dgv2customerID
-            // 
-            this.dgv2customerID.DataPropertyName = "customerID";
-            this.dgv2customerID.HeaderText = "รหัสลูกค้า";
-            this.dgv2customerID.Name = "dgv2customerID";
-            this.dgv2customerID.ReadOnly = true;
-            this.dgv2customerID.Visible = false;
-            // 
-            // dgv2employeeID
-            // 
-            this.dgv2employeeID.DataPropertyName = "employeeID";
-            this.dgv2employeeID.HeaderText = "รหัสพนักงานที่ทำรายการ";
-            this.dgv2employeeID.Name = "dgv2employeeID";
-            this.dgv2employeeID.ReadOnly = true;
-            this.dgv2employeeID.Visible = false;
-            // 
-            // dgv2roomID
-            // 
-            this.dgv2roomID.DataPropertyName = "roomID";
-            this.dgv2roomID.HeaderText = "รหัสห้องพัก";
-            this.dgv2roomID.Name = "dgv2roomID";
-            this.dgv2roomID.ReadOnly = true;
-            this.dgv2roomID.Visible = false;
-            // 
-            // dgv2roomCode
-            // 
-            this.dgv2roomCode.DataPropertyName = "roomCode";
-            this.dgv2roomCode.HeaderText = "หมายเลขห้องพัก";
-            this.dgv2roomCode.Name = "dgv2roomCode";
-            this.dgv2roomCode.ReadOnly = true;
-            // 
-            // dgv2roomType
-            // 
-            this.dgv2roomType.DataPropertyName = "roomType";
-            this.dgv2roomType.HeaderText = "ประเภทห้องพัก";
-            this.dgv2roomType.Name = "dgv2roomType";
-            this.dgv2roomType.ReadOnly = true;
-            // 
-            // dgv2floor
-            // 
-            this.dgv2floor.DataPropertyName = "floor";
-            this.dgv2floor.HeaderText = "ห้องพักอยู่ชั้นที่";
-            this.dgv2floor.Name = "dgv2floor";
-            this.dgv2floor.ReadOnly = true;
-            // 
-            // dgv2building
-            // 
-            this.dgv2building.DataPropertyName = "building";
-            this.dgv2building.HeaderText = "อาคาร";
-            this.dgv2building.Name = "dgv2building";
-            this.dgv2building.ReadOnly = true;
-            // 
-            // dgv2checkinDateTime
-            // 
-            this.dgv2checkinDateTime.DataPropertyName = "checkinDateTime";
-            this.dgv2checkinDateTime.HeaderText = "วันที่เข้าพัก";
-            this.dgv2checkinDateTime.Name = "dgv2checkinDateTime";
-            this.dgv2checkinDateTime.ReadOnly = true;
-            // 
-            // dgv2checkoutDateTime
-            // 
-            this.dgv2checkoutDateTime.DataPropertyName = "checkoutDateTime";
-            this.dgv2checkoutDateTime.HeaderText = "วันที่คืนห้อง";
-            this.dgv2checkoutDateTime.Name = "dgv2checkoutDateTime";
-            this.dgv2checkoutDateTime.ReadOnly = true;
-            // 
-            // dgv2reservationDateTime
-            // 
-            this.dgv2reservationDateTime.DataPropertyName = "reservationDateTime";
-            this.dgv2reservationDateTime.HeaderText = "วันที่ทำการจอง";
-            this.dgv2reservationDateTime.Name = "dgv2reservationDateTime";
-            this.dgv2reservationDateTime.ReadOnly = true;
-            // 
-            // dgv2reservationNight
-            // 
-            this.dgv2reservationNight.DataPropertyName = "reservationNight";
-            this.dgv2reservationNight.HeaderText = "จำนวนคืนที่จอง";
-            this.dgv2reservationNight.Name = "dgv2reservationNight";
-            this.dgv2reservationNight.ReadOnly = true;
-            // 
-            // dgv2checkinoutStatus
-            // 
-            this.dgv2checkinoutStatus.DataPropertyName = "checkinoutStatus";
-            this.dgv2checkinoutStatus.HeaderText = "สถานะการเข้าพัก";
-            this.dgv2checkinoutStatus.Name = "dgv2checkinoutStatus";
-            this.dgv2checkinoutStatus.ReadOnly = true;
-            this.dgv2checkinoutStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2checkinoutStatus.Visible = false;
-            // 
-            // dgv2checkinoutStatusName
-            // 
-            this.dgv2checkinoutStatusName.DataPropertyName = "checkinoutStatusName";
-            this.dgv2checkinoutStatusName.HeaderText = "สถานะการเข้าพัก";
-            this.dgv2checkinoutStatusName.Name = "dgv2checkinoutStatusName";
-            this.dgv2checkinoutStatusName.ReadOnly = true;
-            // 
-            // dgv2reservationStatus
-            // 
-            this.dgv2reservationStatus.DataPropertyName = "reservationStatus";
-            this.dgv2reservationStatus.HeaderText = "สถานะการจองห้องพัก";
-            this.dgv2reservationStatus.Name = "dgv2reservationStatus";
-            this.dgv2reservationStatus.ReadOnly = true;
-            this.dgv2reservationStatus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv2reservationStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dgv2customertitle
-            // 
-            this.dgv2customertitle.DataPropertyName = "customertitle";
-            this.dgv2customertitle.HeaderText = "คำนำหน้าลูกค้า";
-            this.dgv2customertitle.Name = "dgv2customertitle";
-            this.dgv2customertitle.ReadOnly = true;
-            // 
-            // dgv2customerfirstName
-            // 
-            this.dgv2customerfirstName.DataPropertyName = "customerfirstName";
-            this.dgv2customerfirstName.HeaderText = "ชื่อลูกค้า";
-            this.dgv2customerfirstName.Name = "dgv2customerfirstName";
-            this.dgv2customerfirstName.ReadOnly = true;
-            // 
-            // dgv2customerlastName
-            // 
-            this.dgv2customerlastName.DataPropertyName = "customerlastName";
-            this.dgv2customerlastName.HeaderText = "นามสกุลลูกค้า";
-            this.dgv2customerlastName.Name = "dgv2customerlastName";
-            this.dgv2customerlastName.ReadOnly = true;
-            // 
-            // dgv2roomTypeID
-            // 
-            this.dgv2roomTypeID.DataPropertyName = "roomTypeID";
-            this.dgv2roomTypeID.HeaderText = "รหัสประเภทห้องพัก";
-            this.dgv2roomTypeID.Name = "dgv2roomTypeID";
-            this.dgv2roomTypeID.ReadOnly = true;
-            this.dgv2roomTypeID.Visible = false;
-            // 
-            // dgv2employeefirstName
-            // 
-            this.dgv2employeefirstName.DataPropertyName = "employeefirstName";
-            this.dgv2employeefirstName.HeaderText = "ชื่อพนักงานทำรายการ";
-            this.dgv2employeefirstName.Name = "dgv2employeefirstName";
-            this.dgv2employeefirstName.ReadOnly = true;
-            // 
-            // dgv2employeelastName
-            // 
-            this.dgv2employeelastName.DataPropertyName = "employeelastName";
-            this.dgv2employeelastName.HeaderText = "นามสกุลพนักงานทำรายการ";
-            this.dgv2employeelastName.Name = "dgv2employeelastName";
-            this.dgv2employeelastName.ReadOnly = true;
-            // 
-            // dgv2status
-            // 
-            this.dgv2status.DataPropertyName = "status";
-            this.dgv2status.HeaderText = "สถานะของรายการ";
-            this.dgv2status.Name = "dgv2status";
-            this.dgv2status.ReadOnly = true;
-            this.dgv2status.Visible = false;
-            // 
-            // dgv2statusName
-            // 
-            this.dgv2statusName.DataPropertyName = "statusName";
-            this.dgv2statusName.HeaderText = "สถานะของรายการ";
-            this.dgv2statusName.Name = "dgv2statusName";
-            this.dgv2statusName.ReadOnly = true;
-            // 
-            // dgvroomID
-            // 
-            this.dgvroomID.DataPropertyName = "roomID";
-            this.dgvroomID.HeaderText = "roomID";
-            this.dgvroomID.Name = "dgvroomID";
-            this.dgvroomID.ReadOnly = true;
-            this.dgvroomID.Visible = false;
-            // 
-            // dgvdetail
-            // 
-            this.dgvdetail.DataPropertyName = "detail";
-            this.dgvdetail.HeaderText = "detail";
-            this.dgvdetail.Name = "dgvdetail";
-            this.dgvdetail.ReadOnly = true;
-            this.dgvdetail.Visible = false;
-            // 
-            // dgvroomTypeID
-            // 
-            this.dgvroomTypeID.DataPropertyName = "roomTypeID";
-            this.dgvroomTypeID.HeaderText = "roomTypeID";
-            this.dgvroomTypeID.Name = "dgvroomTypeID";
-            this.dgvroomTypeID.ReadOnly = true;
-            this.dgvroomTypeID.Visible = false;
-            // 
-            // dgvroomCode
-            // 
-            this.dgvroomCode.DataPropertyName = "roomCode";
-            this.dgvroomCode.HeaderText = "รหัสห้องพัก";
-            this.dgvroomCode.Name = "dgvroomCode";
-            this.dgvroomCode.ReadOnly = true;
-            // 
-            // dgvroomType
-            // 
-            this.dgvroomType.DataPropertyName = "roomType";
-            this.dgvroomType.HeaderText = "ประเภทห้องพัก";
-            this.dgvroomType.Name = "dgvroomType";
-            this.dgvroomType.ReadOnly = true;
-            // 
-            // dgvroomName
-            // 
-            this.dgvroomName.DataPropertyName = "roomName";
-            this.dgvroomName.HeaderText = "ชื่อห้องพัก";
-            this.dgvroomName.Name = "dgvroomName";
-            this.dgvroomName.ReadOnly = true;
-            // 
-            // dgvfloor
-            // 
-            this.dgvfloor.DataPropertyName = "floor";
-            this.dgvfloor.HeaderText = "ชั้น";
-            this.dgvfloor.Name = "dgvfloor";
-            this.dgvfloor.ReadOnly = true;
-            // 
-            // dgvbuilding
-            // 
-            this.dgvbuilding.DataPropertyName = "building";
-            this.dgvbuilding.HeaderText = "อาคาร";
-            this.dgvbuilding.Name = "dgvbuilding";
-            this.dgvbuilding.ReadOnly = true;
-            // 
-            // dgvremark
-            // 
-            this.dgvremark.DataPropertyName = "remark";
-            this.dgvremark.HeaderText = "หมายเหตุ";
-            this.dgvremark.Name = "dgvremark";
-            this.dgvremark.ReadOnly = true;
-            // 
-            // dgvstatus
-            // 
-            this.dgvstatus.DataPropertyName = "status";
-            this.dgvstatus.HeaderText = "สถานะห้องพัก";
-            this.dgvstatus.Name = "dgvstatus";
-            this.dgvstatus.ReadOnly = true;
             // 
             // reservationForm
             // 

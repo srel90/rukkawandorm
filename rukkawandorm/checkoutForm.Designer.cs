@@ -58,34 +58,35 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.btnsearchCustomer = new DevComponents.DotNetBar.ButtonX();
+            this.txtroomCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtcustomerCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label24 = new System.Windows.Forms.Label();
             this.btnsearchreservationtoday = new DevComponents.DotNetBar.ButtonX();
             this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
             this.txtreservationID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtcustomerID = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtroomCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtamount = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtfines = new DevComponents.Editors.DoubleInput();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtdiscount = new DevComponents.Editors.DoubleInput();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtfines = new DevComponents.Editors.DoubleInput();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtnightStay = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtnetAmount = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtcheckinoutStatus = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtcheckindate = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtcheckoutdate = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtprice = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtfines)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdiscount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtfines)).BeginInit();
             this.SuspendLayout();
             // 
             // dgv2statusName
@@ -372,6 +373,18 @@
             this.btnsearchCustomer.Text = "...";
             this.btnsearchCustomer.Click += new System.EventHandler(this.btnsearchCustomer_Click);
             // 
+            // txtroomCode
+            // 
+            // 
+            // 
+            // 
+            this.txtroomCode.Border.Class = "TextBoxBorder";
+            this.txtroomCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtroomCode.Location = new System.Drawing.Point(94, 3);
+            this.txtroomCode.Name = "txtroomCode";
+            this.txtroomCode.Size = new System.Drawing.Size(99, 20);
+            this.txtroomCode.TabIndex = 13;
+            // 
             // txtcustomerCode
             // 
             // 
@@ -450,18 +463,6 @@
             this.txtcustomerID.TabIndex = 56;
             this.txtcustomerID.Visible = false;
             // 
-            // txtroomCode
-            // 
-            // 
-            // 
-            // 
-            this.txtroomCode.Border.Class = "TextBoxBorder";
-            this.txtroomCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtroomCode.Location = new System.Drawing.Point(94, 3);
-            this.txtroomCode.Name = "txtroomCode";
-            this.txtroomCode.Size = new System.Drawing.Size(99, 20);
-            this.txtroomCode.TabIndex = 13;
-            // 
             // txtamount
             // 
             // 
@@ -507,14 +508,31 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ค่าใช้จ่าย";
             // 
-            // label2
+            // txtdiscount
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "ค่าปรับ";
+            // 
+            // 
+            // 
+            this.txtdiscount.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtdiscount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdiscount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtdiscount.Increment = 1D;
+            this.txtdiscount.Location = new System.Drawing.Point(243, 41);
+            this.txtdiscount.MinValue = 0D;
+            this.txtdiscount.Name = "txtdiscount";
+            this.txtdiscount.ShowUpDown = true;
+            this.txtdiscount.Size = new System.Drawing.Size(98, 20);
+            this.txtdiscount.TabIndex = 14;
+            this.txtdiscount.ValueChanged += new System.EventHandler(this.txtdiscount_ValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(182, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "ส่วนลด";
             // 
             // txtfines
             // 
@@ -533,40 +551,14 @@
             this.txtfines.TabIndex = 14;
             this.txtfines.ValueChanged += new System.EventHandler(this.txtfines_ValueChanged);
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(182, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "ส่วนลด";
-            // 
-            // txtdiscount
-            // 
-            // 
-            // 
-            // 
-            this.txtdiscount.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdiscount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdiscount.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtdiscount.Increment = 1D;
-            this.txtdiscount.Location = new System.Drawing.Point(243, 41);
-            this.txtdiscount.MinValue = 0D;
-            this.txtdiscount.Name = "txtdiscount";
-            this.txtdiscount.ShowUpDown = true;
-            this.txtdiscount.Size = new System.Drawing.Size(98, 20);
-            this.txtdiscount.TabIndex = 14;
-            this.txtdiscount.ValueChanged += new System.EventHandler(this.txtdiscount_ValueChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(182, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "จำนวนคืน";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "ค่าปรับ";
             // 
             // txtnightStay
             // 
@@ -583,15 +575,6 @@
             this.txtnightStay.Text = "0";
             this.txtnightStay.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(357, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "รวมเป็นเงินทั้งสิ้น";
-            // 
             // txtnetAmount
             // 
             this.txtnetAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -603,6 +586,24 @@
             this.txtnetAmount.TabIndex = 7;
             this.txtnetAmount.Text = "##.##";
             this.txtnetAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(357, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "รวมเป็นเงินทั้งสิ้น";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(182, 16);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "จำนวนคืน";
             // 
             // txtcheckinoutStatus
             // 
@@ -617,6 +618,7 @@
             this.txtcheckinoutStatus.Name = "txtcheckinoutStatus";
             this.txtcheckinoutStatus.Size = new System.Drawing.Size(72, 22);
             this.txtcheckinoutStatus.TabIndex = 57;
+            this.txtcheckinoutStatus.Visible = false;
             // 
             // txtcheckindate
             // 
@@ -631,6 +633,7 @@
             this.txtcheckindate.Name = "txtcheckindate";
             this.txtcheckindate.Size = new System.Drawing.Size(72, 22);
             this.txtcheckindate.TabIndex = 57;
+            this.txtcheckindate.Visible = false;
             // 
             // txtcheckoutdate
             // 
@@ -645,6 +648,22 @@
             this.txtcheckoutdate.Name = "txtcheckoutdate";
             this.txtcheckoutdate.Size = new System.Drawing.Size(72, 22);
             this.txtcheckoutdate.TabIndex = 57;
+            this.txtcheckoutdate.Visible = false;
+            // 
+            // txtprice
+            // 
+            // 
+            // 
+            // 
+            this.txtprice.Border.Class = "TextBoxBorder";
+            this.txtprice.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtprice.Enabled = false;
+            this.txtprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtprice.Location = new System.Drawing.Point(13, 401);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(46, 22);
+            this.txtprice.TabIndex = 56;
+            this.txtprice.Visible = false;
             // 
             // checkoutForm
             // 
@@ -658,6 +677,7 @@
             this.Controls.Add(this.txtcheckindate);
             this.Controls.Add(this.txtcheckinoutStatus);
             this.Controls.Add(this.txtreservationID);
+            this.Controls.Add(this.txtprice);
             this.Controls.Add(this.txtcustomerID);
             this.Name = "checkoutForm";
             this.Text = "คืนห้องพัก";
@@ -669,8 +689,8 @@
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtfines)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtdiscount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtfines)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -728,5 +748,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtcheckinoutStatus;
         private DevComponents.DotNetBar.Controls.TextBoxX txtcheckindate;
         private DevComponents.DotNetBar.Controls.TextBoxX txtcheckoutdate;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtprice;
     }
 }

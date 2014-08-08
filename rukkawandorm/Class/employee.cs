@@ -29,6 +29,8 @@ namespace rukkawandorm.Class
         public string password { get; set; }
         public string photo { get; set; }
         public bool status { get; set; }
+        public string statusName { get; set; }
+        public string employeeType { get; set; }
 
         private Database db;
         private DbCommand Dbcmd;
@@ -139,8 +141,12 @@ namespace rukkawandorm.Class
                         searchTermBits.Add("employee.username LIKE '%" + term + "%'");
                     }
                 }
-                str = "SELECT employee.*,IIF (employee.status = true , 'Active' , 'Inactive' ) AS statusName,employeeType.employeeType  FROM employee employee LEFT OUTER JOIN employeeType employeeType on employee.employeeTypeID=employeeType.employeeTypeID WHERE ";
-                str += String.Join<string>(" OR ", searchTermBits);
+                str = "SELECT employee.*,IIF (employee.status = true , 'Active' , 'Inactive' ) AS statusName,employeeType.employeeType  FROM employee employee LEFT OUTER JOIN employeeType employeeType on employee.employeeTypeID=employeeType.employeeTypeID ";
+                if (searchTermBits.Count != 0)
+                {
+                    str += " WHERE ";
+                    str += String.Join<string>(" OR ", searchTermBits);
+                }
                 Dbcmd = db.GetSqlStringCommand(str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;

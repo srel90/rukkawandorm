@@ -16,6 +16,7 @@ namespace rukkawandorm
         roomType clseroomType = new roomType();
         room clsroom = new room();
         revenue clsrevenue = new revenue();
+        customer clscustomer = new customer();
         searchCustomerForm searchCustomerForm = new searchCustomerForm();
         public checkoutForm()
         {
@@ -74,6 +75,7 @@ namespace rukkawandorm
             MessageBoxIcon.Information);
                     if (drprint == DialogResult.Yes)
                     {
+                        showreport();
                     }
                     return;
                 }
@@ -103,6 +105,7 @@ namespace rukkawandorm
                         if (clsreservation.updateReservationCheckout(Convert.ToInt32(txtreservationID.Text)))
                         {
                             MessageBox.Show("บันทึกการคืนห้องพักเรียบร้อยแล้ว");
+                            showreport();
                         }
                         else
                         {
@@ -130,6 +133,7 @@ namespace rukkawandorm
             {
                 txtreservationID.Text = dgv1.Rows[e.RowIndex].Cells["dgv2reservationID"].Value.ToString();
                 txtcheckinoutStatus.Text = dgv1.Rows[e.RowIndex].Cells["dgv2checkinoutStatus"].Value.ToString();
+                txtroomCode.Text = dgv1.Rows[e.RowIndex].Cells["dgv2roomCode"].Value.ToString();
                 //แสดงค่าใช้จ่าย
                 int reservationID = Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells["dgv2reservationID"].Value.ToString());
                 double amount = 0;
@@ -142,6 +146,7 @@ namespace rukkawandorm
                 txtcheckoutdate.Text = dgv1.Rows[e.RowIndex].Cells["dgv2checkoutDateTime"].Value.ToString();
                 int roomID = Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells["dgv2roomID"].Value.ToString());
                 double price = Convert.ToDouble(clsroom.selectRoomByID(roomID).Tables[0].Rows[0]["price"].ToString());
+                txtprice.Text = price.ToString();
                 int reservationNight = 0;
                 if (DateTime.Now>checkoutDateTime  )
                 {
@@ -175,6 +180,52 @@ namespace rukkawandorm
         private void txtdiscount_ValueChanged(object sender, EventArgs e)
         {
             txtnetAmount.Text = string.Format("{0:0.00}",((Convert.ToDouble(txtamount.Text) - txtdiscount.Value) + txtfines.Value));
+        }
+        private void showreport()
+        {
+            int customerID = Convert.ToInt32(txtcustomerID.Text);
+            DataTable dt_customer = clscustomer.selectCustomerByID(customerID).Tables[0];
+            DataTable dt = new DataTable();
+            dt.Columns.Add("no");
+            dt.Columns.Add("roomCode");
+            dt.Columns.Add("checkin");
+            dt.Columns.Add("checkout");
+            dt.Columns.Add("title");
+            dt.Columns.Add("name");
+            dt.Columns.Add("lastname");
+            dt.Columns.Add("address");
+            dt.Columns.Add("items1");
+            dt.Columns.Add("amount1");
+            dt.Columns.Add("price1");
+            dt.Columns.Add("items2");
+            dt.Columns.Add("price2");
+            dt.Columns.Add("items3");
+            dt.Columns.Add("price3");
+            dt.Columns.Add("total");
+            DataRow datarow = dt.NewRow();
+            datarow["no"] = String.Format("{0:00000}", Convert.ToInt32(txtreservationID.Text));
+            datarow["roomCode"] = txtroomCode.Text;
+            datarow["checkin"] = Convert.ToDateTime(txtcheckindate.Text);
+            datarow["checkout"] = Convert.ToDateTime(txtcheckoutdate.Text);
+            datarow["title"] = dt_customer.Rows[0]["title"].ToString();
+            datarow["name"] = dt_customer.Rows[0]["firstName"].ToString();
+            datarow["lastname"] = dt_customer.Rows[0]["lastName"].ToString();
+            datarow["address"] = dt_customer.Rows[0]["presentAddress"].ToString();
+            datarow["items1"] = "ค่าห้องพัก คืนละ " + txtprice.Text + "บาท";
+            datarow["amount1"] = Convert.ToInt32(txtnightStay.Text);
+            datarow["price1"] = Convert.ToDouble(txtamount.Text);
+            datarow["items2"] = "ส่วนลด";
+            datarow["price2"] = txtdiscount.Value;
+            datarow["items3"] = "ค่าปรับ";
+            datarow["price3"] = txtfines.Value;
+            datarow["total"] = Convert.ToDouble(txtnetAmount.Text);
+            dt.Rows.Add(datarow);
+
+            DataSet ds = new DataSet();
+            ds.Tables.Add(dt);
+            receiptForm receiptForm = new receiptForm();
+            receiptForm.rptviewer_show(ds, "receipt.rdlc", "ใบเสร็จรับเงิน/Receipt");
+            receiptForm.Show();
         }
     }
 }
