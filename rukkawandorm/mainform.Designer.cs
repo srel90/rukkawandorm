@@ -32,19 +32,30 @@
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonBar6 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnMenuHelp = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar5 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnMenuExit = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar4 = new DevComponents.DotNetBar.RibbonBar();
             this.reportItems = new DevComponents.DotNetBar.ComboBoxItem();
             this.btnReportEmployee = new DevComponents.Editors.ComboItem();
             this.btnReportCustomer = new DevComponents.Editors.ComboItem();
             this.btnReportRoom = new DevComponents.Editors.ComboItem();
             this.btnReportReservation = new DevComponents.Editors.ComboItem();
-            this.btnReportRoomStatus = new DevComponents.Editors.ComboItem();
             this.btnReportRevenue = new DevComponents.Editors.ComboItem();
             this.btnReport = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar3 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnMenuReservation = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuCheckIn = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuCheckOut = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnMenuEmployee = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuCustomer = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuRoom = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
+            this.btnMenuEmployeeType = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuCustomerType = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuRoomType = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
@@ -52,18 +63,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnMenuHelp = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuExit = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuReservation = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuCheckIn = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuCheckOut = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuEmployee = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuCustomer = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuRoom = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuEmployeeType = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuCustomerType = new DevComponents.DotNetBar.ButtonItem();
-            this.btnMenuRoomType = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -159,6 +158,24 @@
             this.ribbonBar6.TitleStyleMouseOver.Class = "";
             this.ribbonBar6.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // btnMenuHelp
+            // 
+            this.btnMenuHelp.Image = global::rukkawandorm.Properties.Resources.lightbulb32;
+            this.btnMenuHelp.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuHelp.Name = "btnMenuHelp";
+            this.btnMenuHelp.SubItemsExpandWidth = 14;
+            this.btnMenuHelp.Text = "ช่วยเหลือ";
+            this.btnMenuHelp.Click += new System.EventHandler(this.btnMenuHelp_Click);
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Image = global::rukkawandorm.Properties.Resources.info;
+            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.SubItemsExpandWidth = 14;
+            this.buttonItem2.Text = "เกี่ยวกับ";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
+            // 
             // ribbonBar5
             // 
             this.ribbonBar5.AutoOverflowEnabled = true;
@@ -193,6 +210,15 @@
             // 
             this.ribbonBar5.TitleStyleMouseOver.Class = "";
             this.ribbonBar5.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnMenuExit
+            // 
+            this.btnMenuExit.Image = global::rukkawandorm.Properties.Resources.on_off;
+            this.btnMenuExit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuExit.Name = "btnMenuExit";
+            this.btnMenuExit.SubItemsExpandWidth = 14;
+            this.btnMenuExit.Text = "จบการทำงาน";
+            this.btnMenuExit.Click += new System.EventHandler(this.btnMenuExit_Click);
             // 
             // ribbonBar4
             // 
@@ -239,7 +265,6 @@
             this.btnReportCustomer,
             this.btnReportRoom,
             this.btnReportReservation,
-            this.btnReportRoomStatus,
             this.btnReportRevenue});
             this.reportItems.Name = "reportItems";
             // 
@@ -258,10 +283,6 @@
             // btnReportReservation
             // 
             this.btnReportReservation.Text = "รายการจองห้องพัก";
-            // 
-            // btnReportRoomStatus
-            // 
-            this.btnReportRoomStatus.Text = "รายงานสถานะห้องพัก";
             // 
             // btnReportRevenue
             // 
@@ -311,6 +332,33 @@
             this.ribbonBar3.TitleStyleMouseOver.Class = "";
             this.ribbonBar3.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // btnMenuReservation
+            // 
+            this.btnMenuReservation.Image = global::rukkawandorm.Properties.Resources.notecheck32;
+            this.btnMenuReservation.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuReservation.Name = "btnMenuReservation";
+            this.btnMenuReservation.SubItemsExpandWidth = 14;
+            this.btnMenuReservation.Text = "จองห้องพัก";
+            this.btnMenuReservation.Click += new System.EventHandler(this.btnMenuReservation_Click);
+            // 
+            // btnMenuCheckIn
+            // 
+            this.btnMenuCheckIn.Image = global::rukkawandorm.Properties.Resources.key;
+            this.btnMenuCheckIn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuCheckIn.Name = "btnMenuCheckIn";
+            this.btnMenuCheckIn.SubItemsExpandWidth = 14;
+            this.btnMenuCheckIn.Text = "บักทึกการเข้าพัก";
+            this.btnMenuCheckIn.Click += new System.EventHandler(this.btnMenuCheckIn_Click);
+            // 
+            // btnMenuCheckOut
+            // 
+            this.btnMenuCheckOut.Image = global::rukkawandorm.Properties.Resources._149;
+            this.btnMenuCheckOut.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuCheckOut.Name = "btnMenuCheckOut";
+            this.btnMenuCheckOut.SubItemsExpandWidth = 14;
+            this.btnMenuCheckOut.Text = "บันทึกการคืนห้อง";
+            this.btnMenuCheckOut.Click += new System.EventHandler(this.btnMenuCheckOut_Click);
+            // 
             // ribbonBar2
             // 
             this.ribbonBar2.AutoOverflowEnabled = true;
@@ -348,6 +396,33 @@
             this.ribbonBar2.TitleStyleMouseOver.Class = "";
             this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // btnMenuEmployee
+            // 
+            this.btnMenuEmployee.Image = global::rukkawandorm.Properties.Resources.user32;
+            this.btnMenuEmployee.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuEmployee.Name = "btnMenuEmployee";
+            this.btnMenuEmployee.SubItemsExpandWidth = 14;
+            this.btnMenuEmployee.Text = "ข้อมูลพนักงาน";
+            this.btnMenuEmployee.Click += new System.EventHandler(this.btnMenuEmployee_Click);
+            // 
+            // btnMenuCustomer
+            // 
+            this.btnMenuCustomer.Image = global::rukkawandorm.Properties.Resources.users32;
+            this.btnMenuCustomer.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuCustomer.Name = "btnMenuCustomer";
+            this.btnMenuCustomer.SubItemsExpandWidth = 14;
+            this.btnMenuCustomer.Text = "ข้อมูลลูกค้า";
+            this.btnMenuCustomer.Click += new System.EventHandler(this.btnMenuCustomer_Click);
+            // 
+            // btnMenuRoom
+            // 
+            this.btnMenuRoom.Image = global::rukkawandorm.Properties.Resources.home;
+            this.btnMenuRoom.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuRoom.Name = "btnMenuRoom";
+            this.btnMenuRoom.SubItemsExpandWidth = 14;
+            this.btnMenuRoom.Text = "ข้อมูลห้องพัก";
+            this.btnMenuRoom.Click += new System.EventHandler(this.btnMenuRoom_Click);
+            // 
             // ribbonBar1
             // 
             this.ribbonBar1.AutoOverflowEnabled = true;
@@ -384,6 +459,33 @@
             // 
             this.ribbonBar1.TitleStyleMouseOver.Class = "";
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnMenuEmployeeType
+            // 
+            this.btnMenuEmployeeType.Image = global::rukkawandorm.Properties.Resources.users;
+            this.btnMenuEmployeeType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuEmployeeType.Name = "btnMenuEmployeeType";
+            this.btnMenuEmployeeType.SubItemsExpandWidth = 14;
+            this.btnMenuEmployeeType.Text = "ประเภทพนักงาน";
+            this.btnMenuEmployeeType.Click += new System.EventHandler(this.btnMenuEmployeeType_Click);
+            // 
+            // btnMenuCustomerType
+            // 
+            this.btnMenuCustomerType.Image = global::rukkawandorm.Properties.Resources.users;
+            this.btnMenuCustomerType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuCustomerType.Name = "btnMenuCustomerType";
+            this.btnMenuCustomerType.SubItemsExpandWidth = 14;
+            this.btnMenuCustomerType.Text = "ประเภทลูกค้า";
+            this.btnMenuCustomerType.Click += new System.EventHandler(this.btnMenuCustomerType_Click);
+            // 
+            // btnMenuRoomType
+            // 
+            this.btnMenuRoomType.Image = global::rukkawandorm.Properties.Resources.home;
+            this.btnMenuRoomType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuRoomType.Name = "btnMenuRoomType";
+            this.btnMenuRoomType.SubItemsExpandWidth = 14;
+            this.btnMenuRoomType.Text = "ประเภทห้องพัก";
+            this.btnMenuRoomType.Click += new System.EventHandler(this.btnMenuRoomType_Click);
             // 
             // ribbonTabItem1
             // 
@@ -428,114 +530,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnMenuHelp
-            // 
-            this.btnMenuHelp.Image = global::rukkawandorm.Properties.Resources.lightbulb32;
-            this.btnMenuHelp.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuHelp.Name = "btnMenuHelp";
-            this.btnMenuHelp.SubItemsExpandWidth = 14;
-            this.btnMenuHelp.Text = "ช่วยเหลือ";
-            this.btnMenuHelp.Click += new System.EventHandler(this.btnMenuHelp_Click);
-            // 
-            // buttonItem2
-            // 
-            this.buttonItem2.Image = global::rukkawandorm.Properties.Resources.info;
-            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.SubItemsExpandWidth = 14;
-            this.buttonItem2.Text = "เกี่ยวกับ";
-            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
-            // 
-            // btnMenuExit
-            // 
-            this.btnMenuExit.Image = global::rukkawandorm.Properties.Resources.on_off;
-            this.btnMenuExit.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuExit.Name = "btnMenuExit";
-            this.btnMenuExit.SubItemsExpandWidth = 14;
-            this.btnMenuExit.Text = "จบการทำงาน";
-            this.btnMenuExit.Click += new System.EventHandler(this.btnMenuExit_Click);
-            // 
-            // btnMenuReservation
-            // 
-            this.btnMenuReservation.Image = global::rukkawandorm.Properties.Resources.notecheck32;
-            this.btnMenuReservation.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuReservation.Name = "btnMenuReservation";
-            this.btnMenuReservation.SubItemsExpandWidth = 14;
-            this.btnMenuReservation.Text = "จองห้องพัก";
-            this.btnMenuReservation.Click += new System.EventHandler(this.btnMenuReservation_Click);
-            // 
-            // btnMenuCheckIn
-            // 
-            this.btnMenuCheckIn.Image = global::rukkawandorm.Properties.Resources.key;
-            this.btnMenuCheckIn.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuCheckIn.Name = "btnMenuCheckIn";
-            this.btnMenuCheckIn.SubItemsExpandWidth = 14;
-            this.btnMenuCheckIn.Text = "บักทึกการเข้าพัก";
-            this.btnMenuCheckIn.Click += new System.EventHandler(this.btnMenuCheckIn_Click);
-            // 
-            // btnMenuCheckOut
-            // 
-            this.btnMenuCheckOut.Image = global::rukkawandorm.Properties.Resources._149;
-            this.btnMenuCheckOut.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuCheckOut.Name = "btnMenuCheckOut";
-            this.btnMenuCheckOut.SubItemsExpandWidth = 14;
-            this.btnMenuCheckOut.Text = "บันทึกการคืนห้อง";
-            this.btnMenuCheckOut.Click += new System.EventHandler(this.btnMenuCheckOut_Click);
-            // 
-            // btnMenuEmployee
-            // 
-            this.btnMenuEmployee.Image = global::rukkawandorm.Properties.Resources.user32;
-            this.btnMenuEmployee.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuEmployee.Name = "btnMenuEmployee";
-            this.btnMenuEmployee.SubItemsExpandWidth = 14;
-            this.btnMenuEmployee.Text = "ข้อมูลพนักงาน";
-            this.btnMenuEmployee.Click += new System.EventHandler(this.btnMenuEmployee_Click);
-            // 
-            // btnMenuCustomer
-            // 
-            this.btnMenuCustomer.Image = global::rukkawandorm.Properties.Resources.users32;
-            this.btnMenuCustomer.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuCustomer.Name = "btnMenuCustomer";
-            this.btnMenuCustomer.SubItemsExpandWidth = 14;
-            this.btnMenuCustomer.Text = "ข้อมูลลูกค้า";
-            this.btnMenuCustomer.Click += new System.EventHandler(this.btnMenuCustomer_Click);
-            // 
-            // btnMenuRoom
-            // 
-            this.btnMenuRoom.Image = global::rukkawandorm.Properties.Resources.home;
-            this.btnMenuRoom.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuRoom.Name = "btnMenuRoom";
-            this.btnMenuRoom.SubItemsExpandWidth = 14;
-            this.btnMenuRoom.Text = "ข้อมูลห้องพัก";
-            this.btnMenuRoom.Click += new System.EventHandler(this.btnMenuRoom_Click);
-            // 
-            // btnMenuEmployeeType
-            // 
-            this.btnMenuEmployeeType.Image = global::rukkawandorm.Properties.Resources.users;
-            this.btnMenuEmployeeType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuEmployeeType.Name = "btnMenuEmployeeType";
-            this.btnMenuEmployeeType.SubItemsExpandWidth = 14;
-            this.btnMenuEmployeeType.Text = "ประเภทพนักงาน";
-            this.btnMenuEmployeeType.Click += new System.EventHandler(this.btnMenuEmployeeType_Click);
-            // 
-            // btnMenuCustomerType
-            // 
-            this.btnMenuCustomerType.Image = global::rukkawandorm.Properties.Resources.users;
-            this.btnMenuCustomerType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuCustomerType.Name = "btnMenuCustomerType";
-            this.btnMenuCustomerType.SubItemsExpandWidth = 14;
-            this.btnMenuCustomerType.Text = "ประเภทลูกค้า";
-            this.btnMenuCustomerType.Click += new System.EventHandler(this.btnMenuCustomerType_Click);
-            // 
-            // btnMenuRoomType
-            // 
-            this.btnMenuRoomType.Image = global::rukkawandorm.Properties.Resources.home;
-            this.btnMenuRoomType.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuRoomType.Name = "btnMenuRoomType";
-            this.btnMenuRoomType.SubItemsExpandWidth = 14;
-            this.btnMenuRoomType.Text = "ประเภทห้องพัก";
-            this.btnMenuRoomType.Click += new System.EventHandler(this.btnMenuRoomType_Click);
             // 
             // mainform
             // 
@@ -588,7 +582,6 @@
         private DevComponents.Editors.ComboItem btnReportCustomer;
         private DevComponents.Editors.ComboItem btnReportRoom;
         private DevComponents.Editors.ComboItem btnReportReservation;
-        private DevComponents.Editors.ComboItem btnReportRoomStatus;
         private DevComponents.Editors.ComboItem btnReportRevenue;
         private DevComponents.DotNetBar.RibbonBar ribbonBar5;
         private DevComponents.DotNetBar.ButtonItem btnMenuExit;

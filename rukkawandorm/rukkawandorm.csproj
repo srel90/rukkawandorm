@@ -98,6 +98,12 @@
     <Compile Include="customerForm.Designer.cs">
       <DependentUpon>customerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="customerReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customerReportForm.Designer.cs">
+      <DependentUpon>customerReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="employeeReportForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,11 +128,29 @@
     <Compile Include="reservationForm.Designer.cs">
       <DependentUpon>reservationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="reservationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reservationReportForm.Designer.cs">
+      <DependentUpon>reservationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="revenueReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="revenueReportForm.Designer.cs">
+      <DependentUpon>revenueReportForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="roomForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="roomForm.Designer.cs">
       <DependentUpon>roomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="roomReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="roomReportForm.Designer.cs">
+      <DependentUpon>roomReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="roomTypeForm.cs">
       <SubType>Form</SubType>
@@ -166,6 +190,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rukkawandormDataSet.cs">
+      <DependentUpon>rukkawandormDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rukkawandormDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -189,14 +217,31 @@
     <EmbeddedResource Include="customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="customerReportForm.resx">
+      <DependentUpon>customerReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="employeeReportForm.resx">
       <DependentUpon>employeeReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="receiptForm.resx">
       <DependentUpon>receiptForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\employeeReport.rdlc" />
+    <EmbeddedResource Include="Reports\customerReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\employeeReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\receipt.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\reservationReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\revenueReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\roomReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="reportViewer.resx">
@@ -205,8 +250,17 @@
     <EmbeddedResource Include="reservationForm.resx">
       <DependentUpon>reservationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="reservationReportForm.resx">
+      <DependentUpon>reservationReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="revenueReportForm.resx">
+      <DependentUpon>revenueReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="roomForm.resx">
       <DependentUpon>roomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="roomReportForm.resx">
+      <DependentUpon>roomReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="roomTypeForm.resx">
       <DependentUpon>roomTypeForm.cs</DependentUpon>
@@ -242,8 +296,6 @@
     <None Include="help.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Properties\DataSources\employeeReportForm.datasource" />
-    <None Include="Properties\DataSources\rukkawandorm.Class.employee.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

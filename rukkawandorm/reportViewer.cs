@@ -22,6 +22,7 @@ namespace rukkawandorm
         {
 
             this.reportViewer1.RefreshReport();
+            
         }
         public void rptviewer_show(DataSet ds, string rptname, string title)
         {

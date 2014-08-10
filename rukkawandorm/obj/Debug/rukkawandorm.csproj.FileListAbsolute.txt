@@ -67,3 +67,12 @@ D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\help.pdf
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.aboutForm.resources
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.employeeReportForm.resources
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.reportViewer.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\employeeReport.rdlc
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.customerReportForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\customerReport.rdlc
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.roomReportForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\roomReport.rdlc
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.reservationReportForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\reservationReport.rdlc
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\revenueReport.rdlc
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.revenueReportForm.resources

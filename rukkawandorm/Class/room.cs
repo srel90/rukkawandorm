@@ -104,8 +104,12 @@ namespace rukkawandorm.Class
                         searchTermBits.Add("room.remark LIKE '%" + term + "%'");
                     }
                 }
-                str = "SELECT room.*,roomType.roomType  FROM room room LEFT OUTER JOIN roomType roomType on room.roomTypeID=roomType.roomTypeID WHERE ";
-                str += string.Join(" OR ", searchTermBits.ToArray(typeof(string)) as string[]);
+                str = "SELECT room.*,roomType.roomType,roomType.price  FROM room room LEFT OUTER JOIN roomType roomType on room.roomTypeID=roomType.roomTypeID ";
+                if (searchTermBits.Count != 0)
+                {
+                    str += " WHERE ";
+                    str += string.Join(" OR ", searchTermBits.ToArray(typeof(string)) as string[]);
+                }
                 Dbcmd = db.GetSqlStringCommand(str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;

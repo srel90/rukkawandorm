@@ -77,7 +77,7 @@ namespace rukkawandorm.Class
 
                 Dbcmd = db.GetSqlStringCommand(str);
                 ds = db.ExecuteDataSet(Dbcmd);
-                if (!ds.Tables[0].Rows[0].Equals(string.Empty))
+                if (ds.Tables[0].Rows.Count!=0)
                 {
                     ret = Convert.ToInt32(ds.Tables[0].Rows[0]["lastID"].ToString());
                 }
@@ -93,7 +93,7 @@ namespace rukkawandorm.Class
 
             try
             {
-                str = "SELECT *,IIF (status = true , 'Active' , 'Inactive' ) AS statusName  FROM employee;";
+                str = "SELECT employee.*,IIF (employee.status = true , 'Active' , 'Inactive' ) AS statusName,employeeType.employeeType  FROM employee employee LEFT OUTER JOIN employeeType employeeType on employee.employeeTypeID=employeeType.employeeTypeID";
                 Dbcmd = db.GetSqlStringCommand(str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;
@@ -108,7 +108,7 @@ namespace rukkawandorm.Class
 
             try
             {
-                str = "SELECT *,IIF (status = true , 'Active' , 'Inactive' ) AS statusName  FROM employee WHERE employeeID=@employeeID;";
+                str = "SELECT employee.*,IIF (employee.status = true , 'Active' , 'Inactive' ) AS statusName,employeeType.employeeType  FROM employee employee LEFT OUTER JOIN employeeType employeeType on employee.employeeTypeID=employeeType.employeeTypeID WHERE employee.employeeID=@employeeID;";
                 Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@employeeID", DbType.Int32, employeeID);
                 ds = db.ExecuteDataSet(Dbcmd);

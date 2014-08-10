@@ -70,6 +70,23 @@ namespace rukkawandorm.Class
                 throw new Exception(ex.Message);
             }
         }
+        public DataSet selectAllRevenue(DateTime datefrom, DateTime dateto)
+        {
+
+            try
+            {
+                str = "SELECT *,IIF (status = true , 'Active' , 'Inactive' ) AS statusName  FROM revenue where revenueDateTime between @datefrom and @dateto;";
+                Dbcmd = db.GetSqlStringCommand(str);
+                db.AddInParameter(Dbcmd, "@datefrom", DbType.String, datefrom);
+                db.AddInParameter(Dbcmd, "@dateto", DbType.String, dateto);
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public DataSet selectRevenueByID(int revenueID)
         {
 

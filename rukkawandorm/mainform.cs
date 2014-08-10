@@ -23,6 +23,10 @@ namespace rukkawandorm
         checkoutForm checkoutForm;
         aboutForm aboutForm;
         employeeReportForm employeeReportForm;
+        customerReportForm customerReportForm;
+        roomReportForm roomReportForm;
+        reservationReportForm reservationReportForm;
+        revenueReportForm revenueReportForm;
 
         public mainform()
         {
@@ -138,6 +142,14 @@ namespace rukkawandorm
             switch (reportItems.SelectedIndex)
             {
                 case 0: DisplayForm<employeeReportForm>(ref employeeReportForm);
+                    break;
+                case 1: DisplayForm<customerReportForm>(ref customerReportForm);
+                    break;
+                case 2: DisplayForm<roomReportForm>(ref roomReportForm);
+                    break;
+                case 3: DisplayForm<reservationReportForm>(ref reservationReportForm);
+                    break;
+                case 4: DisplayForm<revenueReportForm>(ref revenueReportForm);
                     break;
             }
         }
