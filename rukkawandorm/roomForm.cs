@@ -28,7 +28,7 @@ namespace rukkawandorm
             DataSet ds = clsroom.selectAllRoom();
             dgv1.DataSource = ds.Tables[0];
 
-            DataSet dsroomType = clseroomType.selectAllRoomType();
+            DataSet dsroomType = clseroomType.selectAllActiveRoomType();
             txtroomTypeID.DataSource = dsroomType.Tables[0];
             txtroomTypeID.DisplayMember = "roomType";
             txtroomTypeID.ValueMember = "roomTypeID";

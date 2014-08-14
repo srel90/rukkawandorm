@@ -29,7 +29,7 @@ namespace rukkawandorm
             DataSet dsemployee = clsemployee.selectAllEmployee();
             dgv1.DataSource = dsemployee.Tables[0];
 
-            DataSet dsemployeeType = clsemployeeType.selectAllEmployeeType();
+            DataSet dsemployeeType = clsemployeeType.selectAllActiveEmployeeType();
             txtemployeeTypeID.DataSource = dsemployeeType.Tables[0];
             txtemployeeTypeID.DisplayMember = "employeeType";
             txtemployeeTypeID.ValueMember = "employeeTypeID";

@@ -29,7 +29,7 @@ namespace rukkawandorm
             DataSet dscustomer = clscustomer.selectAllCustomer();
             dgv1.DataSource = dscustomer.Tables[0];
 
-            DataSet dscustomerType = clscustomerType.selectAllCustomerType();
+            DataSet dscustomerType = clscustomerType.selectAllActiveCustomerType();
             txtcustomerTypeID.DataSource = dscustomerType.Tables[0];
             txtcustomerTypeID.DisplayMember = "customerType";
             txtcustomerTypeID.ValueMember = "customerTypeID";

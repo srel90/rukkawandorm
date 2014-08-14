@@ -12,7 +12,6 @@ namespace rukkawandorm
 {
     public partial class login : Form
     {
-        public string status { get; set; }
         public login()
         {
             InitializeComponent();
@@ -52,8 +51,9 @@ namespace rukkawandorm
                 {
                     this.Hide();
                     DataTable dt=employee.selectEmployeeByID(Convert.ToInt16(ret)).Tables[0];
-                    this.status=dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["LastName"].ToString();
                     module.employeeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
+                    module.employeeTypeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
+                    module.employeeFullName = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["LastName"].ToString();
                 }
                 else
                 {
@@ -68,6 +68,49 @@ namespace rukkawandorm
         private void login_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void txtusername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txtpassword.Focus();
+            }
+        }
+
+        private void txtpassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (txtusername.Text.Equals(string.Empty) || txtpassword.Text.Equals(""))
+                {
+                    label3.Text = "กรุณากรอก ชื่อผู้ใช้ และ รหัสผ่าน";
+
+                }
+                else
+                {
+                    employee employee = new employee();
+                    employee.username = txtusername.Text;
+                    employee.password = txtpassword.Text;
+                    string ret = employee.checkEmployee();
+                    if (!ret.Equals("false"))
+                    {
+                        this.Hide();
+                        DataTable dt = employee.selectEmployeeByID(Convert.ToInt16(ret)).Tables[0];
+                        module.employeeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
+                        module.employeeTypeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
+                        module.employeeFullName = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["LastName"].ToString();
+                    }
+                    else
+                    {
+                        label3.Text = "ชื่อผู้ใช้ หรือ รหัสผ่าน ไม่ถูกต้อง";
+                        txtusername.Focus();
+                        txtusername.SelectionStart = 0;
+                        txtusername.SelectionLength = txtusername.TextLength;
+                    }
+                }
+
+            }
         }
     }
 }

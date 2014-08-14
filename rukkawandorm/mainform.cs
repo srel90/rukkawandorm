@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using rukkawandorm.Class;
 namespace rukkawandorm
 {
     public partial class mainform : DevComponents.DotNetBar.Office2007RibbonForm
@@ -58,7 +58,13 @@ namespace rukkawandorm
         {
             login login = new login();
             login.ShowDialog();
-            setstatusbar(login.status);
+            setstatusbar(module.employeeFullName);
+            if (module.employeeTypeID == 2)
+            {
+                btnMenuEmployeeType.Visible = false;
+                btnMenuEmployee.Visible = false;
+            }
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

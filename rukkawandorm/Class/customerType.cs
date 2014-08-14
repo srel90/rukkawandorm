@@ -61,6 +61,21 @@ namespace rukkawandorm.Class
                 throw new Exception(ex.Message);
             }
         }
+        public DataSet selectAllActiveCustomerType()
+        {
+
+            try
+            {
+                str = "SELECT *,IIF (status = true , 'Active' , 'Inactive' ) AS statusName  FROM customerType where status=true;";
+                Dbcmd = db.GetSqlStringCommand(str);
+                ds = db.ExecuteDataSet(Dbcmd);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
         public DataSet selectCustomerTypeByID(int customerTypeID)
         {
 
