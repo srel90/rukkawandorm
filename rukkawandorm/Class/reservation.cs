@@ -21,6 +21,7 @@ namespace rukkawandorm.Class
         public int reservationNight { get; set; }
         public int checkinoutStatus { get; set; }
         public bool reservationStatus { get; set; }
+        public Double pledge { get; set; }//เงินมัดจำ
         public bool status { get; set; }
 
         private Database db;
@@ -267,7 +268,7 @@ namespace rukkawandorm.Class
         {
             try
             {
-                str = "INSERT INTO reservation (customerID,employeeID,roomID,checkinDateTime,checkoutDateTime,reservationDateTime,reservationNight,checkinoutStatus,reservationStatus,status)VALUES(@customerID,@employeeID,@roomID,@checkinDateTime,@checkoutDateTime,@reservationDateTime,@reservationNight,@checkinoutStatus,@reservationStatus,@status);";
+                str = "INSERT INTO reservation (customerID,employeeID,roomID,checkinDateTime,checkoutDateTime,reservationDateTime,reservationNight,checkinoutStatus,reservationStatus,pledge,status)VALUES(@customerID,@employeeID,@roomID,@checkinDateTime,@checkoutDateTime,@reservationDateTime,@reservationNight,@checkinoutStatus,@reservationStatus,@pledge,@status);";
                 Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@customerID", DbType.Int32, customerID);
                 db.AddInParameter(Dbcmd, "@employeeID", DbType.Int32, employeeID);
@@ -278,6 +279,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@reservationNight", DbType.Int32, reservationNight);
                 db.AddInParameter(Dbcmd, "@checkinoutStatus", DbType.Int32, checkinoutStatus);
                 db.AddInParameter(Dbcmd, "@reservationStatus", DbType.Boolean, reservationStatus);
+                db.AddInParameter(Dbcmd, "@pledge", DbType.Double, pledge);
                 db.AddInParameter(Dbcmd, "@status", DbType.Boolean, status);
                 db.ExecuteNonQuery(Dbcmd);
                 return true;
@@ -291,7 +293,7 @@ namespace rukkawandorm.Class
         {
             try
             {
-                str = "UPDATE reservation SET customerID=@customerID,employeeID=@employeeID,roomID=@roomID,checkinDateTime=@checkinDateTime,checkoutDateTime=@checkoutDateTime,reservationDateTime=@reservationDateTime,reservationNight=@reservationNight,checkinoutStatus=@checkinoutStatus,reservationStatus=@reservationStatus,status=@status WHERE reservationID=@reservationID;";
+                str = "UPDATE reservation SET customerID=@customerID,employeeID=@employeeID,roomID=@roomID,checkinDateTime=@checkinDateTime,checkoutDateTime=@checkoutDateTime,reservationDateTime=@reservationDateTime,reservationNight=@reservationNight,checkinoutStatus=@checkinoutStatus,reservationStatus=@reservationStatus,pledge=@pledge,status=@status WHERE reservationID=@reservationID;";
                 Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@customerID", DbType.Int32, customerID);
                 db.AddInParameter(Dbcmd, "@employeeID", DbType.Int32, employeeID);
@@ -302,6 +304,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@reservationNight", DbType.Int32, reservationNight);
                 db.AddInParameter(Dbcmd, "@checkinoutStatus", DbType.Int32, checkinoutStatus);
                 db.AddInParameter(Dbcmd, "@reservationStatus", DbType.Boolean, reservationStatus);
+                db.AddInParameter(Dbcmd, "@pledge", DbType.Double, pledge);
                 db.AddInParameter(Dbcmd, "@status", DbType.Boolean, status);
                 db.AddInParameter(Dbcmd, "@reservationID", DbType.Int32, reservationID);
                 db.ExecuteNonQuery(Dbcmd);

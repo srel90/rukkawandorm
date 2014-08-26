@@ -163,7 +163,8 @@ namespace rukkawandorm
                 discount=txtdiscount.Value;
                 fines=txtfines.Value;
                 netAmount = (amount - discount) + fines;
-                txtnetAmount.Text = string.Format("{0:0.00}", netAmount); 
+                txtnetAmount.Text = string.Format("{0:0.00}", netAmount);
+                txtpledge.Value = Convert.ToDouble(dgv1.Rows[e.RowIndex].Cells["dgv2pledge"].Value.ToString());
             }
         }
 

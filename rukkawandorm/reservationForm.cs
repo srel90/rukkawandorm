@@ -118,6 +118,8 @@ namespace rukkawandorm
         {
             module.ClearControl(groupBox3);
             module.ClearControl(groupBox4);
+            txtpledge.Value = 0;
+            txttotalnight.Text = "0";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -185,6 +187,7 @@ namespace rukkawandorm
             clsreservation.checkoutDateTime = Convert.ToDateTime(dateto.Text);
             clsreservation.reservationDateTime = DateTime.Now;
             clsreservation.reservationNight = Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays);
+            clsreservation.pledge = txtpledge.Value;
             clsreservation.checkinoutStatus = 0;   
             if (rdoreservationStatus1.Checked == true)
             {
@@ -261,6 +264,8 @@ namespace rukkawandorm
                 txtstatus.Text = dgv1.Rows[e.RowIndex].Cells["dgvstatus"].Value.ToString();
                 datefrom.Text = txtdatefrom.Value.ToString();
                 dateto.Text = txtdateto.Value.ToString();
+                txttotalnight.Text= Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays).ToString();
+                txtpledge.Value= (Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays))*Convert.ToDouble(clseroomType.selectRoomTypeByID(Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells["dgvroomTypeID"].Value.ToString())).Tables[0].Rows[0]["price"].ToString());
                 
             }
         }
@@ -324,6 +329,8 @@ namespace rukkawandorm
                 {
                     rdostatus2.Checked = true;
                 }
+                txttotalnight.Text = dgv2.Rows[e.RowIndex].Cells["dgv2reservationNight"].Value.ToString();
+                txtpledge.Value = Convert.ToDouble(dgv2.Rows[e.RowIndex].Cells["dgv2pledge"].Value.ToString());
             }
         }
 
