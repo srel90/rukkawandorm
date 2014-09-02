@@ -144,7 +144,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@presentAddress", DbType.String, presentAddress);
                 db.AddInParameter(Dbcmd, "@permanentAddress", DbType.String, permanentAddress);
                 db.AddInParameter(Dbcmd, "@idCard", DbType.String, idCard);
-                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString());
+                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString("yyyy-MM-dd"));
                 db.AddInParameter(Dbcmd, "@gender", DbType.Int32, gender);
                 db.AddInParameter(Dbcmd, "@level", DbType.String, level);
                 db.AddInParameter(Dbcmd, "@email", DbType.String, email);
@@ -176,7 +176,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@presentAddress", DbType.String, presentAddress);
                 db.AddInParameter(Dbcmd, "@permanentAddress", DbType.String, permanentAddress);
                 db.AddInParameter(Dbcmd, "@idCard", DbType.String, idCard);
-                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString());
+                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString("yyyy-MM-dd"));
                 db.AddInParameter(Dbcmd, "@gender", DbType.Int32, gender);
                 db.AddInParameter(Dbcmd, "@level", DbType.String, level);
                 db.AddInParameter(Dbcmd, "@email", DbType.String, email);

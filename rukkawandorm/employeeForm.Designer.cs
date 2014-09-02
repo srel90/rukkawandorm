@@ -33,25 +33,6 @@
             this.txtKeyword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.dgvemployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvemployeeTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvemployeeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvemployeeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvidCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvtitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvdob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvdepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvposition = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvaddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvpassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvphoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvstatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgvstatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtemployeeID = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -98,6 +79,25 @@
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
+            this.dgvemployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvemployeeTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvemployeeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvemployeeType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvidCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvtitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvfirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvlastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvdob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvdepartment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvposition = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvaddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvpassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvphoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvstatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvstatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -192,144 +192,6 @@
             this.dgv1.TabIndex = 2;
             this.dgv1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv1_CellMouseClick);
             this.dgv1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv1_DataBindingComplete);
-            // 
-            // dgvemployeeID
-            // 
-            this.dgvemployeeID.DataPropertyName = "employeeID";
-            this.dgvemployeeID.HeaderText = "employeeID";
-            this.dgvemployeeID.Name = "dgvemployeeID";
-            this.dgvemployeeID.ReadOnly = true;
-            this.dgvemployeeID.Visible = false;
-            // 
-            // dgvemployeeTypeID
-            // 
-            this.dgvemployeeTypeID.DataPropertyName = "employeeTypeID";
-            this.dgvemployeeTypeID.HeaderText = "employeeTypeID";
-            this.dgvemployeeTypeID.Name = "dgvemployeeTypeID";
-            this.dgvemployeeTypeID.ReadOnly = true;
-            this.dgvemployeeTypeID.Visible = false;
-            // 
-            // dgvemployeeCode
-            // 
-            this.dgvemployeeCode.DataPropertyName = "employeeCode";
-            this.dgvemployeeCode.HeaderText = "รหัสพนักงาน";
-            this.dgvemployeeCode.Name = "dgvemployeeCode";
-            this.dgvemployeeCode.ReadOnly = true;
-            // 
-            // dgvemployeeType
-            // 
-            this.dgvemployeeType.DataPropertyName = "employeeType";
-            this.dgvemployeeType.HeaderText = "ประเภทพนักงาน";
-            this.dgvemployeeType.Name = "dgvemployeeType";
-            this.dgvemployeeType.ReadOnly = true;
-            // 
-            // dgvidCard
-            // 
-            this.dgvidCard.DataPropertyName = "idCard";
-            this.dgvidCard.HeaderText = "เลขประจำตัวประชาชน";
-            this.dgvidCard.Name = "dgvidCard";
-            this.dgvidCard.ReadOnly = true;
-            // 
-            // dgvtitle
-            // 
-            this.dgvtitle.DataPropertyName = "title";
-            this.dgvtitle.HeaderText = "คำนำหน้า";
-            this.dgvtitle.Name = "dgvtitle";
-            this.dgvtitle.ReadOnly = true;
-            // 
-            // dgvfirstName
-            // 
-            this.dgvfirstName.DataPropertyName = "firstName";
-            this.dgvfirstName.HeaderText = "ชื่อ";
-            this.dgvfirstName.Name = "dgvfirstName";
-            this.dgvfirstName.ReadOnly = true;
-            // 
-            // dgvlastName
-            // 
-            this.dgvlastName.DataPropertyName = "lastName";
-            this.dgvlastName.HeaderText = "สกุล";
-            this.dgvlastName.Name = "dgvlastName";
-            this.dgvlastName.ReadOnly = true;
-            // 
-            // dgvdob
-            // 
-            this.dgvdob.DataPropertyName = "dob";
-            this.dgvdob.HeaderText = "วันเกิด";
-            this.dgvdob.Name = "dgvdob";
-            this.dgvdob.ReadOnly = true;
-            // 
-            // dgvdepartment
-            // 
-            this.dgvdepartment.DataPropertyName = "department";
-            this.dgvdepartment.HeaderText = "ฝ่าย";
-            this.dgvdepartment.Name = "dgvdepartment";
-            this.dgvdepartment.ReadOnly = true;
-            // 
-            // dgvposition
-            // 
-            this.dgvposition.DataPropertyName = "position";
-            this.dgvposition.HeaderText = "ตำแหน่ง";
-            this.dgvposition.Name = "dgvposition";
-            this.dgvposition.ReadOnly = true;
-            // 
-            // dgvaddress
-            // 
-            this.dgvaddress.DataPropertyName = "address";
-            this.dgvaddress.HeaderText = "ที่อยู่";
-            this.dgvaddress.Name = "dgvaddress";
-            this.dgvaddress.ReadOnly = true;
-            // 
-            // dgvphone
-            // 
-            this.dgvphone.DataPropertyName = "phone";
-            this.dgvphone.HeaderText = "เบอร์โทรศัพท์";
-            this.dgvphone.Name = "dgvphone";
-            this.dgvphone.ReadOnly = true;
-            // 
-            // dgvemail
-            // 
-            this.dgvemail.DataPropertyName = "email";
-            this.dgvemail.HeaderText = "อีเมล";
-            this.dgvemail.Name = "dgvemail";
-            this.dgvemail.ReadOnly = true;
-            // 
-            // dgvusername
-            // 
-            this.dgvusername.DataPropertyName = "username";
-            this.dgvusername.HeaderText = "ชื่อผู้ใช้";
-            this.dgvusername.Name = "dgvusername";
-            this.dgvusername.ReadOnly = true;
-            // 
-            // dgvpassword
-            // 
-            this.dgvpassword.DataPropertyName = "password";
-            this.dgvpassword.HeaderText = "password";
-            this.dgvpassword.Name = "dgvpassword";
-            this.dgvpassword.ReadOnly = true;
-            this.dgvpassword.Visible = false;
-            // 
-            // dgvphoto
-            // 
-            this.dgvphoto.DataPropertyName = "photo";
-            this.dgvphoto.HeaderText = "รูปถ่าย";
-            this.dgvphoto.Name = "dgvphoto";
-            this.dgvphoto.ReadOnly = true;
-            this.dgvphoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dgvstatus
-            // 
-            this.dgvstatus.DataPropertyName = "status";
-            this.dgvstatus.HeaderText = "status";
-            this.dgvstatus.Name = "dgvstatus";
-            this.dgvstatus.ReadOnly = true;
-            this.dgvstatus.Visible = false;
-            // 
-            // dgvstatusName
-            // 
-            this.dgvstatusName.DataPropertyName = "statusName";
-            this.dgvstatusName.HeaderText = "สถานะ";
-            this.dgvstatusName.Name = "dgvstatusName";
-            this.dgvstatusName.ReadOnly = true;
             // 
             // label1
             // 
@@ -559,7 +421,7 @@
             this.txtposition.Border.Class = "TextBoxBorder";
             this.txtposition.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtposition.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtposition.Location = new System.Drawing.Point(349, 101);
+            this.txtposition.Location = new System.Drawing.Point(149, 101);
             this.txtposition.Name = "txtposition";
             this.txtposition.Size = new System.Drawing.Size(121, 22);
             this.txtposition.TabIndex = 8;
@@ -625,10 +487,11 @@
             this.txtdepartment.Border.Class = "TextBoxBorder";
             this.txtdepartment.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtdepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtdepartment.Location = new System.Drawing.Point(149, 101);
+            this.txtdepartment.Location = new System.Drawing.Point(349, 101);
             this.txtdepartment.Name = "txtdepartment";
             this.txtdepartment.Size = new System.Drawing.Size(121, 22);
             this.txtdepartment.TabIndex = 7;
+            this.txtdepartment.Visible = false;
             // 
             // txtfirstName
             // 
@@ -774,7 +637,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(296, 106);
+            this.label10.Location = new System.Drawing.Point(96, 106);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(47, 13);
             this.label10.TabIndex = 0;
@@ -822,11 +685,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(117, 106);
+            this.label9.Location = new System.Drawing.Point(317, 106);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "ฝ่าย";
+            this.label9.Visible = false;
             // 
             // label3
             // 
@@ -921,6 +785,145 @@
             this.btnAdd.Text = "เพิ่ม";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // dgvemployeeID
+            // 
+            this.dgvemployeeID.DataPropertyName = "employeeID";
+            this.dgvemployeeID.HeaderText = "employeeID";
+            this.dgvemployeeID.Name = "dgvemployeeID";
+            this.dgvemployeeID.ReadOnly = true;
+            this.dgvemployeeID.Visible = false;
+            // 
+            // dgvemployeeTypeID
+            // 
+            this.dgvemployeeTypeID.DataPropertyName = "employeeTypeID";
+            this.dgvemployeeTypeID.HeaderText = "employeeTypeID";
+            this.dgvemployeeTypeID.Name = "dgvemployeeTypeID";
+            this.dgvemployeeTypeID.ReadOnly = true;
+            this.dgvemployeeTypeID.Visible = false;
+            // 
+            // dgvemployeeCode
+            // 
+            this.dgvemployeeCode.DataPropertyName = "employeeCode";
+            this.dgvemployeeCode.HeaderText = "รหัสพนักงาน";
+            this.dgvemployeeCode.Name = "dgvemployeeCode";
+            this.dgvemployeeCode.ReadOnly = true;
+            // 
+            // dgvemployeeType
+            // 
+            this.dgvemployeeType.DataPropertyName = "employeeType";
+            this.dgvemployeeType.HeaderText = "ประเภทพนักงาน";
+            this.dgvemployeeType.Name = "dgvemployeeType";
+            this.dgvemployeeType.ReadOnly = true;
+            // 
+            // dgvidCard
+            // 
+            this.dgvidCard.DataPropertyName = "idCard";
+            this.dgvidCard.HeaderText = "เลขประจำตัวประชาชน";
+            this.dgvidCard.Name = "dgvidCard";
+            this.dgvidCard.ReadOnly = true;
+            // 
+            // dgvtitle
+            // 
+            this.dgvtitle.DataPropertyName = "title";
+            this.dgvtitle.HeaderText = "คำนำหน้า";
+            this.dgvtitle.Name = "dgvtitle";
+            this.dgvtitle.ReadOnly = true;
+            // 
+            // dgvfirstName
+            // 
+            this.dgvfirstName.DataPropertyName = "firstName";
+            this.dgvfirstName.HeaderText = "ชื่อ";
+            this.dgvfirstName.Name = "dgvfirstName";
+            this.dgvfirstName.ReadOnly = true;
+            // 
+            // dgvlastName
+            // 
+            this.dgvlastName.DataPropertyName = "lastName";
+            this.dgvlastName.HeaderText = "สกุล";
+            this.dgvlastName.Name = "dgvlastName";
+            this.dgvlastName.ReadOnly = true;
+            // 
+            // dgvdob
+            // 
+            this.dgvdob.DataPropertyName = "dob";
+            this.dgvdob.HeaderText = "วันเกิด";
+            this.dgvdob.Name = "dgvdob";
+            this.dgvdob.ReadOnly = true;
+            // 
+            // dgvdepartment
+            // 
+            this.dgvdepartment.DataPropertyName = "department";
+            this.dgvdepartment.HeaderText = "ฝ่าย";
+            this.dgvdepartment.Name = "dgvdepartment";
+            this.dgvdepartment.ReadOnly = true;
+            this.dgvdepartment.Visible = false;
+            // 
+            // dgvposition
+            // 
+            this.dgvposition.DataPropertyName = "position";
+            this.dgvposition.HeaderText = "ตำแหน่ง";
+            this.dgvposition.Name = "dgvposition";
+            this.dgvposition.ReadOnly = true;
+            // 
+            // dgvaddress
+            // 
+            this.dgvaddress.DataPropertyName = "address";
+            this.dgvaddress.HeaderText = "ที่อยู่";
+            this.dgvaddress.Name = "dgvaddress";
+            this.dgvaddress.ReadOnly = true;
+            // 
+            // dgvphone
+            // 
+            this.dgvphone.DataPropertyName = "phone";
+            this.dgvphone.HeaderText = "เบอร์โทรศัพท์";
+            this.dgvphone.Name = "dgvphone";
+            this.dgvphone.ReadOnly = true;
+            // 
+            // dgvemail
+            // 
+            this.dgvemail.DataPropertyName = "email";
+            this.dgvemail.HeaderText = "อีเมล";
+            this.dgvemail.Name = "dgvemail";
+            this.dgvemail.ReadOnly = true;
+            // 
+            // dgvusername
+            // 
+            this.dgvusername.DataPropertyName = "username";
+            this.dgvusername.HeaderText = "ชื่อผู้ใช้";
+            this.dgvusername.Name = "dgvusername";
+            this.dgvusername.ReadOnly = true;
+            // 
+            // dgvpassword
+            // 
+            this.dgvpassword.DataPropertyName = "password";
+            this.dgvpassword.HeaderText = "password";
+            this.dgvpassword.Name = "dgvpassword";
+            this.dgvpassword.ReadOnly = true;
+            this.dgvpassword.Visible = false;
+            // 
+            // dgvphoto
+            // 
+            this.dgvphoto.DataPropertyName = "photo";
+            this.dgvphoto.HeaderText = "รูปถ่าย";
+            this.dgvphoto.Name = "dgvphoto";
+            this.dgvphoto.ReadOnly = true;
+            this.dgvphoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dgvstatus
+            // 
+            this.dgvstatus.DataPropertyName = "status";
+            this.dgvstatus.HeaderText = "status";
+            this.dgvstatus.Name = "dgvstatus";
+            this.dgvstatus.ReadOnly = true;
+            this.dgvstatus.Visible = false;
+            // 
+            // dgvstatusName
+            // 
+            this.dgvstatusName.DataPropertyName = "statusName";
+            this.dgvstatusName.HeaderText = "สถานะ";
+            this.dgvstatusName.Name = "dgvstatusName";
+            this.dgvstatusName.ReadOnly = true;
+            // 
             // employeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1002,16 +1005,15 @@
         private System.Windows.Forms.Label label16;
         private DevComponents.DotNetBar.Controls.TextBoxX txtoldphoto;
         private DevComponents.DotNetBar.Controls.TextBoxX txtemployeeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvdob;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvstatusName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeTypeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeType;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvidCard;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvtitle;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvfirstName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvlastName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvdob;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvdepartment;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvposition;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvaddress;
@@ -1021,5 +1023,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvpassword;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvphoto;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dgvstatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvstatusName;
     }
 }

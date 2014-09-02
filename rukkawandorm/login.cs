@@ -52,7 +52,7 @@ namespace rukkawandorm
                     this.Hide();
                     DataTable dt=employee.selectEmployeeByID(Convert.ToInt16(ret)).Tables[0];
                     module.employeeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
-                    module.employeeTypeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
+                    module.employeeTypeID = Convert.ToInt32(dt.Rows[0]["employeeTypeID"].ToString());
                     module.employeeFullName = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["LastName"].ToString();
                 }
                 else

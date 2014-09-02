@@ -29,14 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(employeeReportForm));
-            this.dgvpassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvstatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgvstatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrint = new DevComponents.DotNetBar.ButtonX();
-            this.dgvphoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
+            this.txtKeyword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvemployeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvemployeeTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvemployeeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,37 +50,15 @@
             this.dgvaddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvphone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvemail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
-            this.txtKeyword = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvusername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvpassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvphoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvstatus = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgvstatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgvpassword
-            // 
-            this.dgvpassword.DataPropertyName = "password";
-            this.dgvpassword.HeaderText = "password";
-            this.dgvpassword.Name = "dgvpassword";
-            this.dgvpassword.ReadOnly = true;
-            this.dgvpassword.Visible = false;
-            // 
-            // dgvstatus
-            // 
-            this.dgvstatus.DataPropertyName = "status";
-            this.dgvstatus.HeaderText = "status";
-            this.dgvstatus.Name = "dgvstatus";
-            this.dgvstatus.ReadOnly = true;
-            this.dgvstatus.Visible = false;
-            // 
-            // dgvstatusName
-            // 
-            this.dgvstatusName.DataPropertyName = "statusName";
-            this.dgvstatusName.HeaderText = "สถานะ";
-            this.dgvstatusName.Name = "dgvstatusName";
-            this.dgvstatusName.ReadOnly = true;
             // 
             // label1
             // 
@@ -105,21 +82,6 @@
             this.btnPrint.TabIndex = 29;
             this.btnPrint.Text = "พิมพ์รายงาน";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
-            // 
-            // dgvphoto
-            // 
-            this.dgvphoto.DataPropertyName = "photo";
-            this.dgvphoto.HeaderText = "รูปถ่าย";
-            this.dgvphoto.Name = "dgvphoto";
-            this.dgvphoto.ReadOnly = true;
-            this.dgvphoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // dgvusername
-            // 
-            this.dgvusername.DataPropertyName = "username";
-            this.dgvusername.HeaderText = "ชื่อผู้ใช้";
-            this.dgvusername.Name = "dgvusername";
-            this.dgvusername.ReadOnly = true;
             // 
             // dgv1
             // 
@@ -153,6 +115,58 @@
             this.dgv1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv1.Size = new System.Drawing.Size(789, 444);
             this.dgv1.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.dgv1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(12, 71);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(795, 463);
+            this.groupBox2.TabIndex = 23;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "ข้อมูลพนักงาน";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearch.Location = new System.Drawing.Point(178, 19);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(42, 20);
+            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "ค้นหา";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtKeyword
+            // 
+            // 
+            // 
+            // 
+            this.txtKeyword.Border.Class = "TextBoxBorder";
+            this.txtKeyword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtKeyword.Location = new System.Drawing.Point(6, 19);
+            this.txtKeyword.Name = "txtKeyword";
+            this.txtKeyword.Size = new System.Drawing.Size(166, 20);
+            this.txtKeyword.TabIndex = 1;
+            this.txtKeyword.WatermarkText = "ค้นหาข้อมูล";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.btnSearch);
+            this.groupBox1.Controls.Add(this.txtKeyword);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(795, 53);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ค้นหาข้อมูล";
             // 
             // dgvemployeeID
             // 
@@ -225,6 +239,7 @@
             this.dgvdepartment.HeaderText = "ฝ่าย";
             this.dgvdepartment.Name = "dgvdepartment";
             this.dgvdepartment.ReadOnly = true;
+            this.dgvdepartment.Visible = false;
             // 
             // dgvposition
             // 
@@ -254,57 +269,43 @@
             this.dgvemail.Name = "dgvemail";
             this.dgvemail.ReadOnly = true;
             // 
-            // groupBox2
+            // dgvusername
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.dgv1);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(12, 71);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(795, 463);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "ข้อมูลพนักงาน";
+            this.dgvusername.DataPropertyName = "username";
+            this.dgvusername.HeaderText = "ชื่อผู้ใช้";
+            this.dgvusername.Name = "dgvusername";
+            this.dgvusername.ReadOnly = true;
             // 
-            // btnSearch
+            // dgvpassword
             // 
-            this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearch.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearch.Location = new System.Drawing.Point(178, 19);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(42, 20);
-            this.btnSearch.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "ค้นหา";
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.dgvpassword.DataPropertyName = "password";
+            this.dgvpassword.HeaderText = "password";
+            this.dgvpassword.Name = "dgvpassword";
+            this.dgvpassword.ReadOnly = true;
+            this.dgvpassword.Visible = false;
             // 
-            // txtKeyword
+            // dgvphoto
             // 
+            this.dgvphoto.DataPropertyName = "photo";
+            this.dgvphoto.HeaderText = "รูปถ่าย";
+            this.dgvphoto.Name = "dgvphoto";
+            this.dgvphoto.ReadOnly = true;
+            this.dgvphoto.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
+            // dgvstatus
             // 
+            this.dgvstatus.DataPropertyName = "status";
+            this.dgvstatus.HeaderText = "status";
+            this.dgvstatus.Name = "dgvstatus";
+            this.dgvstatus.ReadOnly = true;
+            this.dgvstatus.Visible = false;
             // 
-            this.txtKeyword.Border.Class = "TextBoxBorder";
-            this.txtKeyword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtKeyword.Location = new System.Drawing.Point(6, 19);
-            this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(166, 20);
-            this.txtKeyword.TabIndex = 1;
-            this.txtKeyword.WatermarkText = "ค้นหาข้อมูล";
+            // dgvstatusName
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.btnSearch);
-            this.groupBox1.Controls.Add(this.txtKeyword);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(795, 53);
-            this.groupBox1.TabIndex = 22;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ค้นหาข้อมูล";
+            this.dgvstatusName.DataPropertyName = "statusName";
+            this.dgvstatusName.HeaderText = "สถานะ";
+            this.dgvstatusName.Name = "dgvstatusName";
+            this.dgvstatusName.ReadOnly = true;
             // 
             // employeeReportForm
             // 
@@ -327,14 +328,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvpassword;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgvstatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvstatusName;
         private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.ButtonX btnPrint;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvphoto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvusername;
         private System.Windows.Forms.DataGridView dgv1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private DevComponents.DotNetBar.ButtonX btnSearch;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtKeyword;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeTypeID;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemployeeCode;
@@ -349,10 +349,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvaddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvphone;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvemail;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private DevComponents.DotNetBar.ButtonX btnSearch;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtKeyword;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvusername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvpassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvphoto;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgvstatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvstatusName;
 
     }
 }

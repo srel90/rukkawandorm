@@ -119,14 +119,14 @@ namespace rukkawandorm
             clsroomType.roomTypeID = Convert.ToInt32(txtroomTypeID.Text);
             clsroomType._roomType = txtroomType.Text;
             clsroomType.price = txtprice.Value;
-            if (rdobf1.Checked == true)
-            {
-                clsroomType.bf = true;
-            }
-            else
-            {
-                clsroomType.bf = false;
-            }
+            //if (rdobf1.Checked == true)
+            //{
+            //    clsroomType.bf = true;
+            //}
+            //else
+            //{
+            //    clsroomType.bf = false;
+            //}
 
             if (rdostatus1.Checked == true)
             {
@@ -178,14 +178,14 @@ namespace rukkawandorm
                 txtroomTypeID.Text = dgv1.Rows[e.RowIndex].Cells["dgvroomTypeID"].Value.ToString();
                 txtroomType.Text = dgv1.Rows[e.RowIndex].Cells["dgvroomType"].Value.ToString();
                 txtprice.Text = dgv1.Rows[e.RowIndex].Cells["dgvprice"].Value.ToString();
-                if (dgv1.Rows[e.RowIndex].Cells["dgvbf"].Value.ToString().Equals("False"))
-                {
-                    rdobf2.Checked = true;
-                }
-                else
-                {
-                    rdobf1.Checked = true;
-                }
+                //if (dgv1.Rows[e.RowIndex].Cells["dgvbf"].Value.ToString().Equals("False"))
+                //{
+                //    rdobf2.Checked = true;
+                //}
+                //else
+                //{
+                //    rdobf1.Checked = true;
+                //}
                 if (dgv1.Rows[e.RowIndex].Cells["dgvstatus"].Value.ToString().Equals("False"))
                 {
                     rdostatus2.Checked = true;

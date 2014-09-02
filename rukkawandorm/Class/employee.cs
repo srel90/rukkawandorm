@@ -169,7 +169,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@title", DbType.String, title);
                 db.AddInParameter(Dbcmd, "@firstName", DbType.String, firstName);
                 db.AddInParameter(Dbcmd, "@lastName", DbType.String, lastName);
-                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString());
+                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString("yyyy-MM-dd"));
                 db.AddInParameter(Dbcmd, "@department", DbType.String, department);
                 db.AddInParameter(Dbcmd, "@position", DbType.String, position);
                 db.AddInParameter(Dbcmd, "@address", DbType.String, address);
@@ -205,7 +205,7 @@ namespace rukkawandorm.Class
                 db.AddInParameter(Dbcmd, "@title", DbType.String, title);
                 db.AddInParameter(Dbcmd, "@firstName", DbType.String, firstName);
                 db.AddInParameter(Dbcmd, "@lastName", DbType.String, lastName);
-                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString());
+                db.AddInParameter(Dbcmd, "@dob", DbType.String, dob.ToString("yyyy-MM-dd"));
                 db.AddInParameter(Dbcmd, "@department", DbType.String, department);
                 db.AddInParameter(Dbcmd, "@position", DbType.String, position);
                 db.AddInParameter(Dbcmd, "@address", DbType.String, address);

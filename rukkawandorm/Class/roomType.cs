@@ -127,11 +127,11 @@ namespace rukkawandorm.Class
         {
             try
             {
-                str = "INSERT INTO roomType (roomType,price,bf,status)VALUES(@roomType,@price,@bf,@status);";
+                str = "INSERT INTO roomType (roomType,price,status)VALUES(@roomType,@price,@status);";
                 Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@roomType", DbType.String, _roomType);
                 db.AddInParameter(Dbcmd, "@price", DbType.Double, price);
-                db.AddInParameter(Dbcmd, "@bf", DbType.Boolean, bf);
+                
                 db.AddInParameter(Dbcmd, "@status", DbType.Boolean, status);
                 db.ExecuteNonQuery(Dbcmd);
                 return true;
@@ -145,11 +145,11 @@ namespace rukkawandorm.Class
         {
             try
             {
-                str = "UPDATE roomType SET roomType=@roomType,price=@price,bf=@bf,status=@status WHERE roomTypeID=@roomTypeID;";
+                str = "UPDATE roomType SET roomType=@roomType,price=@price,status=@status WHERE roomTypeID=@roomTypeID;";
                 Dbcmd = db.GetSqlStringCommand(str);
                 db.AddInParameter(Dbcmd, "@roomType", DbType.String, _roomType);
                 db.AddInParameter(Dbcmd, "@price", DbType.Double, price);
-                db.AddInParameter(Dbcmd, "@bf", DbType.Boolean, bf);
+               
                 db.AddInParameter(Dbcmd, "@status", DbType.Boolean, status);
                 db.AddInParameter(Dbcmd, "@roomTypeID", DbType.Int16, roomTypeID);
                 db.ExecuteNonQuery(Dbcmd);

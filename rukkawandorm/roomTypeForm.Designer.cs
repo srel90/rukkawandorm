@@ -48,15 +48,15 @@
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
+            this.txtKeyword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvroomTypeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvroomType = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvprice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvbf = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgvstatusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new DevComponents.DotNetBar.ButtonX();
-            this.txtKeyword = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtprice)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -110,6 +110,7 @@
             this.groupBox4.Size = new System.Drawing.Size(212, 30);
             this.groupBox4.TabIndex = 30;
             this.groupBox4.TabStop = false;
+            this.groupBox4.Visible = false;
             // 
             // label3
             // 
@@ -329,53 +330,6 @@
             this.dgv1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv1_CellMouseClick);
             this.dgv1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv1_DataBindingComplete);
             // 
-            // dgvroomTypeID
-            // 
-            this.dgvroomTypeID.DataPropertyName = "roomTypeID";
-            this.dgvroomTypeID.HeaderText = "dgvroomTypeID";
-            this.dgvroomTypeID.Name = "dgvroomTypeID";
-            this.dgvroomTypeID.ReadOnly = true;
-            this.dgvroomTypeID.Visible = false;
-            // 
-            // dgvroomType
-            // 
-            this.dgvroomType.DataPropertyName = "roomType";
-            this.dgvroomType.HeaderText = "ประเภทห้องพัก";
-            this.dgvroomType.Name = "dgvroomType";
-            this.dgvroomType.ReadOnly = true;
-            // 
-            // dgvprice
-            // 
-            this.dgvprice.DataPropertyName = "price";
-            this.dgvprice.HeaderText = "ราคา";
-            this.dgvprice.Name = "dgvprice";
-            this.dgvprice.ReadOnly = true;
-            // 
-            // dgvbf
-            // 
-            this.dgvbf.DataPropertyName = "bf";
-            this.dgvbf.HeaderText = "อาหารเช้า";
-            this.dgvbf.Name = "dgvbf";
-            this.dgvbf.ReadOnly = true;
-            this.dgvbf.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvbf.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgvbf.TrueValue = "True";
-            // 
-            // dgvstatusName
-            // 
-            this.dgvstatusName.DataPropertyName = "statusName";
-            this.dgvstatusName.HeaderText = "สถานะ";
-            this.dgvstatusName.Name = "dgvstatusName";
-            this.dgvstatusName.ReadOnly = true;
-            // 
-            // dgvstatus
-            // 
-            this.dgvstatus.DataPropertyName = "status";
-            this.dgvstatus.HeaderText = "dgvstatus";
-            this.dgvstatus.Name = "dgvstatus";
-            this.dgvstatus.ReadOnly = true;
-            this.dgvstatus.Visible = false;
-            // 
             // btnSearch
             // 
             this.btnSearch.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -413,6 +367,54 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ค้นหาข้อมูล";
+            // 
+            // dgvroomTypeID
+            // 
+            this.dgvroomTypeID.DataPropertyName = "roomTypeID";
+            this.dgvroomTypeID.HeaderText = "dgvroomTypeID";
+            this.dgvroomTypeID.Name = "dgvroomTypeID";
+            this.dgvroomTypeID.ReadOnly = true;
+            this.dgvroomTypeID.Visible = false;
+            // 
+            // dgvroomType
+            // 
+            this.dgvroomType.DataPropertyName = "roomType";
+            this.dgvroomType.HeaderText = "ประเภทห้องพัก";
+            this.dgvroomType.Name = "dgvroomType";
+            this.dgvroomType.ReadOnly = true;
+            // 
+            // dgvprice
+            // 
+            this.dgvprice.DataPropertyName = "price";
+            this.dgvprice.HeaderText = "ราคา";
+            this.dgvprice.Name = "dgvprice";
+            this.dgvprice.ReadOnly = true;
+            // 
+            // dgvbf
+            // 
+            this.dgvbf.DataPropertyName = "bf";
+            this.dgvbf.HeaderText = "อาหารเช้า";
+            this.dgvbf.Name = "dgvbf";
+            this.dgvbf.ReadOnly = true;
+            this.dgvbf.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvbf.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvbf.TrueValue = "True";
+            this.dgvbf.Visible = false;
+            // 
+            // dgvstatusName
+            // 
+            this.dgvstatusName.DataPropertyName = "statusName";
+            this.dgvstatusName.HeaderText = "สถานะ";
+            this.dgvstatusName.Name = "dgvstatusName";
+            this.dgvstatusName.ReadOnly = true;
+            // 
+            // dgvstatus
+            // 
+            this.dgvstatus.DataPropertyName = "status";
+            this.dgvstatus.HeaderText = "dgvstatus";
+            this.dgvstatus.Name = "dgvstatus";
+            this.dgvstatus.ReadOnly = true;
+            this.dgvstatus.Visible = false;
             // 
             // roomTypeForm
             // 
