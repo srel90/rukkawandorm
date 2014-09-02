@@ -121,7 +121,7 @@ namespace rukkawandorm.Class
                 }
                 str = "SELECT customer.*,IIF (customer.status = true , 'Active' , 'Inactive' ) AS statusName,customerType.customerType  FROM customer customer LEFT OUTER JOIN customerType customerType on customer.customerTypeID=customerType.customerTypeID WHERE ";
                 str += string.Join(" OR ", searchTermBits.ToArray(typeof(string)) as string[]);
-                Dbcmd = db.GetSqlStringCommand(str);
+                Dbcmd = db.GetSqlStringCommand(@str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;
             }

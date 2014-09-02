@@ -111,7 +111,7 @@ namespace rukkawandorm.Class
                 }
                 str = "SELECT *,IIF (status = true , 'Active' , 'Inactive' ) AS statusName  FROM employeeType WHERE ";
                 str += string.Join(" OR ", searchTermBits.ToArray(typeof(string)) as string[]);
-                Dbcmd = db.GetSqlStringCommand(str);
+                Dbcmd = db.GetSqlStringCommand(@str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;
             }

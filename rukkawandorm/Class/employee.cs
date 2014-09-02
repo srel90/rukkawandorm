@@ -147,7 +147,7 @@ namespace rukkawandorm.Class
                     str += " WHERE ";
                     str += String.Join<string>(" OR ", searchTermBits);
                 }
-                Dbcmd = db.GetSqlStringCommand(str);
+                Dbcmd = db.GetSqlStringCommand(@str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;
             }

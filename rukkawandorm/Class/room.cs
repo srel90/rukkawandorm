@@ -110,7 +110,7 @@ namespace rukkawandorm.Class
                     str += " WHERE ";
                     str += string.Join(" OR ", searchTermBits.ToArray(typeof(string)) as string[]);
                 }
-                Dbcmd = db.GetSqlStringCommand(str);
+                Dbcmd = db.GetSqlStringCommand(@str);
                 ds = db.ExecuteDataSet(Dbcmd);
                 return ds;
             }
