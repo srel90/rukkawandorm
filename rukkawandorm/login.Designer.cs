@@ -57,9 +57,9 @@
             this.label3.ForeColor = System.Drawing.Color.Gold;
             this.label3.Location = new System.Drawing.Point(2, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 20);
+            this.label3.Size = new System.Drawing.Size(43, 20);
             this.label3.TabIndex = 16;
-            this.label3.Text = "error";
+            this.label3.Text = "errrr";
             // 
             // btnlogin
             // 
@@ -112,10 +112,11 @@
             // 
             // logopicturebox
             // 
+            this.logopicturebox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.logopicturebox.Image = ((System.Drawing.Image)(resources.GetObject("logopicturebox.Image")));
-            this.logopicturebox.Location = new System.Drawing.Point(-3, -5);
+            this.logopicturebox.Location = new System.Drawing.Point(0, 0);
             this.logopicturebox.Name = "logopicturebox";
-            this.logopicturebox.Size = new System.Drawing.Size(400, 147);
+            this.logopicturebox.Size = new System.Drawing.Size(397, 141);
             this.logopicturebox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.logopicturebox.TabIndex = 9;
             this.logopicturebox.TabStop = false;
