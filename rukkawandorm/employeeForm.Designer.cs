@@ -491,7 +491,6 @@
             this.txtdepartment.Name = "txtdepartment";
             this.txtdepartment.Size = new System.Drawing.Size(121, 22);
             this.txtdepartment.TabIndex = 7;
-            this.txtdepartment.Visible = false;
             // 
             // txtfirstName
             // 
@@ -690,7 +689,6 @@
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 0;
             this.label9.Text = "ฝ่าย";
-            this.label9.Visible = false;
             // 
             // label3
             // 
@@ -856,7 +854,6 @@
             this.dgvdepartment.HeaderText = "ฝ่าย";
             this.dgvdepartment.Name = "dgvdepartment";
             this.dgvdepartment.ReadOnly = true;
-            this.dgvdepartment.Visible = false;
             // 
             // dgvposition
             // 
