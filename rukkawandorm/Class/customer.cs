@@ -119,7 +119,7 @@ namespace rukkawandorm.Class
                         searchTermBits.Add("customer.contactPerson LIKE '*" + term + "*'");
                     }
                 }
-                str = "SELECT customer.*,IIF (customer.status = true , 'Active' , 'Inactive' ) AS statusName,customerType.customerType  FROM customer customer LEFT OUTER JOIN customerType customerType on customer.customerTypeID=customerType.customerTypeID WHERE ";
+                str = "SELECT customer.*,IIF (customer.status = true , 'Active' , 'Inactive' ) AS statusName,customerType.customerType  FROM customer customer LEFT OUTER JOIN customerType customerType on customer.customerTypeID=customerType.customerTypeID  ";
                 if (searchTermBits.Count != 0)
                 {
                     str += " WHERE ";
