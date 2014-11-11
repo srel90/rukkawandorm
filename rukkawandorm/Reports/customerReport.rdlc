@@ -42,7 +42,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>1.10417in</Width>
                           <Style>
@@ -135,7 +134,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Top>0.31945in</Top>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>1.10417in</Width>
                           <ZIndex>3</ZIndex>
@@ -338,7 +336,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Top>0.63889in</Top>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>1.10417in</Width>
                           <ZIndex>8</ZIndex>
@@ -452,7 +449,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Top>0.95834in</Top>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>2.27778in</Width>
                           <ZIndex>11</ZIndex>
@@ -566,7 +562,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Top>1.27778in</Top>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>6.98137in</Width>
                           <ZIndex>14</ZIndex>
@@ -604,7 +599,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Top>1.59723in</Top>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>6.98137in</Width>
                           <ZIndex>15</ZIndex>
@@ -642,7 +636,6 @@
                           </Paragraphs>
                           <rd:DefaultName>Textbox31</rd:DefaultName>
                           <Top>1.9132in</Top>
-                          <Left>0in</Left>
                           <Height>0.25in</Height>
                           <Width>2.27778in</Width>
                           <ZIndex>16</ZIndex>
@@ -782,6 +775,40 @@
           <Height>0.25in</Height>
           <Width>2.37973in</Width>
           <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox5">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>วันที่ </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Now()</Value>
+                  <Style>
+                    <Format>d MMM yyyy</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox5</rd:DefaultName>
+          <Height>0.25in</Height>
+          <Width>2.8125in</Width>
+          <ZIndex>2</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

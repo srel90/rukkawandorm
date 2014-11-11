@@ -87,11 +87,18 @@
     <Compile Include="Class\customerType.cs" />
     <Compile Include="Class\employee.cs" />
     <Compile Include="Class\employeeType.cs" />
+    <Compile Include="Class\maintenance.cs" />
     <Compile Include="Class\module.cs" />
     <Compile Include="Class\reservation.cs" />
     <Compile Include="Class\revenue.cs" />
     <Compile Include="Class\room.cs" />
     <Compile Include="Class\roomType.cs" />
+    <Compile Include="maintenanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="maintenanceForm.Designer.cs">
+      <DependentUpon>maintenanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="customerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +221,9 @@
     <EmbeddedResource Include="checkoutForm.resx">
       <DependentUpon>checkoutForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="maintenanceForm.resx">
+      <DependentUpon>maintenanceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="customerForm.resx">
       <DependentUpon>customerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="receiptForm.resx">
       <DependentUpon>receiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\maintenanceReport.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\customerReport.rdlc">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

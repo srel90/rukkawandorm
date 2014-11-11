@@ -76,3 +76,5 @@ D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\reservationReport.rdlc
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\revenueReport.rdlc
 D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.revenueReportForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\obj\Debug\rukkawandorm.maintenanceForm.resources
+D:\Visual Studio 2012\Projects\rukkawandorm\rukkawandorm\bin\Debug\Reports\maintenanceReport.rdlc

@@ -75,7 +75,7 @@ namespace rukkawandorm
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
             reportViewer reportViewer = new reportViewer();
-            reportViewer.rptviewer_show(dsroom, "roomReport.rdlc", "รายงานข้อมูลค้า");
+            reportViewer.rptviewer_show(ds, "roomReport.rdlc", "รายงานข้อมูลค้า");
             reportViewer.Show();
         }
     }

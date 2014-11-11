@@ -27,7 +27,7 @@ namespace rukkawandorm
         roomReportForm roomReportForm;
         reservationReportForm reservationReportForm;
         revenueReportForm revenueReportForm;
-
+        maintenanceForm maintenanceForm;
         public mainform()
         {
             InitializeComponent();
@@ -158,6 +158,11 @@ namespace rukkawandorm
                 case 4: DisplayForm<revenueReportForm>(ref revenueReportForm);
                     break;
             }
+        }
+
+        private void btnMenuMA_Click(object sender, EventArgs e)
+        {
+            DisplayForm<maintenanceForm>(ref maintenanceForm);
         }
     }
 }
