@@ -54,6 +54,8 @@ namespace rukkawandorm
                     module.employeeID = Convert.ToInt32(dt.Rows[0]["employeeID"].ToString());
                     module.employeeTypeID = Convert.ToInt32(dt.Rows[0]["employeeTypeID"].ToString());
                     module.employeeFullName = dt.Rows[0]["firstName"].ToString() + " " + dt.Rows[0]["LastName"].ToString();
+                    mainform mainform = new mainform();
+                    mainform.Show();
                 }
                 else
                 {

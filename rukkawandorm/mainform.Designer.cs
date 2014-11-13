@@ -52,6 +52,7 @@
             this.btnMenuEmployee = new DevComponents.DotNetBar.ButtonItem();
             this.btnMenuCustomer = new DevComponents.DotNetBar.ButtonItem();
             this.btnMenuRoom = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuMA = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnMenuEmployeeType = new DevComponents.DotNetBar.ButtonItem();
             this.btnMenuCustomerType = new DevComponents.DotNetBar.ButtonItem();
@@ -63,7 +64,6 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnMenuMA = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -142,7 +142,7 @@
             this.ribbonBar6.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenuHelp,
             this.buttonItem2});
-            this.ribbonBar6.Location = new System.Drawing.Point(1031, 0);
+            this.ribbonBar6.Location = new System.Drawing.Point(1006, 0);
             this.ribbonBar6.Name = "ribbonBar6";
             this.ribbonBar6.Size = new System.Drawing.Size(99, 76);
             this.ribbonBar6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -195,7 +195,7 @@
             this.ribbonBar5.HorizontalItemAlignment = DevComponents.DotNetBar.eHorizontalItemsAlignment.Center;
             this.ribbonBar5.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenuExit});
-            this.ribbonBar5.Location = new System.Drawing.Point(945, 0);
+            this.ribbonBar5.Location = new System.Drawing.Point(920, 0);
             this.ribbonBar5.Name = "ribbonBar5";
             this.ribbonBar5.Size = new System.Drawing.Size(86, 76);
             this.ribbonBar5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -240,7 +240,7 @@
             this.ribbonBar4.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.reportItems,
             this.btnReport});
-            this.ribbonBar4.Location = new System.Drawing.Point(754, 0);
+            this.ribbonBar4.Location = new System.Drawing.Point(729, 0);
             this.ribbonBar4.Name = "ribbonBar4";
             this.ribbonBar4.Size = new System.Drawing.Size(191, 76);
             this.ribbonBar4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -315,11 +315,10 @@
             this.ribbonBar3.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenuReservation,
             this.btnMenuCheckIn,
-            this.btnMenuCheckOut,
-            this.btnMenuMA});
-            this.ribbonBar3.Location = new System.Drawing.Point(420, 0);
+            this.btnMenuCheckOut});
+            this.ribbonBar3.Location = new System.Drawing.Point(493, 0);
             this.ribbonBar3.Name = "ribbonBar3";
-            this.ribbonBar3.Size = new System.Drawing.Size(334, 76);
+            this.ribbonBar3.Size = new System.Drawing.Size(236, 76);
             this.ribbonBar3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar3.TabIndex = 2;
             this.ribbonBar3.Text = "จัดการห้องพัก";
@@ -380,10 +379,11 @@
             this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenuEmployee,
             this.btnMenuCustomer,
-            this.btnMenuRoom});
+            this.btnMenuRoom,
+            this.btnMenuMA});
             this.ribbonBar2.Location = new System.Drawing.Point(227, 0);
             this.ribbonBar2.Name = "ribbonBar2";
-            this.ribbonBar2.Size = new System.Drawing.Size(193, 76);
+            this.ribbonBar2.Size = new System.Drawing.Size(266, 76);
             this.ribbonBar2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonBar2.TabIndex = 1;
             this.ribbonBar2.Text = "จัดการข้อมูลพื้นฐาน";
@@ -424,6 +424,15 @@
             this.btnMenuRoom.SubItemsExpandWidth = 14;
             this.btnMenuRoom.Text = "ข้อมูลห้องพัก";
             this.btnMenuRoom.Click += new System.EventHandler(this.btnMenuRoom_Click);
+            // 
+            // btnMenuMA
+            // 
+            this.btnMenuMA.Image = global::rukkawandorm.Properties.Resources.home;
+            this.btnMenuMA.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuMA.Name = "btnMenuMA";
+            this.btnMenuMA.SubItemsExpandWidth = 14;
+            this.btnMenuMA.Text = "การบำรุงรักษา";
+            this.btnMenuMA.Click += new System.EventHandler(this.btnMenuMA_Click);
             // 
             // ribbonBar1
             // 
@@ -532,15 +541,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnMenuMA
-            // 
-            this.btnMenuMA.Image = global::rukkawandorm.Properties.Resources.home;
-            this.btnMenuMA.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnMenuMA.Name = "btnMenuMA";
-            this.btnMenuMA.SubItemsExpandWidth = 14;
-            this.btnMenuMA.Text = "การบำรุงรักษา";
-            this.btnMenuMA.Click += new System.EventHandler(this.btnMenuMA_Click);
             // 
             // mainform
             // 

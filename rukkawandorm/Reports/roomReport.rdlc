@@ -633,6 +633,58 @@
                 </TablixCell>
               </TablixCells>
             </TablixRow>
+            <TablixRow>
+              <Height>0.25in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox16">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>จำนวนห้องพัก </Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
+                              <Value>=CountRows("roomTypeID")</Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
+                              <Value> ห้อง</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox16</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>9</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
@@ -652,19 +704,22 @@
           <TablixMembers>
             <TablixMember />
             <TablixMember>
-              <Group Name="roomType">
+              <Group Name="roomTypeID">
                 <GroupExpressions>
-                  <GroupExpression>=Fields!roomType.Value</GroupExpression>
+                  <GroupExpression>=Fields!roomTypeID.Value</GroupExpression>
                 </GroupExpressions>
               </Group>
               <SortExpressions>
                 <SortExpression>
-                  <Value>=Fields!roomType.Value</Value>
+                  <Value>=Fields!roomTypeID.Value</Value>
                 </SortExpression>
               </SortExpressions>
               <TablixMembers>
                 <TablixMember>
                   <Group Name="Details" />
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>Before</KeepWithGroup>
                 </TablixMember>
               </TablixMembers>
             </TablixMember>
@@ -672,7 +727,7 @@
         </TablixRowHierarchy>
         <DataSetName>rukkawandormDataSet</DataSetName>
         <Top>0.06944in</Top>
-        <Height>0.5in</Height>
+        <Height>0.75in</Height>
         <Width>9in</Width>
         <Style>
           <Border>
@@ -681,7 +736,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>0.56944in</Height>
+    <Height>0.81944in</Height>
     <Style />
   </Body>
   <Width>10in</Width>

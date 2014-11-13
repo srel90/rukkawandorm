@@ -56,8 +56,8 @@ namespace rukkawandorm
 
         private void mainform_Load(object sender, EventArgs e)
         {
-            login login = new login();
-            login.ShowDialog();
+            //login login = new login();
+            //login.ShowDialog();
             setstatusbar(module.employeeFullName);
             if (module.employeeTypeID == 2)
             {

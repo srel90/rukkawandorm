@@ -318,7 +318,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>รหัสพนักงาน</Value>
+                              <Value>ชื่อพนักงาน</Value>
                               <Style>
                                 <FontWeight>Bold</FontWeight>
                                 <Color>White</Color>
@@ -606,14 +606,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="employeeID">
+                    <Textbox Name="employeefirstName">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!employeeID.Value</Value>
+                              <Value>=Fields!employeefirstName.Value+" "+Fields!employeelastName.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -622,7 +622,7 @@
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>employeeID</rd:DefaultName>
+                      <rd:DefaultName>employeefirstName</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>

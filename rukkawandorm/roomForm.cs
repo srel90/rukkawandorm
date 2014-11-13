@@ -15,6 +15,7 @@ namespace rukkawandorm
     public partial class roomForm : Form
     {
         room clsroom = new room();
+        
         roomType clseroomType = new roomType();
         string mode = "insert";
         public roomForm()
