@@ -34,6 +34,11 @@ namespace rukkawandorm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
+            if (txtdatetoreservation_search.Value < txtdatefromreservation_search.Value)
+            {
+                MessageBox.Show("วันที่สิ้นสุดต้องไม่น้อยกว่าวันที่เริ่มต้น");
+                return;
+            }
             clsmaintenance.maDatetimeFrom = txtdatefromreservation_search.Value;
             clsmaintenance.maDatetimeTo = txtdatetoreservation_search.Value;
             clsmaintenance.maType = txtmaType_search.Text;
@@ -117,6 +122,12 @@ namespace rukkawandorm
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+
+            if (txtmaDatetimeTo.Value < txtmaDatetimeFrom.Value)
+            {
+                MessageBox.Show("วันที่สิ้นสุดต้องไม่น้อยกว่าวันที่เริ่มต้น");
+                return;
+            }
             clsmaintenance.employeeCode = txtemployeeCode.Text;
             clsmaintenance.roomCode = txtroomCode.Text;
             clsmaintenance.maType = txtmaType.Text;

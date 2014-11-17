@@ -11,6 +11,7 @@ namespace rukkawandorm.Class
     {
         public static int employeeID { get; set; }
         public static int employeeTypeID { get; set; }
+        public static string employeeType { get; set; }
         public static string employeeFullName { get; set; }
         public static void ClearControl(Control control)
         {

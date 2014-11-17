@@ -521,6 +521,57 @@
                 </TablixCell>
               </TablixCells>
             </TablixRow>
+            <TablixRow>
+              <Height>0.23622in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>จำนวนพนักงานทั้งหมด </Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
+                              <Value>=CountRows("rukkawandormDataSet")</Value>
+                              <Style />
+                            </TextRun>
+                            <TextRun>
+                              <Value> คน</Value>
+                              <Style />
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                    <ColSpan>8</ColSpan>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+                <TablixCell />
+              </TablixCells>
+            </TablixRow>
           </TablixRows>
         </TablixBody>
         <TablixColumnHierarchy>
@@ -542,12 +593,16 @@
             </TablixMember>
             <TablixMember>
               <Group Name="Details" />
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>rukkawandormDataSet</DataSetName>
         <Top>0.01389in</Top>
-        <Height>0.5in</Height>
+        <Height>0.73622in</Height>
         <Width>8.53in</Width>
         <Style>
           <Border>
@@ -556,7 +611,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.30528cm</Height>
+    <Height>1.90528cm</Height>
     <Style />
   </Body>
   <Width>21.6662cm</Width>
@@ -712,44 +767,6 @@
           <Left>2.46263in</Left>
           <Height>0.25in</Height>
           <Width>3.81683in</Width>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-            <PaddingLeft>2pt</PaddingLeft>
-            <PaddingRight>2pt</PaddingRight>
-            <PaddingTop>2pt</PaddingTop>
-            <PaddingBottom>2pt</PaddingBottom>
-          </Style>
-        </Textbox>
-        <Textbox Name="Textbox39">
-          <CanGrow>true</CanGrow>
-          <KeepTogether>true</KeepTogether>
-          <Paragraphs>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>จำนวนพนักงานทั้งหมด </Value>
-                  <Style />
-                </TextRun>
-                <TextRun>
-                  <Value>=CountRows("rukkawandormDataSet")</Value>
-                  <Style />
-                </TextRun>
-                <TextRun>
-                  <Value> คน</Value>
-                  <Style />
-                </TextRun>
-              </TextRuns>
-              <Style />
-            </Paragraph>
-          </Paragraphs>
-          <rd:DefaultName>Textbox39</rd:DefaultName>
-          <Top>0.03528cm</Top>
-          <Left>0cm</Left>
-          <Height>0.6cm</Height>
-          <Width>6.36292cm</Width>
-          <ZIndex>1</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>

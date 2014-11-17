@@ -77,7 +77,7 @@ namespace rukkawandorm
         {
             module.ClearControl(groupBox3);
             txtemployeeID.Text = clsemployee.getLastID().ToString();
-            txtemployeeCode.Text = String.Format("{0:00000}",Convert.ToInt32(txtemployeeID.Text));
+            txtemployeeCode.Text = String.Format("{0:EM00000}",Convert.ToInt32(txtemployeeID.Text));
 
             txtidCard.Text = "";
             txtdob.Value = DateTime.Now;
@@ -160,6 +160,11 @@ namespace rukkawandorm
             clsemployee.phone = txtphone.Text;
             clsemployee.email = txtemail.Text;
             clsemployee.username = txtusername.Text;
+            if (txtpassword.Text.Length < 5)
+            {
+                MessageBox.Show("รหัสผ่านควรมากกว่า 5 ตัวอักษร");
+                return;
+            }
             clsemployee.password = txtpassword.Text;
 
             string appPath = Application.StartupPath;

@@ -34,7 +34,7 @@ namespace rukkawandorm
         }
         public void setstatusbar(string status)
         {
-            toolStripStatusLabel1.Text = "ผู้ใช้งาน : " + status;
+            toolStripStatusLabel1.Text = "ผู้ใช้งาน : " + status + " ประเภทผู้ใช้ : "+ module.employeeType.ToString();
         }
 
         private void btnMenuExit_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace rukkawandorm
             //login login = new login();
             //login.ShowDialog();
             setstatusbar(module.employeeFullName);
-            if (module.employeeTypeID == 2)
+            if (module.employeeTypeID !=1)
             {
                 btnMenuEmployeeType.Visible = false;
                 btnMenuEmployee.Visible = false;
@@ -157,6 +157,7 @@ namespace rukkawandorm
                     break;
                 case 4: DisplayForm<revenueReportForm>(ref revenueReportForm);
                     break;
+
             }
         }
 

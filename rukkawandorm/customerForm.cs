@@ -78,7 +78,7 @@ namespace rukkawandorm
         {
             module.ClearControl(groupBox3);
             txtcustomerID.Text = clscustomer.getLastID().ToString();
-            txtcustomerCode.Text = String.Format("{0:00000}",Convert.ToInt32(txtcustomerID.Text));
+            txtcustomerCode.Text = String.Format("{0:CM00000}",Convert.ToInt32(txtcustomerID.Text));
 
             txtidCard.Text = "";
             txtdob.Value = DateTime.Now;
