@@ -37,6 +37,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtmaID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtroomCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
             this.txtdatetoreservation_search = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.txtmaID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnPrint = new DevComponents.DotNetBar.ButtonX();
             this.dgvmaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvemployeeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -210,6 +210,20 @@
             this.label6.Size = new System.Drawing.Size(46, 13);
             this.label6.TabIndex = 9;
             this.label6.Text = "วันที่เริ่ม";
+            // 
+            // txtmaID
+            // 
+            // 
+            // 
+            // 
+            this.txtmaID.Border.Class = "TextBoxBorder";
+            this.txtmaID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtmaID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtmaID.Location = new System.Drawing.Point(522, 45);
+            this.txtmaID.Name = "txtmaID";
+            this.txtmaID.Size = new System.Drawing.Size(121, 22);
+            this.txtmaID.TabIndex = 10;
+            this.txtmaID.Visible = false;
             // 
             // txtroomCode
             // 
@@ -615,20 +629,6 @@
             this.txtdatetoreservation_search.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txtdatetoreservation_search.TabIndex = 12;
             // 
-            // txtmaID
-            // 
-            // 
-            // 
-            // 
-            this.txtmaID.Border.Class = "TextBoxBorder";
-            this.txtmaID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtmaID.Location = new System.Drawing.Point(522, 45);
-            this.txtmaID.Name = "txtmaID";
-            this.txtmaID.Size = new System.Drawing.Size(121, 22);
-            this.txtmaID.TabIndex = 10;
-            this.txtmaID.Visible = false;
-            // 
             // btnPrint
             // 
             this.btnPrint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -693,7 +693,6 @@
             this.dgvmaDetail.HeaderText = "รายละเอียด";
             this.dgvmaDetail.Name = "dgvmaDetail";
             this.dgvmaDetail.ReadOnly = true;
-            this.dgvmaDetail.Visible = false;
             // 
             // maintenanceForm
             // 

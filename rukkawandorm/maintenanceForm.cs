@@ -134,6 +134,7 @@ namespace rukkawandorm
             clsmaintenance.maDatetimeFrom = txtmaDatetimeFrom.Value;
             clsmaintenance.maDatetimeTo = txtmaDatetimeTo.Value;
             clsmaintenance.maDetail = txtmaDetail.Text;
+            
 
             switch (mode)
             {
@@ -148,6 +149,7 @@ namespace rukkawandorm
                     }
                     break;
                 case "update":
+                    clsmaintenance.maID = Convert.ToInt32(txtmaID.Text);
                     if (clsmaintenance.updateMaintenance())
                     {
                         MessageBox.Show("ปรับปรุงข้อมูลการบำรุงรักษาเรียบร้อยแล้ว");
