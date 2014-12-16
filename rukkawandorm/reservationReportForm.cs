@@ -70,9 +70,9 @@ namespace rukkawandorm
                 dr["customerID"] = row.Cells["dgv2customerID"].Value.ToString();
                 dr["employeeID"] = row.Cells["dgv2employeeID"].Value.ToString();
                 dr["roomID"] = row.Cells["dgv2roomID"].Value.ToString();
-                dr["checkinDateTime"] = row.Cells["dgv2checkinDateTime"].Value.ToString();
-                dr["checkoutDateTime"] = row.Cells["dgv2checkoutDateTime"].Value.ToString();
-                dr["reservationDateTime"] = row.Cells["dgv2reservationDateTime"].Value.ToString();
+                dr["checkinDateTime"] = Convert.ToString(Convert.ToDateTime(row.Cells["dgv2checkinDateTime"].Value.ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH")));
+                dr["checkoutDateTime"] = Convert.ToString(Convert.ToDateTime(row.Cells["dgv2checkoutDateTime"].Value.ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH")).ToString());
+                dr["reservationDateTime"] = Convert.ToString(Convert.ToDateTime(row.Cells["dgv2reservationDateTime"].Value.ToString()).ToString("dd/MM/yyyy H:mm:ss tt", CultureInfo.CreateSpecificCulture("th-TH")).ToString());
                 dr["reservationNight"] = row.Cells["dgv2reservationNight"].Value.ToString();
                 dr["checkinoutStatus"] = row.Cells["dgv2checkinoutStatus"].Value.ToString();
                 dr["reservationStatus"] = row.Cells["dgv2reservationStatus"].Value.ToString();
@@ -96,7 +96,7 @@ namespace rukkawandorm
             DataSet ds = new DataSet();
             ds.Tables.Add(dt);
             reportViewer reportViewer = new reportViewer();
-            reportViewer.rptviewer_show(dsreservation, "reservationReport.rdlc", "รายงานข้อมูลการจองห้องพัก");
+            reportViewer.rptviewer_show(ds, "reservationReport.rdlc", "รายงานข้อมูลการจองห้องพัก");
             reportViewer.Show();
         }
 

@@ -87,10 +87,13 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox7</rd:DefaultName>
+                      <DataElementOutput>Output</DataElementOutput>
                       <Style>
                         <Border>
                           <Color>#622424</Color>
@@ -121,10 +124,13 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <DataElementOutput>Output</DataElementOutput>
                       <Style>
                         <Border>
                           <Color>#622424</Color>
@@ -389,16 +395,19 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatDateTime(Fields!checkinDateTime.Value,DateFormat.ShortDate)</Value>
+                              <Value>=Fields!checkinDateTime.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>checkinDateTime</rd:DefaultName>
+                      <DataElementOutput>Output</DataElementOutput>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -421,16 +430,19 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=FormatDateTime(Fields!checkoutDateTime.Value,DateFormat.ShortDate)</Value>
+                              <Value>=Fields!checkoutDateTime.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>checkoutDateTime</rd:DefaultName>
+                      <DataElementOutput>Output</DataElementOutput>
                       <Style>
                         <Border>
                           <Color>#e5e5e5</Color>
@@ -867,7 +879,7 @@
   <Width>28.99832cm</Width>
   <Page>
     <PageHeader>
-      <Height>1.29646cm</Height>
+      <Height>1.3112cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
