@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
 using System.IO;
+using System.Globalization;
 
 namespace rukkawandorm
 {
@@ -81,7 +82,6 @@ namespace rukkawandorm
             txtcustomerCode.Text = String.Format("{0:CM00000}",Convert.ToInt32(txtcustomerID.Text));
 
             txtidCard.Text = "";
-            txtdob.Value = DateTime.Now;
             picture1.Image = null;
         }
 
@@ -154,7 +154,7 @@ namespace rukkawandorm
             clscustomer.title = txttitle.Text;
             clscustomer.firstName = txtfirstName.Text;
             clscustomer.lastName = txtlastName.Text;
-            clscustomer.dob = txtdob.Value;
+            clscustomer.dob = DateTime.Parse(txtdob.Text, new CultureInfo("th-TH"));
             clscustomer.presentAddress = txtpresentAddress.Text;
             clscustomer.permanentAddress = txtpermanentAddress.Text;
             clscustomer.level = txtlevel.Text;
@@ -301,7 +301,7 @@ namespace rukkawandorm
                 txtpresentAddress.Text = dgv1.Rows[e.RowIndex].Cells["dgvpresentAddress"].Value.ToString();
                 txtpermanentAddress.Text = dgv1.Rows[e.RowIndex].Cells["dgvpermanentAddress"].Value.ToString();
                 txtidCard.Text = dgv1.Rows[e.RowIndex].Cells["dgvidCard"].Value.ToString();
-                txtdob.Text = dgv1.Rows[e.RowIndex].Cells["dgvdob"].Value.ToString();
+                txtdob.Text = Convert.ToDateTime(dgv1.Rows[e.RowIndex].Cells["dgvdob"].Value.ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH"));
                 if (dgv1.Rows[e.RowIndex].Cells["dgvgender"].Value.ToString().Equals("1"))
                 {
                     rdogender1.Checked = true;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
 using System.IO;
+using System.Globalization;
 
 namespace rukkawandorm
 {
@@ -80,8 +81,9 @@ namespace rukkawandorm
             txtemployeeCode.Text = String.Format("{0:EM00000}",Convert.ToInt32(txtemployeeID.Text));
 
             txtidCard.Text = "";
-            txtdob.Value = DateTime.Now;
+            txtdob.Text ="";
             picture1.Image = null;
+            txtdob.WatermarkText = "วัน/เดือน/ปี";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -153,7 +155,7 @@ namespace rukkawandorm
             clsemployee.title = txttitle.Text;
             clsemployee.firstName = txtfirstName.Text;
             clsemployee.lastName = txtlastName.Text;
-            clsemployee.dob = txtdob.Value;
+            clsemployee.dob = DateTime.Parse(txtdob.Text, new CultureInfo("th-TH"));
             clsemployee.department = txtdepartment.Text;
             clsemployee.position = txtposition.Text;
             clsemployee.address = txtaddress.Text;
@@ -296,7 +298,7 @@ namespace rukkawandorm
                 txttitle.Text = dgv1.Rows[e.RowIndex].Cells["dgvtitle"].Value.ToString();
                 txtfirstName.Text = dgv1.Rows[e.RowIndex].Cells["dgvfirstName"].Value.ToString();
                 txtlastName.Text = dgv1.Rows[e.RowIndex].Cells["dgvlastName"].Value.ToString();
-                txtdob.Text = dgv1.Rows[e.RowIndex].Cells["dgvdob"].Value.ToString();
+                txtdob.Text = Convert.ToDateTime(dgv1.Rows[e.RowIndex].Cells["dgvdob"].Value.ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH"));
                 txtdepartment.Text = dgv1.Rows[e.RowIndex].Cells["dgvdepartment"].Value.ToString();
                 txtposition.Text = dgv1.Rows[e.RowIndex].Cells["dgvposition"].Value.ToString();
                 txtaddress.Text = dgv1.Rows[e.RowIndex].Cells["dgvaddress"].Value.ToString();

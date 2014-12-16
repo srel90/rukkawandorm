@@ -60,7 +60,7 @@ namespace rukkawandorm.Class
 
             try
             {
-                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'waiting' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
+                str = "SELECT reservation.*,customer.title as customertitle,customer.firstName as customerfirstName,customer.lastName as customerlastName,employee.firstName as employeefirstName,employee.lastName as employeelastName,room.roomCode,room.roomTypeID,room.floor,room.building,roomType.roomType,IIF (reservation.status = true , 'Active' , 'Inactive' ) AS statusName,IIF (reservation.checkinoutStatus = 0 , 'รอ' , IIF(reservation.checkinoutStatus = 1,'Checkin','Checkout')) as checkinoutStatusName";
                 str += " FROM ((((reservation reservation";
                 str += " LEFT OUTER JOIN customer customer ON customer.customerID=reservation.customerID)";
                 str += " LEFT OUTER JOIN employee employee ON employee.employeeID=reservation.employeeID)";

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
+using System.Globalization;
 namespace rukkawandorm
 {
     public partial class revenueReportForm : Form
@@ -29,22 +30,18 @@ namespace rukkawandorm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtdatefrom.Text == "" || txtdateto.Text == "")
+            if (txtdatefrom.Text == "  /  /" || txtdateto.Text == "  /  /")
             {
                 MessageBox.Show("กรุณาเลือกวันที่ตั้งแต่วันที่ และ ถึงวันที่");
                 return;
             }
-            else if (txtdatefrom.Value > txtdateto.Value)
+            else if (DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH")) > DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")))
             {
-                MessageBox.Show("กรุณาเลือกตั้งแต่วันที่ใหม่");
+                MessageBox.Show("กรุณาเลือกตั้งแต่วันที่ และ เลือกถึงวันที่ใหม่");
                 return;
             }
-            else if (txtdateto.Value < txtdatefrom.Value)
-            {
-                MessageBox.Show("กรุณาเลือกถึงวันที่ใหม่");
-                return;
-            }
-            DataSet ds = clsrevenue.selectAllRevenue(txtdatefrom.Value, txtdateto.Value);
+
+            DataSet ds = clsrevenue.selectAllRevenue(DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH")), DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")));
             rptviewer_show(ds, "revenueReport.rdlc", "รายงานรายรับ");
             
         }

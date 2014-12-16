@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtmaDetail = new System.Windows.Forms.TextBox();
-            this.txtmaDatetimeFrom = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.txtemployeeCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,25 +44,12 @@
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtmaDatetimeTo = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
             this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtdatefromreservation_search = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtmaType_search = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
-            this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
-            this.txtdatetoreservation_search = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.btnPrint = new DevComponents.DotNetBar.ButtonX();
             this.dgvmaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvemployeeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvroomCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,14 +57,24 @@
             this.dgvmaDatetimeFrom = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvmaDatetimeTo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvmaDetail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtmaType_search = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
+            this.btnPrint = new DevComponents.DotNetBar.ButtonX();
+            this.txtdatefromreservation_search = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtdatetoreservation_search = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtmaDatetimeFrom = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtmaDatetimeTo = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmaDatetimeFrom)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmaDatetimeTo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatefromreservation_search)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatetoreservation_search)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -93,8 +89,9 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.txtmaDetail);
+            this.groupBox3.Controls.Add(this.txtmaDatetimeTo);
             this.groupBox3.Controls.Add(this.txtmaDatetimeFrom);
+            this.groupBox3.Controls.Add(this.txtmaDetail);
             this.groupBox3.Controls.Add(this.txtemployeeCode);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label7);
@@ -105,7 +102,6 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.txtmaType);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.txtmaDatetimeTo);
             this.groupBox3.Location = new System.Drawing.Point(12, 261);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(795, 166);
@@ -120,56 +116,6 @@
             this.txtmaDetail.Name = "txtmaDetail";
             this.txtmaDetail.Size = new System.Drawing.Size(631, 87);
             this.txtmaDetail.TabIndex = 43;
-            // 
-            // txtmaDatetimeFrom
-            // 
-            // 
-            // 
-            // 
-            this.txtmaDatetimeFrom.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtmaDatetimeFrom.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeFrom.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtmaDatetimeFrom.ButtonDropDown.Visible = true;
-            this.txtmaDatetimeFrom.Location = new System.Drawing.Point(150, 47);
-            // 
-            // 
-            // 
-            this.txtmaDatetimeFrom.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtmaDatetimeFrom.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtmaDatetimeFrom.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtmaDatetimeFrom.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeFrom.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtmaDatetimeFrom.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeFrom.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtmaDatetimeFrom.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtmaDatetimeFrom.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtmaDatetimeFrom.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtmaDatetimeFrom.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtmaDatetimeFrom.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtmaDatetimeFrom.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtmaDatetimeFrom.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeFrom.MonthCalendar.TodayButtonVisible = true;
-            this.txtmaDatetimeFrom.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtmaDatetimeFrom.Name = "txtmaDatetimeFrom";
-            this.txtmaDatetimeFrom.Size = new System.Drawing.Size(120, 20);
-            this.txtmaDatetimeFrom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtmaDatetimeFrom.TabIndex = 11;
             // 
             // txtemployeeCode
             // 
@@ -288,56 +234,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "รหัสห้องพัก";
             // 
-            // txtmaDatetimeTo
-            // 
-            // 
-            // 
-            // 
-            this.txtmaDatetimeTo.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtmaDatetimeTo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeTo.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtmaDatetimeTo.ButtonDropDown.Visible = true;
-            this.txtmaDatetimeTo.Location = new System.Drawing.Point(386, 47);
-            // 
-            // 
-            // 
-            this.txtmaDatetimeTo.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtmaDatetimeTo.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtmaDatetimeTo.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtmaDatetimeTo.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeTo.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtmaDatetimeTo.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeTo.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtmaDatetimeTo.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtmaDatetimeTo.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtmaDatetimeTo.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtmaDatetimeTo.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtmaDatetimeTo.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtmaDatetimeTo.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtmaDatetimeTo.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtmaDatetimeTo.MonthCalendar.TodayButtonVisible = true;
-            this.txtmaDatetimeTo.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtmaDatetimeTo.Name = "txtmaDatetimeTo";
-            this.txtmaDatetimeTo.Size = new System.Drawing.Size(120, 20);
-            this.txtmaDatetimeTo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtmaDatetimeTo.TabIndex = 12;
-            // 
             // btnEdit
             // 
             this.btnEdit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -436,6 +332,56 @@
             this.dgv1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv1_CellMouseClick);
             this.dgv1.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv1_DataBindingComplete);
             // 
+            // dgvmaID
+            // 
+            this.dgvmaID.DataPropertyName = "maID";
+            this.dgvmaID.HeaderText = "maID";
+            this.dgvmaID.Name = "dgvmaID";
+            this.dgvmaID.ReadOnly = true;
+            this.dgvmaID.Visible = false;
+            // 
+            // dgvemployeeCode
+            // 
+            this.dgvemployeeCode.DataPropertyName = "employeeCode";
+            this.dgvemployeeCode.HeaderText = "รหัสพนักงาน";
+            this.dgvemployeeCode.Name = "dgvemployeeCode";
+            this.dgvemployeeCode.ReadOnly = true;
+            // 
+            // dgvroomCode
+            // 
+            this.dgvroomCode.DataPropertyName = "roomCode";
+            this.dgvroomCode.HeaderText = "รหัสห้องพัก";
+            this.dgvroomCode.Name = "dgvroomCode";
+            this.dgvroomCode.ReadOnly = true;
+            // 
+            // dgvmaType
+            // 
+            this.dgvmaType.DataPropertyName = "maType";
+            this.dgvmaType.HeaderText = "ประเภทการบำรุงรักษา";
+            this.dgvmaType.Name = "dgvmaType";
+            this.dgvmaType.ReadOnly = true;
+            // 
+            // dgvmaDatetimeFrom
+            // 
+            this.dgvmaDatetimeFrom.DataPropertyName = "maDatetimeFrom";
+            this.dgvmaDatetimeFrom.HeaderText = "วันที่เริ่ม";
+            this.dgvmaDatetimeFrom.Name = "dgvmaDatetimeFrom";
+            this.dgvmaDatetimeFrom.ReadOnly = true;
+            // 
+            // dgvmaDatetimeTo
+            // 
+            this.dgvmaDatetimeTo.DataPropertyName = "maDatetimeTo";
+            this.dgvmaDatetimeTo.HeaderText = "วันที่สิ้นสุด";
+            this.dgvmaDatetimeTo.Name = "dgvmaDatetimeTo";
+            this.dgvmaDatetimeTo.ReadOnly = true;
+            // 
+            // dgvmaDetail
+            // 
+            this.dgvmaDetail.DataPropertyName = "maDetail";
+            this.dgvmaDetail.HeaderText = "รายละเอียด";
+            this.dgvmaDetail.Name = "dgvmaDetail";
+            this.dgvmaDetail.ReadOnly = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -453,69 +399,19 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtdatetoreservation_search);
             this.groupBox1.Controls.Add(this.txtdatefromreservation_search);
             this.groupBox1.Controls.Add(this.label24);
             this.groupBox1.Controls.Add(this.label22);
             this.groupBox1.Controls.Add(this.label23);
             this.groupBox1.Controls.Add(this.txtmaType_search);
             this.groupBox1.Controls.Add(this.btnsearchreservation);
-            this.groupBox1.Controls.Add(this.txtdatetoreservation_search);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(795, 53);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ค้นหาข้อมูล";
-            // 
-            // txtdatefromreservation_search
-            // 
-            // 
-            // 
-            // 
-            this.txtdatefromreservation_search.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdatefromreservation_search.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation_search.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdatefromreservation_search.ButtonDropDown.Visible = true;
-            this.txtdatefromreservation_search.Location = new System.Drawing.Point(73, 19);
-            // 
-            // 
-            // 
-            this.txtdatefromreservation_search.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatefromreservation_search.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdatefromreservation_search.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdatefromreservation_search.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation_search.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdatefromreservation_search.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation_search.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtdatefromreservation_search.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdatefromreservation_search.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatefromreservation_search.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdatefromreservation_search.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatefromreservation_search.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdatefromreservation_search.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdatefromreservation_search.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation_search.MonthCalendar.TodayButtonVisible = true;
-            this.txtdatefromreservation_search.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdatefromreservation_search.Name = "txtdatefromreservation_search";
-            this.txtdatefromreservation_search.Size = new System.Drawing.Size(114, 20);
-            this.txtdatefromreservation_search.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdatefromreservation_search.TabIndex = 11;
             // 
             // label24
             // 
@@ -579,56 +475,6 @@
             this.btnsearchreservation.Text = "ค้นหา";
             this.btnsearchreservation.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtdatetoreservation_search
-            // 
-            // 
-            // 
-            // 
-            this.txtdatetoreservation_search.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdatetoreservation_search.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation_search.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdatetoreservation_search.ButtonDropDown.Visible = true;
-            this.txtdatetoreservation_search.Location = new System.Drawing.Point(254, 19);
-            // 
-            // 
-            // 
-            this.txtdatetoreservation_search.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatetoreservation_search.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdatetoreservation_search.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdatetoreservation_search.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation_search.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdatetoreservation_search.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation_search.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtdatetoreservation_search.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdatetoreservation_search.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatetoreservation_search.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdatetoreservation_search.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatetoreservation_search.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdatetoreservation_search.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdatetoreservation_search.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation_search.MonthCalendar.TodayButtonVisible = true;
-            this.txtdatetoreservation_search.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdatetoreservation_search.Name = "txtdatetoreservation_search";
-            this.txtdatetoreservation_search.Size = new System.Drawing.Size(114, 20);
-            this.txtdatetoreservation_search.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdatetoreservation_search.TabIndex = 12;
-            // 
             // btnPrint
             // 
             this.btnPrint.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -644,55 +490,77 @@
             this.btnPrint.Text = "พิมพ์รายงาน";
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // dgvmaID
+            // txtdatefromreservation_search
             // 
-            this.dgvmaID.DataPropertyName = "maID";
-            this.dgvmaID.HeaderText = "maID";
-            this.dgvmaID.Name = "dgvmaID";
-            this.dgvmaID.ReadOnly = true;
-            this.dgvmaID.Visible = false;
             // 
-            // dgvemployeeCode
             // 
-            this.dgvemployeeCode.DataPropertyName = "employeeCode";
-            this.dgvemployeeCode.HeaderText = "รหัสพนักงาน";
-            this.dgvemployeeCode.Name = "dgvemployeeCode";
-            this.dgvemployeeCode.ReadOnly = true;
             // 
-            // dgvroomCode
+            this.txtdatefromreservation_search.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdatefromreservation_search.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdatefromreservation_search.ButtonClear.Visible = true;
+            this.txtdatefromreservation_search.Location = new System.Drawing.Point(60, 19);
+            this.txtdatefromreservation_search.Mask = "00\\/00\\/0000";
+            this.txtdatefromreservation_search.Name = "txtdatefromreservation_search";
+            this.txtdatefromreservation_search.Size = new System.Drawing.Size(121, 20);
+            this.txtdatefromreservation_search.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdatefromreservation_search.TabIndex = 24;
+            this.txtdatefromreservation_search.Text = "";
+            this.txtdatefromreservation_search.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdatefromreservation_search.WatermarkText = "วัน/เดือน/ปี";
             // 
-            this.dgvroomCode.DataPropertyName = "roomCode";
-            this.dgvroomCode.HeaderText = "รหัสห้องพัก";
-            this.dgvroomCode.Name = "dgvroomCode";
-            this.dgvroomCode.ReadOnly = true;
+            // txtdatetoreservation_search
             // 
-            // dgvmaType
             // 
-            this.dgvmaType.DataPropertyName = "maType";
-            this.dgvmaType.HeaderText = "ประเภทการบำรุงรักษา";
-            this.dgvmaType.Name = "dgvmaType";
-            this.dgvmaType.ReadOnly = true;
             // 
-            // dgvmaDatetimeFrom
             // 
-            this.dgvmaDatetimeFrom.DataPropertyName = "maDatetimeFrom";
-            this.dgvmaDatetimeFrom.HeaderText = "วันที่เริ่ม";
-            this.dgvmaDatetimeFrom.Name = "dgvmaDatetimeFrom";
-            this.dgvmaDatetimeFrom.ReadOnly = true;
+            this.txtdatetoreservation_search.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdatetoreservation_search.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdatetoreservation_search.ButtonClear.Visible = true;
+            this.txtdatetoreservation_search.Location = new System.Drawing.Point(256, 19);
+            this.txtdatetoreservation_search.Mask = "00\\/00\\/0000";
+            this.txtdatetoreservation_search.Name = "txtdatetoreservation_search";
+            this.txtdatetoreservation_search.Size = new System.Drawing.Size(121, 20);
+            this.txtdatetoreservation_search.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdatetoreservation_search.TabIndex = 24;
+            this.txtdatetoreservation_search.Text = "";
+            this.txtdatetoreservation_search.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdatetoreservation_search.WatermarkText = "วัน/เดือน/ปี";
             // 
-            // dgvmaDatetimeTo
+            // txtmaDatetimeFrom
             // 
-            this.dgvmaDatetimeTo.DataPropertyName = "maDatetimeTo";
-            this.dgvmaDatetimeTo.HeaderText = "วันที่สิ้นสุด";
-            this.dgvmaDatetimeTo.Name = "dgvmaDatetimeTo";
-            this.dgvmaDatetimeTo.ReadOnly = true;
             // 
-            // dgvmaDetail
             // 
-            this.dgvmaDetail.DataPropertyName = "maDetail";
-            this.dgvmaDetail.HeaderText = "รายละเอียด";
-            this.dgvmaDetail.Name = "dgvmaDetail";
-            this.dgvmaDetail.ReadOnly = true;
+            // 
+            this.txtmaDatetimeFrom.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtmaDatetimeFrom.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtmaDatetimeFrom.ButtonClear.Visible = true;
+            this.txtmaDatetimeFrom.Location = new System.Drawing.Point(149, 47);
+            this.txtmaDatetimeFrom.Mask = "00\\/00\\/0000";
+            this.txtmaDatetimeFrom.Name = "txtmaDatetimeFrom";
+            this.txtmaDatetimeFrom.Size = new System.Drawing.Size(121, 20);
+            this.txtmaDatetimeFrom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtmaDatetimeFrom.TabIndex = 44;
+            this.txtmaDatetimeFrom.Text = "";
+            this.txtmaDatetimeFrom.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtmaDatetimeFrom.WatermarkText = "วัน/เดือน/ปี";
+            // 
+            // txtmaDatetimeTo
+            // 
+            // 
+            // 
+            // 
+            this.txtmaDatetimeTo.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtmaDatetimeTo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtmaDatetimeTo.ButtonClear.Visible = true;
+            this.txtmaDatetimeTo.Location = new System.Drawing.Point(386, 47);
+            this.txtmaDatetimeTo.Mask = "00\\/00\\/0000";
+            this.txtmaDatetimeTo.Name = "txtmaDatetimeTo";
+            this.txtmaDatetimeTo.Size = new System.Drawing.Size(121, 20);
+            this.txtmaDatetimeTo.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtmaDatetimeTo.TabIndex = 44;
+            this.txtmaDatetimeTo.Text = "";
+            this.txtmaDatetimeTo.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtmaDatetimeTo.WatermarkText = "วัน/เดือน/ปี";
             // 
             // maintenanceForm
             // 
@@ -713,15 +581,11 @@
             this.Load += new System.EventHandler(this.employeeTypeForm_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmaDatetimeFrom)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmaDatetimeTo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatefromreservation_search)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatetoreservation_search)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -741,7 +605,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtemployeeCode;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdatefromreservation_search;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
@@ -749,16 +612,13 @@
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.DotNetBar.ButtonX btnsearchreservation;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdatetoreservation_search;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private DevComponents.DotNetBar.Controls.ComboBoxEx txtmaType;
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.Editors.ComboItem comboItem4;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtmaDatetimeFrom;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtmaDatetimeTo;
         private System.Windows.Forms.TextBox txtmaDetail;
         private System.Windows.Forms.Label label7;
         private DevComponents.DotNetBar.Controls.TextBoxX txtmaID;
@@ -770,5 +630,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvmaDatetimeFrom;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvmaDatetimeTo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvmaDetail;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdatetoreservation_search;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdatefromreservation_search;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtmaDatetimeTo;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtmaDatetimeFrom;
     }
 }

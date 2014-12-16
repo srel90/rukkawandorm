@@ -67,7 +67,6 @@
             this.btnbrowse = new DevComponents.DotNetBar.ButtonX();
             this.picture1 = new System.Windows.Forms.PictureBox();
             this.txtphoto = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtdob = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.txtemail = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtfax = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtcontactPerson = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -111,13 +110,13 @@
             this.btnDelete = new DevComponents.DotNetBar.ButtonX();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
+            this.txtdob = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdob)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -371,6 +370,7 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.txtdob);
             this.groupBox3.Controls.Add(this.groupBox4);
             this.groupBox3.Controls.Add(this.txtcustomerID);
             this.groupBox3.Controls.Add(this.txtoldphoto);
@@ -379,7 +379,6 @@
             this.groupBox3.Controls.Add(this.btnbrowse);
             this.groupBox3.Controls.Add(this.picture1);
             this.groupBox3.Controls.Add(this.txtphoto);
-            this.groupBox3.Controls.Add(this.txtdob);
             this.groupBox3.Controls.Add(this.txtemail);
             this.groupBox3.Controls.Add(this.txtfax);
             this.groupBox3.Controls.Add(this.txtcontactPerson);
@@ -546,56 +545,6 @@
             this.txtphoto.Name = "txtphoto";
             this.txtphoto.Size = new System.Drawing.Size(281, 22);
             this.txtphoto.TabIndex = 35;
-            // 
-            // txtdob
-            // 
-            // 
-            // 
-            // 
-            this.txtdob.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdob.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdob.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdob.ButtonDropDown.Visible = true;
-            this.txtdob.Location = new System.Drawing.Point(349, 78);
-            // 
-            // 
-            // 
-            this.txtdob.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdob.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdob.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdob.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdob.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdob.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdob.MonthCalendar.DisplayMonth = new System.DateTime(2013, 11, 1, 0, 0, 0, 0);
-            this.txtdob.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdob.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdob.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdob.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdob.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdob.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdob.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdob.MonthCalendar.TodayButtonVisible = true;
-            this.txtdob.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdob.Name = "txtdob";
-            this.txtdob.Size = new System.Drawing.Size(121, 20);
-            this.txtdob.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdob.TabIndex = 6;
             // 
             // txtemail
             // 
@@ -1041,6 +990,24 @@
             this.btnAdd.Text = "เพิ่ม";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // txtdob
+            // 
+            // 
+            // 
+            // 
+            this.txtdob.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdob.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdob.ButtonClear.Visible = true;
+            this.txtdob.Location = new System.Drawing.Point(349, 78);
+            this.txtdob.Mask = "00\\/00\\/0000";
+            this.txtdob.Name = "txtdob";
+            this.txtdob.Size = new System.Drawing.Size(121, 20);
+            this.txtdob.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdob.TabIndex = 23;
+            this.txtdob.Text = "";
+            this.txtdob.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdob.WatermarkText = "วัน/เดือน/ปี";
+            // 
             // customerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1067,7 +1034,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdob)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1104,7 +1070,6 @@
         private DevComponents.DotNetBar.ButtonX btnbrowse;
         private System.Windows.Forms.PictureBox picture1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtphoto;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdob;
         private DevComponents.DotNetBar.Controls.TextBoxX txtemail;
         private DevComponents.DotNetBar.Controls.TextBoxX txtfax;
         private DevComponents.DotNetBar.Controls.TextBoxX txtcontactPerson;
@@ -1157,5 +1122,6 @@
         private DevComponents.Editors.ComboItem comboItem7;
         private DevComponents.Editors.ComboItem comboItem8;
         private System.Windows.Forms.Label label15;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdob;
     }
 }

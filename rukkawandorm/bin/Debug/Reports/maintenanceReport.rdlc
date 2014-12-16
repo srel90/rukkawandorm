@@ -342,7 +342,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!maDatetimeFrom.Value</Value>
+                              <Value>=FormatDateTime(Fields!maDatetimeFrom.Value,DateFormat.ShortDate)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -374,7 +374,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!maDatetimeTo.Value</Value>
+                              <Value>=FormatDateTime(Fields!maDatetimeTo.Value,DateFormat.ShortDate)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>

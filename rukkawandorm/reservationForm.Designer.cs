@@ -55,9 +55,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtroomTypeID = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.txtdateto = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtdatefrom = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
             this.label7 = new System.Windows.Forms.Label();
             this.btnSearch = new DevComponents.DotNetBar.ButtonX();
             this.txtroomName = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -95,28 +93,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgv2 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtdatefromreservation = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.txtroomTypeIDreservation = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btnsearchreservationtoday = new DevComponents.DotNetBar.ButtonX();
-            this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
-            this.txtdatetoreservation = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.rdostatus2 = new System.Windows.Forms.RadioButton();
-            this.rdostatus1 = new System.Windows.Forms.RadioButton();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtreservationID = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.label21 = new System.Windows.Forms.Label();
-            this.rdoreservationStatus1 = new System.Windows.Forms.RadioButton();
-            this.rdoreservationStatus2 = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtpledge = new DevComponents.Editors.DoubleInput();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txttotalnight = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.dgv2reservationID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2customerID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2employeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -141,19 +117,39 @@
             this.dgv2employeelastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv2statusName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.txtroomTypeIDreservation = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.btnsearchreservationtoday = new DevComponents.DotNetBar.ButtonX();
+            this.btnsearchreservation = new DevComponents.DotNetBar.ButtonX();
+            this.rdostatus2 = new System.Windows.Forms.RadioButton();
+            this.rdostatus1 = new System.Windows.Forms.RadioButton();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtreservationID = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.label21 = new System.Windows.Forms.Label();
+            this.rdoreservationStatus1 = new System.Windows.Forms.RadioButton();
+            this.rdoreservationStatus2 = new System.Windows.Forms.RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtpledge = new DevComponents.Editors.DoubleInput();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txttotalnight = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtdatefrom = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtdateto = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtdatefromreservation = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
+            this.txtdatetoreservation = new DevComponents.DotNetBar.Controls.MaskedTextBoxAdv();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdateto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatefrom)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatefromreservation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatetoreservation)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtpledge)).BeginInit();
@@ -413,11 +409,11 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtdateto);
+            this.groupBox1.Controls.Add(this.txtdatefrom);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtroomTypeID);
-            this.groupBox1.Controls.Add(this.txtdateto);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtdatefrom);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -448,56 +444,6 @@
             this.txtroomTypeID.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.txtroomTypeID.TabIndex = 6;
             // 
-            // txtdateto
-            // 
-            // 
-            // 
-            // 
-            this.txtdateto.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdateto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdateto.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdateto.ButtonDropDown.Visible = true;
-            this.txtdateto.Location = new System.Drawing.Point(295, 15);
-            // 
-            // 
-            // 
-            this.txtdateto.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdateto.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdateto.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdateto.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdateto.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdateto.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdateto.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtdateto.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdateto.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdateto.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdateto.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdateto.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdateto.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdateto.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdateto.MonthCalendar.TodayButtonVisible = true;
-            this.txtdateto.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdateto.Name = "txtdateto";
-            this.txtdateto.Size = new System.Drawing.Size(114, 20);
-            this.txtdateto.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdateto.TabIndex = 5;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -506,56 +452,6 @@
             this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 4;
             this.label8.Text = "วันที่ออกจากห้องพัก";
-            // 
-            // txtdatefrom
-            // 
-            // 
-            // 
-            // 
-            this.txtdatefrom.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdatefrom.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefrom.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdatefrom.ButtonDropDown.Visible = true;
-            this.txtdatefrom.Location = new System.Drawing.Point(71, 15);
-            // 
-            // 
-            // 
-            this.txtdatefrom.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatefrom.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdatefrom.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdatefrom.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefrom.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdatefrom.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefrom.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtdatefrom.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdatefrom.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatefrom.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdatefrom.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatefrom.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdatefrom.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdatefrom.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefrom.MonthCalendar.TodayButtonVisible = true;
-            this.txtdatefrom.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdatefrom.Name = "txtdatefrom";
-            this.txtdatefrom.Size = new System.Drawing.Size(114, 20);
-            this.txtdatefrom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdatefrom.TabIndex = 5;
             // 
             // label7
             // 
@@ -1063,337 +959,6 @@
             this.dgv2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv2_CellMouseClick);
             this.dgv2.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgv2_DataBindingComplete);
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtdatefromreservation);
-            this.panel1.Controls.Add(this.label24);
-            this.panel1.Controls.Add(this.label22);
-            this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.txtroomTypeIDreservation);
-            this.panel1.Controls.Add(this.btnsearchreservationtoday);
-            this.panel1.Controls.Add(this.btnsearchreservation);
-            this.panel1.Controls.Add(this.txtdatetoreservation);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(3, 16);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(847, 29);
-            this.panel1.TabIndex = 8;
-            // 
-            // txtdatefromreservation
-            // 
-            // 
-            // 
-            // 
-            this.txtdatefromreservation.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdatefromreservation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdatefromreservation.ButtonDropDown.Visible = true;
-            this.txtdatefromreservation.Location = new System.Drawing.Point(71, 3);
-            // 
-            // 
-            // 
-            this.txtdatefromreservation.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatefromreservation.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdatefromreservation.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdatefromreservation.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdatefromreservation.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtdatefromreservation.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdatefromreservation.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatefromreservation.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdatefromreservation.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatefromreservation.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdatefromreservation.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdatefromreservation.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatefromreservation.MonthCalendar.TodayButtonVisible = true;
-            this.txtdatefromreservation.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdatefromreservation.Name = "txtdatefromreservation";
-            this.txtdatefromreservation.Size = new System.Drawing.Size(114, 20);
-            this.txtdatefromreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdatefromreservation.TabIndex = 5;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(415, 7);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(77, 13);
-            this.label24.TabIndex = 7;
-            this.label24.Text = "ประเภทห้องพัก";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 7);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(59, 13);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "วันที่เข้าพัก";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(191, 7);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(98, 13);
-            this.label23.TabIndex = 4;
-            this.label23.Text = "วันที่ออกจากห้องพัก";
-            // 
-            // txtroomTypeIDreservation
-            // 
-            this.txtroomTypeIDreservation.DisplayMember = "Text";
-            this.txtroomTypeIDreservation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.txtroomTypeIDreservation.FormattingEnabled = true;
-            this.txtroomTypeIDreservation.ItemHeight = 14;
-            this.txtroomTypeIDreservation.Location = new System.Drawing.Point(498, 3);
-            this.txtroomTypeIDreservation.Name = "txtroomTypeIDreservation";
-            this.txtroomTypeIDreservation.Size = new System.Drawing.Size(121, 20);
-            this.txtroomTypeIDreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtroomTypeIDreservation.TabIndex = 6;
-            // 
-            // btnsearchreservationtoday
-            // 
-            this.btnsearchreservationtoday.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnsearchreservationtoday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsearchreservationtoday.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnsearchreservationtoday.Location = new System.Drawing.Point(754, 3);
-            this.btnsearchreservationtoday.Name = "btnsearchreservationtoday";
-            this.btnsearchreservationtoday.Size = new System.Drawing.Size(90, 20);
-            this.btnsearchreservationtoday.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnsearchreservationtoday.TabIndex = 2;
-            this.btnsearchreservationtoday.Text = "รายการจองวันนี้";
-            this.btnsearchreservationtoday.Click += new System.EventHandler(this.btnsearchreservationtoday_Click);
-            // 
-            // btnsearchreservation
-            // 
-            this.btnsearchreservation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnsearchreservation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnsearchreservation.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnsearchreservation.Location = new System.Drawing.Point(658, 3);
-            this.btnsearchreservation.Name = "btnsearchreservation";
-            this.btnsearchreservation.Size = new System.Drawing.Size(90, 20);
-            this.btnsearchreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnsearchreservation.TabIndex = 2;
-            this.btnsearchreservation.Text = "ค้นหารายการจอง";
-            this.btnsearchreservation.Click += new System.EventHandler(this.btnsearchreservation_Click);
-            // 
-            // txtdatetoreservation
-            // 
-            // 
-            // 
-            // 
-            this.txtdatetoreservation.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtdatetoreservation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.txtdatetoreservation.ButtonDropDown.Visible = true;
-            this.txtdatetoreservation.Location = new System.Drawing.Point(295, 3);
-            // 
-            // 
-            // 
-            this.txtdatetoreservation.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatetoreservation.MonthCalendar.BackgroundStyle.BackColor = System.Drawing.SystemColors.Window;
-            this.txtdatetoreservation.MonthCalendar.BackgroundStyle.Class = "";
-            this.txtdatetoreservation.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.Class = "";
-            this.txtdatetoreservation.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation.MonthCalendar.DisplayMonth = new System.DateTime(2014, 8, 1, 0, 0, 0, 0);
-            this.txtdatetoreservation.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.txtdatetoreservation.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.txtdatetoreservation.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.txtdatetoreservation.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.txtdatetoreservation.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.txtdatetoreservation.MonthCalendar.NavigationBackgroundStyle.Class = "";
-            this.txtdatetoreservation.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtdatetoreservation.MonthCalendar.TodayButtonVisible = true;
-            this.txtdatetoreservation.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.txtdatetoreservation.Name = "txtdatetoreservation";
-            this.txtdatetoreservation.Size = new System.Drawing.Size(114, 20);
-            this.txtdatetoreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.txtdatetoreservation.TabIndex = 5;
-            // 
-            // rdostatus2
-            // 
-            this.rdostatus2.AutoSize = true;
-            this.rdostatus2.Location = new System.Drawing.Point(179, 6);
-            this.rdostatus2.Name = "rdostatus2";
-            this.rdostatus2.Size = new System.Drawing.Size(69, 17);
-            this.rdostatus2.TabIndex = 50;
-            this.rdostatus2.Text = "ไม่ใช้งาน";
-            this.rdostatus2.UseVisualStyleBackColor = true;
-            // 
-            // rdostatus1
-            // 
-            this.rdostatus1.AutoSize = true;
-            this.rdostatus1.Checked = true;
-            this.rdostatus1.Location = new System.Drawing.Point(117, 6);
-            this.rdostatus1.Name = "rdostatus1";
-            this.rdostatus1.Size = new System.Drawing.Size(56, 17);
-            this.rdostatus1.TabIndex = 49;
-            this.rdostatus1.TabStop = true;
-            this.rdostatus1.Text = "ใช้งาน";
-            this.rdostatus1.UseVisualStyleBackColor = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 6);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(74, 13);
-            this.label20.TabIndex = 48;
-            this.label20.Text = "สถานะรายการ";
-            // 
-            // txtreservationID
-            // 
-            // 
-            // 
-            // 
-            this.txtreservationID.Border.Class = "TextBoxBorder";
-            this.txtreservationID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtreservationID.Enabled = false;
-            this.txtreservationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.txtreservationID.Location = new System.Drawing.Point(780, 430);
-            this.txtreservationID.Name = "txtreservationID";
-            this.txtreservationID.Size = new System.Drawing.Size(25, 22);
-            this.txtreservationID.TabIndex = 51;
-            this.txtreservationID.Visible = false;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 10);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(106, 13);
-            this.label21.TabIndex = 48;
-            this.label21.Text = "สถานะการจองห้องพัก";
-            // 
-            // rdoreservationStatus1
-            // 
-            this.rdoreservationStatus1.AutoSize = true;
-            this.rdoreservationStatus1.Checked = true;
-            this.rdoreservationStatus1.Location = new System.Drawing.Point(118, 8);
-            this.rdoreservationStatus1.Name = "rdoreservationStatus1";
-            this.rdoreservationStatus1.Size = new System.Drawing.Size(55, 17);
-            this.rdoreservationStatus1.TabIndex = 49;
-            this.rdoreservationStatus1.TabStop = true;
-            this.rdoreservationStatus1.Text = "ยืนยัน";
-            this.rdoreservationStatus1.UseVisualStyleBackColor = true;
-            // 
-            // rdoreservationStatus2
-            // 
-            this.rdoreservationStatus2.AutoSize = true;
-            this.rdoreservationStatus2.Location = new System.Drawing.Point(180, 8);
-            this.rdoreservationStatus2.Name = "rdoreservationStatus2";
-            this.rdoreservationStatus2.Size = new System.Drawing.Size(80, 17);
-            this.rdoreservationStatus2.TabIndex = 50;
-            this.rdoreservationStatus2.Text = "ยังไม่ยืนยัน";
-            this.rdoreservationStatus2.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.Controls.Add(this.rdoreservationStatus1);
-            this.panel3.Controls.Add(this.rdoreservationStatus2);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Location = new System.Drawing.Point(368, 427);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(263, 34);
-            this.panel3.TabIndex = 52;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.rdostatus1);
-            this.panel4.Controls.Add(this.rdostatus2);
-            this.panel4.Location = new System.Drawing.Point(368, 462);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(263, 34);
-            this.panel4.TabIndex = 52;
-            // 
-            // txtpledge
-            // 
-            this.txtpledge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            // 
-            // 
-            // 
-            this.txtpledge.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.txtpledge.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtpledge.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
-            this.txtpledge.Increment = 1D;
-            this.txtpledge.Location = new System.Drawing.Point(676, 432);
-            this.txtpledge.MinValue = 0D;
-            this.txtpledge.Name = "txtpledge";
-            this.txtpledge.ShowUpDown = true;
-            this.txtpledge.Size = new System.Drawing.Size(98, 20);
-            this.txtpledge.TabIndex = 54;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(638, 436);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(32, 13);
-            this.label25.TabIndex = 53;
-            this.label25.Text = "มัดจำ";
-            // 
-            // label26
-            // 
-            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(637, 466);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(55, 13);
-            this.label26.TabIndex = 45;
-            this.label26.Text = "จำนวนคืน";
-            // 
-            // txttotalnight
-            // 
-            this.txttotalnight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            // 
-            // 
-            // 
-            this.txttotalnight.Border.Class = "TextBoxBorder";
-            this.txttotalnight.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txttotalnight.Location = new System.Drawing.Point(702, 462);
-            this.txttotalnight.Name = "txttotalnight";
-            this.txttotalnight.ReadOnly = true;
-            this.txttotalnight.Size = new System.Drawing.Size(72, 20);
-            this.txttotalnight.TabIndex = 2;
-            // 
             // dgv2reservationID
             // 
             this.dgv2reservationID.DataPropertyName = "reservationID";
@@ -1572,6 +1137,309 @@
             this.dgv2statusName.Name = "dgv2statusName";
             this.dgv2statusName.ReadOnly = true;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtdatetoreservation);
+            this.panel1.Controls.Add(this.txtdatefromreservation);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.txtroomTypeIDreservation);
+            this.panel1.Controls.Add(this.btnsearchreservationtoday);
+            this.panel1.Controls.Add(this.btnsearchreservation);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(3, 16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(847, 29);
+            this.panel1.TabIndex = 8;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(415, 7);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(77, 13);
+            this.label24.TabIndex = 7;
+            this.label24.Text = "ประเภทห้องพัก";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 7);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(59, 13);
+            this.label22.TabIndex = 4;
+            this.label22.Text = "วันที่เข้าพัก";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(191, 7);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(98, 13);
+            this.label23.TabIndex = 4;
+            this.label23.Text = "วันที่ออกจากห้องพัก";
+            // 
+            // txtroomTypeIDreservation
+            // 
+            this.txtroomTypeIDreservation.DisplayMember = "Text";
+            this.txtroomTypeIDreservation.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.txtroomTypeIDreservation.FormattingEnabled = true;
+            this.txtroomTypeIDreservation.ItemHeight = 14;
+            this.txtroomTypeIDreservation.Location = new System.Drawing.Point(498, 3);
+            this.txtroomTypeIDreservation.Name = "txtroomTypeIDreservation";
+            this.txtroomTypeIDreservation.Size = new System.Drawing.Size(121, 20);
+            this.txtroomTypeIDreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtroomTypeIDreservation.TabIndex = 6;
+            // 
+            // btnsearchreservationtoday
+            // 
+            this.btnsearchreservationtoday.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnsearchreservationtoday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnsearchreservationtoday.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnsearchreservationtoday.Location = new System.Drawing.Point(754, 3);
+            this.btnsearchreservationtoday.Name = "btnsearchreservationtoday";
+            this.btnsearchreservationtoday.Size = new System.Drawing.Size(90, 20);
+            this.btnsearchreservationtoday.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnsearchreservationtoday.TabIndex = 2;
+            this.btnsearchreservationtoday.Text = "รายการจองวันนี้";
+            this.btnsearchreservationtoday.Click += new System.EventHandler(this.btnsearchreservationtoday_Click);
+            // 
+            // btnsearchreservation
+            // 
+            this.btnsearchreservation.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnsearchreservation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnsearchreservation.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnsearchreservation.Location = new System.Drawing.Point(658, 3);
+            this.btnsearchreservation.Name = "btnsearchreservation";
+            this.btnsearchreservation.Size = new System.Drawing.Size(90, 20);
+            this.btnsearchreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnsearchreservation.TabIndex = 2;
+            this.btnsearchreservation.Text = "ค้นหารายการจอง";
+            this.btnsearchreservation.Click += new System.EventHandler(this.btnsearchreservation_Click);
+            // 
+            // rdostatus2
+            // 
+            this.rdostatus2.AutoSize = true;
+            this.rdostatus2.Location = new System.Drawing.Point(179, 6);
+            this.rdostatus2.Name = "rdostatus2";
+            this.rdostatus2.Size = new System.Drawing.Size(69, 17);
+            this.rdostatus2.TabIndex = 50;
+            this.rdostatus2.Text = "ไม่ใช้งาน";
+            this.rdostatus2.UseVisualStyleBackColor = true;
+            // 
+            // rdostatus1
+            // 
+            this.rdostatus1.AutoSize = true;
+            this.rdostatus1.Checked = true;
+            this.rdostatus1.Location = new System.Drawing.Point(117, 6);
+            this.rdostatus1.Name = "rdostatus1";
+            this.rdostatus1.Size = new System.Drawing.Size(56, 17);
+            this.rdostatus1.TabIndex = 49;
+            this.rdostatus1.TabStop = true;
+            this.rdostatus1.Text = "ใช้งาน";
+            this.rdostatus1.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(74, 13);
+            this.label20.TabIndex = 48;
+            this.label20.Text = "สถานะรายการ";
+            // 
+            // txtreservationID
+            // 
+            // 
+            // 
+            // 
+            this.txtreservationID.Border.Class = "TextBoxBorder";
+            this.txtreservationID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtreservationID.Enabled = false;
+            this.txtreservationID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtreservationID.Location = new System.Drawing.Point(780, 430);
+            this.txtreservationID.Name = "txtreservationID";
+            this.txtreservationID.Size = new System.Drawing.Size(25, 22);
+            this.txtreservationID.TabIndex = 51;
+            this.txtreservationID.Visible = false;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(6, 10);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(106, 13);
+            this.label21.TabIndex = 48;
+            this.label21.Text = "สถานะการจองห้องพัก";
+            // 
+            // rdoreservationStatus1
+            // 
+            this.rdoreservationStatus1.AutoSize = true;
+            this.rdoreservationStatus1.Checked = true;
+            this.rdoreservationStatus1.Location = new System.Drawing.Point(118, 8);
+            this.rdoreservationStatus1.Name = "rdoreservationStatus1";
+            this.rdoreservationStatus1.Size = new System.Drawing.Size(55, 17);
+            this.rdoreservationStatus1.TabIndex = 49;
+            this.rdoreservationStatus1.TabStop = true;
+            this.rdoreservationStatus1.Text = "ยืนยัน";
+            this.rdoreservationStatus1.UseVisualStyleBackColor = true;
+            // 
+            // rdoreservationStatus2
+            // 
+            this.rdoreservationStatus2.AutoSize = true;
+            this.rdoreservationStatus2.Location = new System.Drawing.Point(180, 8);
+            this.rdoreservationStatus2.Name = "rdoreservationStatus2";
+            this.rdoreservationStatus2.Size = new System.Drawing.Size(80, 17);
+            this.rdoreservationStatus2.TabIndex = 50;
+            this.rdoreservationStatus2.Text = "ยังไม่ยืนยัน";
+            this.rdoreservationStatus2.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.Controls.Add(this.rdoreservationStatus1);
+            this.panel3.Controls.Add(this.rdoreservationStatus2);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Location = new System.Drawing.Point(368, 427);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(263, 34);
+            this.panel3.TabIndex = 52;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel4.Controls.Add(this.label20);
+            this.panel4.Controls.Add(this.rdostatus1);
+            this.panel4.Controls.Add(this.rdostatus2);
+            this.panel4.Location = new System.Drawing.Point(368, 462);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(263, 34);
+            this.panel4.TabIndex = 52;
+            // 
+            // txtpledge
+            // 
+            this.txtpledge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            // 
+            // 
+            // 
+            this.txtpledge.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.txtpledge.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtpledge.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2;
+            this.txtpledge.Increment = 1D;
+            this.txtpledge.Location = new System.Drawing.Point(676, 432);
+            this.txtpledge.MinValue = 0D;
+            this.txtpledge.Name = "txtpledge";
+            this.txtpledge.ShowUpDown = true;
+            this.txtpledge.Size = new System.Drawing.Size(98, 20);
+            this.txtpledge.TabIndex = 54;
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(638, 436);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(32, 13);
+            this.label25.TabIndex = 53;
+            this.label25.Text = "มัดจำ";
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(637, 466);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(55, 13);
+            this.label26.TabIndex = 45;
+            this.label26.Text = "จำนวนคืน";
+            // 
+            // txttotalnight
+            // 
+            this.txttotalnight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            // 
+            // 
+            // 
+            this.txttotalnight.Border.Class = "TextBoxBorder";
+            this.txttotalnight.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txttotalnight.Location = new System.Drawing.Point(702, 462);
+            this.txttotalnight.Name = "txttotalnight";
+            this.txttotalnight.ReadOnly = true;
+            this.txttotalnight.Size = new System.Drawing.Size(72, 20);
+            this.txttotalnight.TabIndex = 2;
+            // 
+            // txtdatefrom
+            // 
+            // 
+            // 
+            // 
+            this.txtdatefrom.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdatefrom.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdatefrom.ButtonClear.Visible = true;
+            this.txtdatefrom.Location = new System.Drawing.Point(65, 15);
+            this.txtdatefrom.Mask = "00\\/00\\/0000";
+            this.txtdatefrom.Name = "txtdatefrom";
+            this.txtdatefrom.Size = new System.Drawing.Size(121, 20);
+            this.txtdatefrom.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdatefrom.TabIndex = 25;
+            this.txtdatefrom.Text = "";
+            this.txtdatefrom.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdatefrom.WatermarkText = "วัน/เดือน/ปี";
+            // 
+            // txtdateto
+            // 
+            // 
+            // 
+            // 
+            this.txtdateto.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdateto.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdateto.ButtonClear.Visible = true;
+            this.txtdateto.Location = new System.Drawing.Point(288, 15);
+            this.txtdateto.Mask = "00\\/00\\/0000";
+            this.txtdateto.Name = "txtdateto";
+            this.txtdateto.Size = new System.Drawing.Size(121, 20);
+            this.txtdateto.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdateto.TabIndex = 25;
+            this.txtdateto.Text = "";
+            this.txtdateto.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdateto.WatermarkText = "วัน/เดือน/ปี";
+            // 
+            // txtdatefromreservation
+            // 
+            // 
+            // 
+            // 
+            this.txtdatefromreservation.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdatefromreservation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdatefromreservation.ButtonClear.Visible = true;
+            this.txtdatefromreservation.Location = new System.Drawing.Point(71, 3);
+            this.txtdatefromreservation.Mask = "00\\/00\\/0000";
+            this.txtdatefromreservation.Name = "txtdatefromreservation";
+            this.txtdatefromreservation.Size = new System.Drawing.Size(121, 20);
+            this.txtdatefromreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdatefromreservation.TabIndex = 26;
+            this.txtdatefromreservation.Text = "";
+            this.txtdatefromreservation.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdatefromreservation.WatermarkText = "วัน/เดือน/ปี";
+            // 
+            // txtdatetoreservation
+            // 
+            // 
+            // 
+            // 
+            this.txtdatetoreservation.BackgroundStyle.Class = "TextBoxBorder";
+            this.txtdatetoreservation.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtdatetoreservation.ButtonClear.Visible = true;
+            this.txtdatetoreservation.Location = new System.Drawing.Point(288, 3);
+            this.txtdatetoreservation.Mask = "00\\/00\\/0000";
+            this.txtdatetoreservation.Name = "txtdatetoreservation";
+            this.txtdatetoreservation.Size = new System.Drawing.Size(121, 20);
+            this.txtdatetoreservation.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.txtdatetoreservation.TabIndex = 26;
+            this.txtdatetoreservation.Text = "";
+            this.txtdatetoreservation.WatermarkFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.txtdatetoreservation.WatermarkText = "วัน/เดือน/ปี";
+            // 
             // reservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1601,8 +1469,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdateto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatefrom)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -1612,8 +1478,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatefromreservation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtdatetoreservation)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -1652,10 +1516,8 @@
         private DevComponents.DotNetBar.ButtonX btnDelete;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdatefrom;
         private System.Windows.Forms.Label label9;
         private DevComponents.DotNetBar.Controls.ComboBoxEx txtroomTypeID;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdateto;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label10;
@@ -1689,11 +1551,9 @@
         private System.Windows.Forms.RadioButton rdoreservationStatus2;
         private System.Windows.Forms.Label label24;
         private DevComponents.DotNetBar.Controls.ComboBoxEx txtroomTypeIDreservation;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdatetoreservation;
         private DevComponents.DotNetBar.ButtonX btnsearchreservation;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput txtdatefromreservation;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private DevComponents.DotNetBar.ButtonX btnsearchreservationtoday;
@@ -1739,5 +1599,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2employeelastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2status;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv2statusName;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdateto;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdatefrom;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdatetoreservation;
+        private DevComponents.DotNetBar.Controls.MaskedTextBoxAdv txtdatefromreservation;
     }
 }

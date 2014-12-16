@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
+using System.Globalization;
 
 
 namespace rukkawandorm
@@ -57,22 +58,18 @@ namespace rukkawandorm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtdatefrom.Text == "" || txtdateto.Text == "")
+            if (txtdatefrom.Text == "  /  /" || txtdateto.Text == "  /  /")
             {
                 MessageBox.Show("กรุณาเลือกวันที่เข้าพักและวันที่ออกจากห้องพัก");
                 return;
             }
-            else if (txtdatefrom.Value > txtdateto.Value)
+
+            else if (DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")) < DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH")))
             {
-                MessageBox.Show("กรุณาเลือกวันที่เข้าพักใหม่");
+                MessageBox.Show("กรุณาเลือกวันที่เข้าพัก และ วันที่ออกจากห้องพักใหม่");
                 return;
             }
-            else if (txtdateto.Value < txtdatefrom.Value)
-            {
-                MessageBox.Show("กรุณาเลือกวันที่ออกจากห้องพักใหม่");
-                return;
-            }
-            ds_room = clsreservation.searchReservationAvariable(txtdatefrom.Value, txtdateto.Value, Convert.ToInt32(txtroomTypeID.SelectedValue));
+            ds_room = clsreservation.searchReservationAvariable(DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH")), DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")), Convert.ToInt32(txtroomTypeID.SelectedValue));
             
             dgv1.DataSource = ds_room.Tables[0];
             module.ClearControl(groupBox3);
@@ -186,7 +183,7 @@ namespace rukkawandorm
             clsreservation.checkinDateTime = Convert.ToDateTime(datefrom.Text);
             clsreservation.checkoutDateTime = Convert.ToDateTime(dateto.Text);
             clsreservation.reservationDateTime = DateTime.Now;
-            clsreservation.reservationNight = Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays);
+            clsreservation.reservationNight = Convert.ToInt32((DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")) - DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH"))).TotalDays);
             clsreservation.pledge = txtpledge.Value;
             clsreservation.checkinoutStatus = 0;   
             if (rdoreservationStatus1.Checked == true)
@@ -262,10 +259,10 @@ namespace rukkawandorm
                 txtbuilding.Text = dgv1.Rows[e.RowIndex].Cells["dgvbuilding"].Value.ToString();
                 txtremark.Text = dgv1.Rows[e.RowIndex].Cells["dgvremark"].Value.ToString();
                 txtstatus.Text = dgv1.Rows[e.RowIndex].Cells["dgvstatus"].Value.ToString();
-                datefrom.Text = txtdatefrom.Value.ToString();
-                dateto.Text = txtdateto.Value.ToString();
-                txttotalnight.Text= Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays).ToString();
-                txtpledge.Value= (Convert.ToInt32((txtdateto.Value - txtdatefrom.Value).TotalDays))*Convert.ToDouble(clseroomType.selectRoomTypeByID(Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells["dgvroomTypeID"].Value.ToString())).Tables[0].Rows[0]["price"].ToString());
+                datefrom.Text = DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH")).ToString();
+                dateto.Text = DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")).ToString();
+                txttotalnight.Text = Convert.ToInt32((DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")) - DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH"))).TotalDays).ToString();
+                txtpledge.Value = (Convert.ToInt32((DateTime.Parse(txtdateto.Text, new CultureInfo("th-TH")) - DateTime.Parse(txtdatefrom.Text, new CultureInfo("th-TH"))).TotalDays)) * Convert.ToDouble(clseroomType.selectRoomTypeByID(Convert.ToInt32(dgv1.Rows[e.RowIndex].Cells["dgvroomTypeID"].Value.ToString())).Tables[0].Rows[0]["price"].ToString());
                 
             }
         }
@@ -280,7 +277,7 @@ namespace rukkawandorm
             txtname.Text = searchCustomerForm.firstName + " " + searchCustomerForm.lastName;
             txtidCard.Text = searchCustomerForm.idCard;
             txtlevel.Text = searchCustomerForm.level;
-            txtdob.Text = searchCustomerForm.dob.ToShortDateString();
+            txtdob.Text = Convert.ToDateTime(searchCustomerForm.dob.ToShortDateString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH"));
             txtcontactPerson.Text = searchCustomerForm.contactPerson;
             txtcustomerID.Text = searchCustomerForm.customerID.ToString();
         }
@@ -298,7 +295,7 @@ namespace rukkawandorm
                 txtname.Text = dtcustomer.Rows[0]["firstName"].ToString() + " " + dtcustomer.Rows[0]["lastName"].ToString();
                 txtidCard.Text = dtcustomer.Rows[0]["idCard"].ToString();
                 txtlevel.Text = dtcustomer.Rows[0]["level"].ToString();
-                txtdob.Text = Convert.ToDateTime(dtcustomer.Rows[0]["dob"].ToString()).ToShortDateString();
+                txtdob.Text = Convert.ToDateTime(dtcustomer.Rows[0]["dob"].ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH")); 
                 txtcontactPerson.Text = dtcustomer.Rows[0]["contactPerson"].ToString();
                 txtcustomerID.Text = dtcustomer.Rows[0]["customerID"].ToString();
 
@@ -342,22 +339,18 @@ namespace rukkawandorm
 
         private void btnsearchreservation_Click(object sender, EventArgs e)
         {
-            if (txtdatefromreservation.Text == "" || txtdatetoreservation.Text == "")
+            if (txtdatefromreservation.Text == "  /  /" || txtdatetoreservation.Text == "  /  /")
             {
                 MessageBox.Show("กรุณาเลือกวันที่เข้าพักและวันที่ออกจากห้องพัก");
                 return;
             }
-            else if (txtdatefromreservation.Value > txtdatetoreservation.Value)
+            else if (DateTime.Parse(txtdatefromreservation.Text, new CultureInfo("th-TH")) > DateTime.Parse(txtdatetoreservation.Text, new CultureInfo("th-TH")))
             {
-                MessageBox.Show("กรุณาเลือกวันที่เข้าพักใหม่");
+                MessageBox.Show("กรุณาเลือกวันที่เข้าพัก และวันที่ออกจากห้องพักใหม่");
                 return;
             }
-            else if (txtdatetoreservation.Value < txtdatefromreservation.Value)
-            {
-                MessageBox.Show("กรุณาเลือกวันที่ออกจากห้องพักใหม่");
-                return;
-            }
-            DataSet ds = clsreservation.searchReservation(txtdatefromreservation.Value, txtdatetoreservation.Value, Convert.ToInt32(txtroomTypeIDreservation.SelectedValue));
+
+            DataSet ds = clsreservation.searchReservation(DateTime.Parse(txtdatefromreservation.Text, new CultureInfo("th-TH")), DateTime.Parse(txtdatetoreservation.Text, new CultureInfo("th-TH")), Convert.ToInt32(txtroomTypeIDreservation.SelectedValue));
             dgv2.DataSource = ds.Tables[0];
         }
 

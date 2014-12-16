@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
 using System.IO;
+using System.Globalization;
 
 namespace rukkawandorm
 {
@@ -34,13 +35,13 @@ namespace rukkawandorm
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtdatetoreservation_search.Value < txtdatefromreservation_search.Value)
+            if (DateTime.Parse(txtdatetoreservation_search.Text, new CultureInfo("th-TH")) < DateTime.Parse(txtdatefromreservation_search.Text, new CultureInfo("th-TH")))
             {
                 MessageBox.Show("วันที่สิ้นสุดต้องไม่น้อยกว่าวันที่เริ่มต้น");
                 return;
             }
-            clsmaintenance.maDatetimeFrom = txtdatefromreservation_search.Value;
-            clsmaintenance.maDatetimeTo = txtdatetoreservation_search.Value;
+            clsmaintenance.maDatetimeFrom = DateTime.Parse(txtdatefromreservation_search.Text, new CultureInfo("th-TH")); 
+            clsmaintenance.maDatetimeTo = DateTime.Parse(txtdatetoreservation_search.Text, new CultureInfo("th-TH")); 
             clsmaintenance.maType = txtmaType_search.Text;
             DataSet ds = clsmaintenance.searchMaintenance();
             dgv1.DataSource = ds.Tables[0];
@@ -123,7 +124,7 @@ namespace rukkawandorm
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if (txtmaDatetimeTo.Value < txtmaDatetimeFrom.Value)
+            if (DateTime.Parse(txtmaDatetimeTo.Text, new CultureInfo("th-TH")) < DateTime.Parse(txtmaDatetimeFrom.Text, new CultureInfo("th-TH")))
             {
                 MessageBox.Show("วันที่สิ้นสุดต้องไม่น้อยกว่าวันที่เริ่มต้น");
                 return;
@@ -131,8 +132,8 @@ namespace rukkawandorm
             clsmaintenance.employeeCode = txtemployeeCode.Text;
             clsmaintenance.roomCode = txtroomCode.Text;
             clsmaintenance.maType = txtmaType.Text;
-            clsmaintenance.maDatetimeFrom = txtmaDatetimeFrom.Value;
-            clsmaintenance.maDatetimeTo = txtmaDatetimeTo.Value;
+            clsmaintenance.maDatetimeFrom = DateTime.Parse(txtmaDatetimeFrom.Text, new CultureInfo("th-TH")); 
+            clsmaintenance.maDatetimeTo = DateTime.Parse(txtmaDatetimeTo.Text, new CultureInfo("th-TH")); 
             clsmaintenance.maDetail = txtmaDetail.Text;
             
 
@@ -180,8 +181,8 @@ namespace rukkawandorm
                 txtemployeeCode.Text = dgv1.Rows[e.RowIndex].Cells["dgvemployeeCode"].Value.ToString();
                 txtroomCode.Text = dgv1.Rows[e.RowIndex].Cells["dgvroomCode"].Value.ToString();
                 txtmaType.Text = dgv1.Rows[e.RowIndex].Cells["dgvmaType"].Value.ToString();
-                txtmaDatetimeFrom.Value = Convert.ToDateTime(dgv1.Rows[e.RowIndex].Cells["dgvmaDatetimeFrom"].Value.ToString());
-                txtmaDatetimeTo.Value = Convert.ToDateTime(dgv1.Rows[e.RowIndex].Cells["dgvmaDatetimeTo"].Value.ToString());
+                txtmaDatetimeFrom.Text = Convert.ToDateTime(dgv1.Rows[e.RowIndex].Cells["dgvmaDatetimeFrom"].Value.ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH"));
+                txtmaDatetimeTo.Text = Convert.ToDateTime(dgv1.Rows[e.RowIndex].Cells["dgvmaDatetimeTo"].Value.ToString()).ToString("dd/MM/yyyy", CultureInfo.CreateSpecificCulture("th-TH"));
                 txtmaDetail.Text = dgv1.Rows[e.RowIndex].Cells["dgvmaDetail"].Value.ToString();
             }
         }

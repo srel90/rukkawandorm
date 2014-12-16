@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using rukkawandorm.Class;
+using System.Globalization;
 namespace rukkawandorm
 {
     public partial class reservationReportForm : Form
@@ -101,23 +102,18 @@ namespace rukkawandorm
 
         private void btnsearchreservation_Click(object sender, EventArgs e)
         {
-            if (txtdatefromreservation.Text == "" || txtdatetoreservation.Text == "")
+            if (txtdatefromreservation.Text == "  /  /" || txtdatetoreservation.Text == "  /  /")
             {
                 MessageBox.Show("กรุณาเลือกวันที่เข้าพักและวันที่ออกจากห้องพัก");
                 return;
             }
-            else if (txtdatefromreservation.Value > txtdatetoreservation.Value)
+            else if (DateTime.Parse(txtdatefromreservation.Text, new CultureInfo("th-TH")) > DateTime.Parse(txtdatetoreservation.Text, new CultureInfo("th-TH")))
             {
-                MessageBox.Show("กรุณาเลือกวันที่เข้าพักใหม่");
+                MessageBox.Show("กรุณาเลือกวันที่เข้าพักใหม่ และ วันที่ออกจากห้องพักใหม่");
                 return;
             }
-            else if (txtdatetoreservation.Value < txtdatefromreservation.Value)
-            {
-                MessageBox.Show("กรุณาเลือกวันที่ออกจากห้องพักใหม่");
-                return;
-            }
-
-            dsreservation = clsreservation.searchReservation(txtdatefromreservation.Value, txtdatetoreservation.Value, Convert.ToInt32(txtroomTypeIDreservation.SelectedValue));
+           
+            dsreservation = clsreservation.searchReservation(DateTime.Parse(txtdatefromreservation.Text, new CultureInfo("th-TH")), DateTime.Parse(txtdatetoreservation.Text, new CultureInfo("th-TH")), Convert.ToInt32(txtroomTypeIDreservation.SelectedValue));
             dgv2.DataSource = dsreservation.Tables[0];
         }
 
